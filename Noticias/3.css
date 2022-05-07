@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+body,
+ul,
+li,
+p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial;
+}
+
+
+body{
+ background-color:#5F5FC2 ;  
+ width: 100%;   
+}
+
+#caixa{
+    background-color: #C1C1F4;
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+a{
+text-decoration: none;    
+color:black;
+}
+
+
+p{
+text-align: center;
+padding-top: 30px;    
+}
+
+a>p:nth-child(1){
+
+padding-top: 40px;
+}
+
+#pwd{
+    margin-left:-160px;
+}
+
+#acc{
+    margin-top: -62px;
+    margin-left: 230px;
+}
+
+#enviar{
+    margin-top: 40px;
+    margin-left: 166px;
+    font-size: 18px;
+    border-radius: 4px 4px 4px 4px black;
+   
+}   
+
+
+
+#usuario{
+margin-left: 110px;   
+}
+
+#senha{
+margin-left: 110px;    
+}
+
+#check{
+    margin-left:190px;
+}
+
+#load{
+display: none;
+width: 20px;
+height: 20px;
+border: 10px solid;
+border-radius: 50%;
+border-top-color: transparent;
+color: #ffb801;
+margin: 0 auto;    
+animation:load .9s linear infinite ;
+margin-top: 30px;
+} 
+
+@keyframes load {
+to{
+transform: rotate(360deg);    
+}
+    
+}
+    

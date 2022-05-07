@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobremesas</title>
+    <link rel="stylesheet" href="2.css">
+</head>
+
+<body>
+
+
+
+
+
+    <header class="header">
+    
+        <a href="#">Logo</a>
+    <nav>
+                <ul class="menu">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Bolos.html">Bolos</a></li>
+                    <li><a href="Sobremesas.html">Sobremesas</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                </ul>
+    </nav>
+        <div class="menu-icon" onclick="abrirMenu()">
+        <img src="https://i.ibb.co/B4jYVzZ/menu.png" ></div>
+        </header>
+        
+        <h1>Receitas</h1>
+
+        <section class="flex">
+        <div>
+        <a href=""><p>Mousse de maracuja</p></a>
+        <img src="https://i.ibb.co/XLRH1sp/maracuja.jpg " alt="Mousse de maracuja">
+        </div>
+        
+        <div>
+        <a href=""><p>Mousse de chocolate</p></a>    
+        <img src="https://i.ibb.co/2qr0hPr/mousse.jpg" alt="Mousse de chocolate">
+        </div>
+                    
+        <div>
+        <a href=""><p>Torta de Limão</p></a>
+        <img src="https://i.ibb.co/5xntqT3/limao.jpg" alt="Torta de limão">
+        </div>
+                        
+      
+
+
+        
+    
+    
+        </section>
+        
+        
+        
+        <script>
+             var menu = document.querySelector('nav ul');
+             var menuIcon = document.querySelector('menu-icon');
+             
+             function abrirMenu(){
+             menu.classList.toggle('open');
+             }
+        </script>    
+</body>
+</html>

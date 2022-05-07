@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="2.css">
+</head>
+
+<header id="header">
+
+    <h1>Gazeta</h1>
+
+    <nav>
+
+        <ul id="menu">
+
+            <li><a href="home.html">Home</a></li>
+
+            <li><a href="cadastro.html">Cadastro</a></li>
+
+            <li><a href="login.html">Login</a></li>
+
+            <li><a href="esportes.html">Esportes</a></li>
+
+            <li><a href="esports.html">E-Sports</a></li>
+            
+            <li><a href="politica">Politica</a></li>
+
+            <li><a href="populacao.html">População</a></li>
+        </ul>
+
+
+
+    </nav>
+    <div class="menu-icon" onclick="abrirMenu()">
+    <img src="https://i.ibb.co/B4jYVzZ/menu.png">
+    </div>
+
+
+
+</header>
+<body>
+    <div id="box"><br>
+        <div id="formulario">
+        <form action="https://formsubmit.co/lopesluan18@outlook.com" method="POST"></form><br>
+        <label for="primeironome" class="label">Primeiro nome :</label>
+        <input type="text" name="primeironome" id="primeironome" required>
+        <label for="segundonome" class="label">Segundo nome :</label>
+        <input type="text" name="segundonome" id="segundonome" required>
+        <label for="radsex">Masculino</label>
+        <input type="radio" name="radsex" id="sexo" checked>
+        <label for="radsex">Feminino</label>
+        <input type="radio" name="radsex"> 
+        <br><label for="aniversario" class="label">Data de nascimento:</label>
+        <input type="date" name="aniversario" id="aniversario" required><br>  
+        <label for="email" class="label">Digite seu e-mail :</label>
+        <input type="email" name="email" id="email" required><br>
+        <label for="confirm" class="label">Confirme seu e-mail :</label>
+        <input type="email" name="confirm" id="confirm" required>
+        <label for="pwd" class="label">Digite sua senha :</label>
+        <input type="password" name="pwd" id="pwd" required>
+        <label for="confirmpwd" class="label">Confirme sua senha :</label>
+        <input type="password" name="confirmpwd" id="confirmpwd" required>
+        <input type="submit" value="Enviar" id="enviar">
+    
+    </div>
+    </div>    
+</body>
+</html>
