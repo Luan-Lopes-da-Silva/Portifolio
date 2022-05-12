@@ -148,7 +148,7 @@ a>p{
  grid-template-columns: repeat(3, 1fr);
  max-width: 100%;
  margin: 0 auto;
- grid-gap: 10px;
+ grid-row-gap: 10px;
  background-color: #EBAF17;
  margin-left: 10px;
  margin-right: 10px;
@@ -158,6 +158,8 @@ a>p{
     margin-left: 80px; 
     margin-top: 50px; 
 }
+
+
 
  h2{
  font: normal 22pt arial;    
@@ -188,9 +190,7 @@ a>p{
     margin-left:80px
 }
 
-.meio1{
-margin-right: -50px;    
-}
+
 
 #obs>p{
  margin-top: 20px;

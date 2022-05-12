@@ -119,11 +119,12 @@ margin-top: 40px;
 
 
    .destaque{
-    margin-top: 50px;   
+    padding-top: 80px;   
     grid-column-start: 1;  
     grid-column-end: 2;
     grid-row: 1/5;
     display: block;
+    
     
    }
 
