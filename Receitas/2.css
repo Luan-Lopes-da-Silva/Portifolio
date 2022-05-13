@@ -134,7 +134,7 @@ a>p{
  }
 
  a>p:hover{
- background-color: data-anime; 
+ background-color: #B33102; 
  transition: 3s;   
  }
 
@@ -148,94 +148,31 @@ a>p{
  grid-template-columns: repeat(3, 1fr);
  max-width: 100%;
  margin: 0 auto;
- grid-row-gap: 10px;
+ row-gap: 40px;
  background-color: #EBAF17;
- margin-left: 10px;
- margin-right: 10px;
 }
 
 .grid1>div{
-    margin-left: 80px; 
-    margin-top: 50px; 
+  margin: 0 auto;
+  margin-top: 80px;
 }
 
-
-
- h2{
+h2{
  font: normal 22pt arial;    
  text-align: center;
  margin-bottom:80px;
  }
- .grid1>div>p {
-    margin-left: -10px; 
+ 
+ div>p {
+  margin: 0 auto; 
     width: 300px;
-}
-
-.primeirareceita{
-    margin-left: 10px;
-
-}
-
-.segundareceita{
-
-    margin-left: 10px;
-}
-
-.terceirareceita{
-    margin-left: 80px;
-
-}
-
-.ultimareceita{
-    margin-left:80px
-}
-
+ }
 
 
 #obs>p{
  margin-top: 20px;
  margin-bottom: 20px;   
 }
-
-#paginate{
-    width: 100%;
-    margin: 32px auto;    
-}
-
-#paginate .pagination{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 8px;
-}
-
-#paginate .pagination div{
-  cursor: pointer;
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 14px;
-}
-
-#paginate .pagination div:not(.numbers),
-#paginate .pagination div.numbers div{
-    width: 40px;
-    height: 40px;
-   
-}
-
-#paginate .pagination div:not(.numbers):hover,
-#paginate .pagination div.numbers div:hover,
-#paginate .pagination div:not(.numbers):active,
-#paginate .pagination div.numbers div:active{
-  color: #F5582C;  
-}
-
-
-
-
 
 .agrad{
     background-color: white;   

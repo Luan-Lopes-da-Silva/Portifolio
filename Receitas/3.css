@@ -64,7 +64,7 @@ body{
                 margin-top: -24px;
                 color: #ffb801;
                 animation: load .9s linear infinite;
-                transition-duration: .9s;
+           
             }
         
             @keyframes load {

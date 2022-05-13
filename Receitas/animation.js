@@ -7,6 +7,4 @@ let enviar = window.document.getElementById('enviar')
 let load = window.document.getElementById('load')
 load.style.display = 'block'
 enviar.style.display = 'none'
-window.location.href = "Home.html";
-
 }
