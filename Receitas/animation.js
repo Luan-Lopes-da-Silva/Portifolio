@@ -7,4 +7,8 @@ let enviar = window.document.getElementById('enviar')
 let load = window.document.getElementById('load')
 load.style.display = 'block'
 enviar.style.display = 'none'
+setTimeout(function(){
+window.location.href="Home.html"
+},3000);
 }
+

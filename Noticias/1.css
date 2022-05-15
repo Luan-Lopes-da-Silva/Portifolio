@@ -119,12 +119,12 @@ margin-top: 40px;
 
 
 
-   .destaque{
-    padding-top: 80px;   
-    grid-column:1/2 ;
-    grid-row: 1/5;
-    display: block;
-    }
+.destaque{
+padding-top: 80px;   
+grid-column:1/2 ;
+grid-row: 1/5;
+display: block;
+}
     
     
 
@@ -148,6 +148,46 @@ transition: 3s ;
 background-color: black; 
 text-decoration: underline;
 color: white;   
+}
+
+.text-reveal{
+position: relative;
+overflow: hidden;
+}
+
+.text-reveal::after{
+animation: text-reveal 4s ease forwards;  
+background-color: #B33102;
+content: '';
+display: block;
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+top: 0;
+  
+}
+
+p{
+ animation: fade 2ms 1.0s forwards;   
+ opacity: 0;
+}
+
+@keyframes text-reveal {
+    from{
+    transform: translateX(-101%);
+    }
+    to{
+    transform: translateX(101%);    
+    }
+}
+
+
+
+@keyframes fade {
+    to{
+    opacity: 1;    
+    }
 }
 
   
