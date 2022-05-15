@@ -77,9 +77,18 @@ p {
     margin-bottom:80px;
     }
     
-    div>p {
+    div>p{
+    animation: fade 2s ease forwards;
+    opacity: 0 ;    
+    }
+    
+    
+    .text-reveal {
+       
+     animation: text-reveal 2s ease forwards ;
      margin: 0 auto; 
-       width: 300px;
+     width: 300px;
+    opacity: 1;
     }
    
    
@@ -101,6 +110,27 @@ p {
     .grid1>div{
      margin: 0 auto;
      margin-top: 80px;
+    }
+
+    @keyframes text-reveal{
+    from{
+    transform: translateX(-101%);    
+    }
+    to{
+    transform: translateX(0%);
+    }
+    }
+
+    @keyframes fade {
+    0%{
+    opacity: 0;
+    }
+    50%{
+    opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }    
     }
 
 

@@ -21,7 +21,10 @@ a{
     text-decoration: none;  
 }
 
+
+
 #box{
+    opacity: 1;
     background-color:#F5582C ;   
     width: 400px;
     height: 400px;
@@ -31,7 +34,7 @@ a{
     text-align: center;
     font: normal 12pt arial;
     color: black;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 p{
@@ -54,6 +57,22 @@ p{
     color: #ffb801;
     animation: load .9s linear infinite;
 }
+
+
+
+img{
+position: absolute;
+margin-left: 320px;
+margin-top: -45px;
+cursor: pointer;
+}
+
+#senha{
+ z-index: 10;   
+}
+
+
+
         
 @keyframes load {
 to{
