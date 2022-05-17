@@ -111,6 +111,7 @@ margin-left: 15px;
 
 
 
+
 }
 .grid > div{
 margin-top: 40px; 
@@ -167,6 +168,8 @@ right: 0;
 top: 0;
   
 }
+
+
 
 p{
  animation: fade 2ms 1.0s forwards;   
