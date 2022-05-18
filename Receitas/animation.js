@@ -1,4 +1,12 @@
-
+function animar(){
+  let btn = window.document.getElementById('animar')
+  let box = window.document.getElementById('box')
+  if(btn = "true")
+  box.style.animation="slide 3s ease forwards"
+  else{
+  box.style.animation = "none"
+  }
+}
 
 function clicar(){
 let enviar = window.document.getElementById('enviar')
