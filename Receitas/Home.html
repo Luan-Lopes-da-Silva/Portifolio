@@ -25,7 +25,7 @@
                     <li><a href="Login.html">Login</a></li>
                 </ul>
     </nav>
-        <div class="menu-icon" onclick="abrirMenu()">
+        <div class="menu-icon">
         <img src="https://i.ibb.co/B4jYVzZ/menu.png" ></div>
         </header><br>
         
@@ -74,8 +74,8 @@
         
         
         <script>
-             var menu = document.querySelector('nav ul');
-             var menuIcon = document.querySelector('menu-icon');
+             let menu = document.querySelector('nav ul');
+             let menuIcon = document.querySelector('menu-icon');
              
              function abrirMenu(){
              menu.classList.toggle('open');

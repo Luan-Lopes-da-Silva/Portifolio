@@ -6,67 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar-se</title>
     <link rel="stylesheet" href="cadastro.css">
+
 </head>
 <body>
-    <header class="header">
-    
-        <a href="#">Logo</a>
-    <nav>
-                <ul class="menu">
-                    <li><a href="Home.html">Home</a></li>
-                    <li><a href="Bolos.html">Bolos</a></li>
-                    <li><a href="Sobremesas.html">Sobremesas</a></li>
-                    <li><a href="Login.html">Login</a></li>
-                </ul>
-    </nav>
-        <div class="menu-icon" onclick="abrirMenu()">
-        <img src="https://i.ibb.co/B4jYVzZ/menu.png" ></div>
-        </header>
-    
-    
-    
+   
 
-    <h1>Cadastro</h1> 
- 
-<main> 
-<br>                  
+
+
+<a href="Home.html">
+    <p>Voltar</p>
+</a>
+
 <div class="cadastro">   
-<form action="https://formsubmit.co/47db5bf178baf8cad557dd07d6395fcd" method="POST">
-<label for = "Primeiro nome" >Digite seu nome :</label>
-<input type="text" id="primeironome" name="primeironome">
-<br><label for = "Sobrenome">Digite seu sobrenome :</label>
-<input type="text" id="sobrenome" name="sobrenome">
-<label for="email">Digite seu email :</label>
-<input type="email" id="email" name="email" required>
-<br><label for="confirm">Cofirme seu email :</label>
-<input type="hidden" name="_next" value="http://127.0.0.1:5500/thanks.html">
-<input type="email" id="confirm" name="confirm">
-
-<br><label for="Sexo">Masculino</label>
-<input type="radio" class="sexo" name="masculino">
-<label for="Sexo">Feminino</label>
-<input type="radio" class="sexo" name="feminino">
-<label for="Outros">Outros</label>
-<input type="radio" class="sexo" name="outros">
-<br><label for="aniversario">Digite sua data de nascimento:</label>
-<input type="date" id="aniversario" name="aniversario">
-<button type="submit" id="enviar">Enviar</button>
+    
+<form action="">
+    <div id="msgError"></div>
+    <div id="msgSucess"></div>
+<label for = "nome" id="labelNome">Nome </label>
+<input type="text" id="nome" name="nome" required>
+<br><label for = "Usuario" id="labelUsuario">Usuario</label> 
+<input type="text" id="usuario" required><br>
+<label for="senha" id="labelSenha">Senha</label>
+<input type="password" id="senha" required>
+<img src="https://i.ibb.co/2KmysBt/65000-1.png" id= "mostrar" onclick="ver()">
+<label for="confirm" id="labelconfirmSenha">Confirma Senha</label>
+<input type="password" id="confirm" required>
+<img src="https://i.ibb.co/2KmysBt/65000-1.png" id= "confirmaolho" onclick="mostra()" >
+<button type="submit" id="enviar" onclick="cadastrar()">Enviar</button>
 </form>
 </div>
 <br>
-</main>
 
 
-<script>
-var menu = document.querySelector('nav ul');
-var menuIcon = document.querySelector('menu-icon');
 
-function abrirMenu(){
- menu.classList.toggle('open');
-}
-</script>
 
 
     
 </body>
+
+<script src="script.js"></script>
 </html>

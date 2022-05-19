@@ -6,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="login.css">
-    <script src="animation.js"></script>
+  
+   
 </head>
 
 <body>
 <a href="Home.html"><p>Voltar</p></a>
-<input type="submit" value="Ativar" id="animar" onclick = animar()>
+<input type="submit" value="Ativar" id="animar">
 
-<div id="box"> 
+<div id="box" class="animar"> 
 <p>Usuario:</p>
 <input type="text" id="usuario" name="usuario" placeholder="Usuario" required>
 <p>Senha:</p>
-<input type="password" id="senha" name="senha" placeholder="Senha"> 
+<input type="password" id="senha" name="senha" placeholder="Senha" required> 
 <img src="https://i.ibb.co/sjr5Mpz/65000.png" id= "mostrar" onclick="mostrar()" ><br>
 <p>Mantenha-me conectado</p>
 <input type="checkbox" id="checkbox">
@@ -27,23 +28,15 @@
 <br><div id="load"></div>
 </div>
 
+
 <br>
 
 
 
-<script>
-    
 
-
-var menu = document.querySelector('nav ul');
-var menuIcon = document.querySelector('menu-icon');
-
-function abrirMenu(){
- menu.classList.toggle('open');
-}
-</script>
 
 
     
 </body>
+<script src="animation.js"></script>
 </html>

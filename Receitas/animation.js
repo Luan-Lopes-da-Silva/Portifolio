@@ -1,12 +1,15 @@
-function animar(){
-  let btn = window.document.getElementById('animar')
+ 
+  let ativar = window.document.getElementById('animar')
   let box = window.document.getElementById('box')
-  if(btn = "true")
-  box.style.animation="slide 3s ease forwards"
-  else{
-  box.style.animation = "none"
-  }
-}
+  ativar.addEventListener('click', () =>{
+  box.classList.toggle('animar')
+  })
+
+
+
+
+  
+
 
 function clicar(){
 let enviar = window.document.getElementById('enviar')
@@ -15,11 +18,12 @@ let usuario = window.document.getElementById('usuario')
 let senha = window.document.getElementById('senha')
 load.style.display = 'block'
 enviar.style.display = 'none'
-if(usuario == 'sangbom' || senha == 1234){
+if(usuario === 'sangbom' && senha === '1234'){
         setTimeout(function(){
         window.alert('Login realizado com sucesso !!!')
         window.location.href="Home.html"
         },3000);
+        
         }
  else{
         setTimeout(function(){
