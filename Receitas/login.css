@@ -96,10 +96,7 @@ to{
 }
             
 }
-label{
-    font: normal 12pt Arial;   
-    margin-left: 20px;
-}
+
             
 #usuario{
     margin-top: 8px;
@@ -108,7 +105,8 @@ label{
 }
              
 #senha{
-    margin-left: 110px;    
+    margin-left: 110px;  
+    margin-top: 8px;  
     margin-bottom: 10px;
 }
                 
@@ -138,3 +136,37 @@ h1{
     margin-left: 165px;
     font-size: 16px;
 }
+
+#msgError{
+    text-align: center;
+    color: #0C82F7;
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+    }
+    
+    #msgSucess{
+    text-align: center;
+    color: white;
+    background-color: green;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+    
+    }
+
+    #labelUsuario{
+    font: normal 12pt arial;
+    margin-left: 165px;
+    
+  
+    
+    }
+
+    #labelSenha{
+    font: normal 12pt arial;
+    margin-left: 170px;
+    
+
+    }

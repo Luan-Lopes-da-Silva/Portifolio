@@ -46,6 +46,9 @@ let confirmaSenha=window.document.getElementById("confirm")
 let labelconfirmaSenha = window.document.getElementById("labelconfirmSenha")
 let validconfirmaSenha = false
 
+let msgError = window.document.getElementById('msgError')
+let msgSucess = window.document.getElementById('msgSucess')
+
 nome.addEventListener('keyup', () =>{
    if(nome.value.length <=2 ){
     labelNome.setAttribute('style', 'color:blue')  
@@ -100,10 +103,27 @@ nome.addEventListener('keyup', () =>{
                  })
 
                  function cadastrar(){
-                    let error = window.document.getElementById('msgError')
-                    let sucess = window.document.getElementById('msgSucess')
+                  
                     
                     if(validnome && validUsuario && validSenha && validconfirmaSenha ){
+                        msgSucess.setAttribute('style' , 'display:block')
+                        msgSucess.innerHTML="<strong>Usuario cadastrado com sucesso!</strong>"
+                        msgError.setAttribute('style','display:none')
+                        msgError.innerHTML=''
+
+                        setTimeout(()=>{
+                        window.location.href="Login.html"
+
+                        },4000);
+
+                        
+                    }else{
+                        msgError.setAttribute('style' , 'display:block') 
+                        msgError.innerHTML="<strong>Preencha todos os campos!</strong>"  
+                        msgSucess.setAttribute('style','display:none')
+                        msgSucess.innerHTML='' 
+                    }
+                        
                         let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
                     
                         listaUser.push(
@@ -115,22 +135,6 @@ nome.addEventListener('keyup', () =>{
                         )
                     
                         localStorage.setItem('listaUser', JSON.stringify(listaUser))
-                        
-                    
-                        sucess.style.display = 'block'
-                        sucess.innerHTML='<strong>Cadastrado com Sucesso!</strong>'
-                        error.style.display = 'none'
-                        error.innerHTML=''
-                        setTimeout(()=>{
-                        window.location.href='file:///C:/Users/lopes/Desktop/Definitiva/Receitas/Login.html'
-                        },3000)
-                    
-                       
-                        }else{
-                        error.style.display = 'block'
-                        error.innerHTML='<strong>Preencha todos os campos</strong>'
-                        sucess.style.display = 'none'
-                        sucess.innerHTML=''
                         }
                     
-                    }
+                    
