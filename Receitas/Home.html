@@ -16,18 +16,20 @@
     
 <header class="header">
     
-        <a href="#">Logo</a>
-    <nav>
+    <div id="logo">
+        <img src="" alt="Logo Loja">
+    </div>
+   
+            <nav>
                 <ul class="menu">
                     <li><a href="Home.html">Home</a></li>
                     <li><a href="Bolos.html">Bolos</a></li>
-                    <li><a href="Sobremesas.html">Sobremesas</a></li>
+                    <li><a href="Cadastro.html">Cadastro</a></li>
                     <li><a href="Login.html">Login</a></li>
-                  
-                </ul>
-    </nav>
-        <div class="menu-icon">
-        <img src="https://i.ibb.co/B4jYVzZ/menu.png" ></div>
+                </ul>    
+            </nav>    
+            <div class="menu-icon" onclick="abrirMenu()"><img src="https://i.ibb.co/54CsRmv/menu.png"></div>
+     
         </header><br>
         
         <h1>Receitas</h1><br>
@@ -74,17 +76,18 @@
         
         
         
-        <script>
-             let menu = document.querySelector('nav ul');
+        
+
+</body>
+<script>
+                 let menu = document.querySelector('nav ul');
              let menuIcon = document.querySelector('menu-icon');
              
              function abrirMenu(){
              menu.classList.toggle('open');
              }
-        </script>
-
-</body>
-
+             
+</script>
 </html>
 
     

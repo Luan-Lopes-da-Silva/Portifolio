@@ -269,7 +269,7 @@ h2{
 .menu-icon {
     display: block;
     z-index: 10;
-    margin-top: 25px
+    margin-top: 25px;
 }
 
 nav ul {
@@ -283,7 +283,7 @@ nav ul {
     align-items: center;
     flex-direction: column;
     transform: translateX(100%);
-    transition: transform 0.6s ease-in;
+    transition: transform 0.6s ease-in forwards;
     background-color: #B33102;
 }
 
