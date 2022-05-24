@@ -1,38 +1,6 @@
-function ver(){
-let olho = window.document.getElementById("mostrar");
-let senha = window.document.getElementById("senha")
-
-if(senha.type == "password"){
-senha.type ="text"    
-
-}else{
-senha.type = "password"    
-
-}
-}
-
-function mostra(){
-    let confirmSenha=window.document.getElementById("confirm")
-    let outroolho = window.document.getElementById("confirmaolho")
-
-if(confirmSenha.type =="password"){
-confirmSenha.type= "text"    
-}else{
-confirmSenha.type= "password"    
-}
-}
-
-
-
-
-
-
-
-
-
-let nome = window.document.getElementById("nome")
+let vulgo = window.document.getElementById("nome")
 let labelNome=window.document.getElementById("labelNome")
-let validnome = false
+let validvulgo = false
 
 let usuario = window.document.getElementById("usuario")
 let labelUsuario = window.document.getElementById("labelUsuario")
@@ -49,16 +17,16 @@ let validconfirmaSenha = false
 let msgError = window.document.getElementById('msgError')
 let msgSucess = window.document.getElementById('msgSucess')
 
-nome.addEventListener('keyup', () =>{
-   if(nome.value.length <=2 ){
+vulgo.addEventListener('keyup', () =>{
+   if(vulgo.value.length <=2 ){
     labelNome.setAttribute('style', 'color:blue')  
-    nome.setAttribute('style' , 'border-color:blue')
-    validnome= false
+    vulgo.setAttribute('style' , 'border-color:blue')
+    validvulgo= false
    }
     else{
     labelNome.setAttribute('style', 'color: white')
-    nome.setAttribute('style' , 'border-color:white')
-    validnome= true
+    vulgo.setAttribute('style' , 'border-color:white')
+    validvulgo= true
     }
     })
 
@@ -137,4 +105,27 @@ nome.addEventListener('keyup', () =>{
                         localStorage.setItem('listaUser', JSON.stringify(listaUser))
                         }
                     
-                    
+              
+                        function ver(){
+                            let olho = window.document.getElementById("mostrar");
+                            let senha = window.document.getElementById("senha")
+                            
+                            if(senha.type == "password"){
+                            senha.type ="text"    
+                            
+                            }else{
+                            senha.type = "password"    
+                            
+                            }
+                            }
+                            
+                            function mostra(){
+                                let confirmSenha=window.document.getElementById("confirm")
+                                let outroolho = window.document.getElementById("confirmaolho")
+                            
+                            if(confirmSenha.type =="password"){
+                            confirmSenha.type= "text"    
+                            }else{
+                            confirmSenha.type= "password"    
+                            }
+                            }
