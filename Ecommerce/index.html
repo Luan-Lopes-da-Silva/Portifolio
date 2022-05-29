@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="quantidade">Quantidade</label><br>
+    <input type="number" id="quantidade">
+    <input type="submit" value="Adicionar ao carrinho" id="add" onclick="inserirnoCarrinho()">
+    <p id="carrinho"></p>
+
+<script>
+
+    //Funcão adicionar item no carrinho//
+function inserirnoCarrinho(){
+let quantidade = window.document.getElementById('quantidade')
+let carrinho = window.document.getElementById('carrinho')
+let btn = window.document.getElementById('add')
+carrinho.innerText=    quantidade.value
+
+}
+
+</script>
+    
+</body>
+</html>
