@@ -61,13 +61,13 @@ ul li{
     
     }
 
-    #primeironome{
-    margin-top: 50px;
-    margin-left: 47px;    
+    #primeiroNome{
+    margin-top: 25px;
+    margin-left: 48px;    
     margin-bottom: 15px;
     }
 
-    #segundonome{
+    #segundoNome{
     margin-bottom: 15px;  
     margin-left: 43px;  
     }
@@ -107,6 +107,10 @@ ul li{
     margin-left: 170px;
     }
 
+    
+
+   
+
     a{
         text-decoration: none;   
         color: black; 
@@ -117,6 +121,21 @@ ul li{
         background-color: black; 
         text-decoration: underline;
         color: white;   
+        }
+
+
+        #msgError{
+        text-align: center;
+        background-color: black;
+        color: red;
+        display: none;
+                }
+
+        #msgSucess{
+        text-align: center;
+        background-color: green;
+        color: white;
+        display: none;
         }
         
   
