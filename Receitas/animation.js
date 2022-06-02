@@ -17,9 +17,10 @@ let load = window.document.getElementById('load')
 enviar.style.display = 'none'
 load.style.display = 'block'
 setTimeout(()=>{
-window.location.href = 'Home.html'
-},3000)
-}
+  window.location.href = 'Home.html'
+  },3000)
+  }
+
 
 
 function mostrar(){

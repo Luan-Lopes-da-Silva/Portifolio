@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+*{
+margin: 0;
+padding: 0;
+border-style: border-box;   
+}
+
 body{
     display: grid;
     background-color:#EBAF17  ;
@@ -28,14 +34,16 @@ a{
     background-color:#F5582C ;   
     width: 400px;
     height: 400px;
-    transform: translateX(-401px)
+    transform: translateX(-401px);
+    border-radius: 20px;
 }
 
 #box>p{
+    position: relative;
     text-align: center;
     font: normal 12pt arial;
     color: black;
-    margin-top: 30px;
+    margin-top: 160px;
 }
 
 p{
@@ -47,6 +55,7 @@ p{
 
 
 #load{
+    
     display: none;
     width: 20px;
     height: 20px;
@@ -54,7 +63,7 @@ p{
     border-radius: 50%;
     border-top-color: transparent;
     margin: 0 auto;
-    margin-top: -24px;
+    margin-top: 13px;
     color: #ffb801;
     animation: load .9s linear infinite;
 }
@@ -78,35 +87,26 @@ animation-fill-mode: forwards;
 
 img{
 position: absolute;
-margin-left: 20px;
-margin-top: -13px;
+margin-left: 300px;
+margin-top: 85px;
 cursor: pointer;
 }
 
 #senha{
  z-index: 10;   
+ margin-top: 20px;
 }
-
-
-
-        
-@keyframes load {
-to{
-    transform: rotate(360deg);   
-}
-            
-}
-
-            
 #usuario{
-    margin-top: 8px;
+    position: absolute;
+    margin-top: 70px;
     margin-bottom: 10px; 
     margin-left: 110px; 
 }
              
 #senha{
+    position: absolute;
     margin-left: 110px;  
-    margin-top: 8px;  
+    margin-top: 100px;  
     margin-bottom: 10px;
 }
                 
@@ -117,7 +117,7 @@ to{
                 
 #checkbox{
     margin-left: 189px;   
-    margin-top: -2px;
+    margin-top: 4px;
     margin-bottom: 20px;
 }
                  
@@ -132,7 +132,7 @@ h1{
 
 
 #enviar{
-    margin-top: 8px;
+    margin-top: 50px;
     margin-left: 165px;
     font-size: 16px;
 }
@@ -157,16 +157,32 @@ h1{
     }
 
     #labelUsuario{
+    position: absolute;
     font: normal 12pt arial;
     margin-left: 165px;
+    margin-top: 60px;
+    
     
   
     
     }
 
     #labelSenha{
+    position: absolute;
     font: normal 12pt arial;
     margin-left: 170px;
-    
+    margin-top: 90px;
 
     }
+
+
+
+        
+@keyframes load {
+to{
+    transform: rotate(360deg);   
+}
+            
+}
+
+            
