@@ -8,41 +8,10 @@
     <link rel="stylesheet" href="2.css">
 </head>
 
-<header id="header">
 
-    <h1>Gazeta</h1>
-
-    <nav>
-
-        <ul id="menu">
-
-            <li><a href="home.html">Home</a></li>
-
-            <li><a href="cadastro.html">Cadastro</a></li>
-
-            <li><a href="login.html">Login</a></li>
-
-            <li><a href="esportes.html">Esportes</a></li>
-
-            <li><a href="esports.html">E-Sports</a></li>
-            
-            <li><a href="politica">Politica</a></li>
-
-            <li><a href="populacao.html">População</a></li>
-        </ul>
-
-
-
-    </nav>
-    <div class="menu-icon" onclick="abrirMenu()">
-    <img src="https://i.ibb.co/B4jYVzZ/menu.png">
-    </div>
-
-
-
-</header>
 <body>
-    <div id="box"><br>
+    <h1>Pagina de Cadastro</h1>
+    <br><div id="box">
         <div id="formulario">
         <form action="https://formsubmit.co/lopesluan18@outlook.com" method="POST"></form><br>
         <div id="msgError">Preencha todos os campos!!!</div>
@@ -66,9 +35,12 @@
         <label for="confirmpwd" id ="labelconfirmSenha">Confirme sua senha :</label>
         <input type="password" name="confirmpwd" id="confirmpwd" required>
         <input type="submit" value="Enviar" id="enviar" onclick="validar()">
-    
+       
     </div>
+    <a href="home.html"><p>Voltar</p></a>
     </div>    
+
+    
     <script src="cadastro.js"></script>
 </body>
 </html>

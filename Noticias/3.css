@@ -23,6 +23,8 @@ body{
     width: 400px;
     margin: 0 auto;
     margin-top: 200px;
+    border-radius: 20px;
+
 }
 
 a{
@@ -83,7 +85,7 @@ color: #ffb801;
 margin: 0 auto;    
 animation:load .9s linear infinite ;
 margin-top: 30px;
-animation-duration: 3s;
+
 } 
 
 #mostrar{
