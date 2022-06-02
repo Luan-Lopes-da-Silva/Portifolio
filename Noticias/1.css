@@ -43,18 +43,29 @@ ul{
     display: block;     
 }
 
-#noticias>#politica,#esportes,#e-sports{
-background-color: #5F5FC2;
-width: 100%;
-margin-top: 600px;
 
+#politica{
+    background-color: #5F5FC2;
+    width: 100%;
+    margin-top: 700px;
+    margin-bottom: 100px;
+  
+}
+
+#e-sports{
+    background-color: #5F5FC2;
+    width: 100%;
+    margin-bottom: 100px;
+   
 }
 
 
-#noticias>h2{
-    text-align: center;
-    margin-top: 65px;
+#esportes{
+    background-color: #5F5FC2;
+    width: 100%;
+   
 }
+
 
 div>p{
 text-align: center; 
@@ -62,7 +73,9 @@ margin-top: 20px;
 }
 
 h2{
-text-align: center;    
+text-align: center; 
+width: 100%;
+background-color: red;  
 }
 
 .menu-icon{
@@ -238,6 +251,7 @@ p{
 display: flex;
 width: 500%;
 height: 100%;
+margin-top: -24px;
 }
 
 .slide{
@@ -268,6 +282,8 @@ height: 100%;
    #slide5:checked ~ .s1{
     margin-left: -80% ;   
    }
+
+   
    
 
 @keyframes text-reveal {
