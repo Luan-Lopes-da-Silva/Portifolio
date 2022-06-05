@@ -13,6 +13,13 @@
 
     <h1>Gazeta</h1>
 
+    <div class="menu-icon" onclick="abrirMenu()" >
+        <div id="One" ></div>
+        <div id="Two"></div>
+        <div id="Three"></div>
+    </div>
+    
+    
     <nav>
 
         <ul id="menu">
@@ -22,26 +29,28 @@
             <li><a href="cadastro.html">Cadastro</a></li>
 
             <li><a href="login.html">Login</a></li>
-
-            <li><a href="esportes.html">Esportes</a></li>
-
-            <li><a href="esports.html">E-Sports</a></li>
             
-            <li><a href="politica">Politica</a></li>
-
-            <li><a href="populacao.html">População</a></li>
+            <li onmouseenter="Dropdown()" id="dropdown" onmouseout="Sumir()" >Categorias</li>
+            <div class="dropdown">
+                <li ><a href="esportes.html" >Esportes</a></li>
+                <li ><a href="esports.html">E-Sports</a></li>
+                <li><a href="politica">Politica</a></li>
+                <li ><a href="populacao.html">População</a></li>
+                </div>
+</div>
+            
         </ul>
         <input type="search" placeholder="Busca" id="busca"> <img src="https://i.ibb.co/tH7qQ6d/amplie-o-cone-sinal-da-lupa-busca-107950947.png" alt="" srcset="" id="lupa">
 
 
     </nav>
-    <div class="menu-icon" onclick="abrirMenu()">
-    <img src="https://i.ibb.co/B4jYVzZ/menu.png">
-    </div>
+    
+   
 
 
 
 </header>
+
 
 
 
@@ -239,18 +248,15 @@
 
 </section>
 
-        <script>
-  
-             var menu = document.querySelector('nav ul');
-             var menuIcon = document.querySelector('menu-icon');
-             
-             function abrirMenu(){
-             menu.classList.toggle('open');
-             }
-        </script>
+       
 
 <body>
-    
+    <script>
+        function abrirMenu(){
+            let menuIcon = document.querySelector('.menu-icon')
+            let menu = document.querySelector('.nav-ul')
+            menu.classList.toggle('.open')
+        }</script>
 </body>
 <script src="script.js"></script>
 </html>
