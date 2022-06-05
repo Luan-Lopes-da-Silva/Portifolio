@@ -11,6 +11,16 @@ p {
     font-family: Arial;
   }
 
+  body{
+
+    display: grid;
+    max-width: 100%;
+    height: 100vh;
+    place-items: center;
+    background-color: #EBAF17 ;
+    
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -55,15 +65,16 @@ li>a:hover{
     transition:  3s;    
 }
 
-.cadastro{
+#cadastro{
     background-color:#F5582C ;   
     width: 400px;
     height: 400px;
     align-items: center;
     margin: 0 auto;
+  
 }
 
-.cadastro>label{
+#cadastro>label{
     font: normal 12pt Arial;   
 }
 
@@ -107,14 +118,13 @@ li>a:hover{
     margin-bottom: 30px;
 }
        
-
-#enviar{
-    font-size: 12pt;
-    margin-top: 80px;
-    margin-left: -200px;
-    background-color: transparent;
+#submit{
     cursor: pointer;
-    position: absolute;
+    background-color: transparent;
+    margin-left: 160px;
+    font-size: 16px;
+    margin-top: 50px;
+
 }
 
 
@@ -140,15 +150,7 @@ label{
        margin-left:20px;    
 }
 
-body{
 
-        display: grid;
-        max-width: 100%;
-        height: 100vh;
-        place-items: center;
-        background-color: #EBAF17 ;
-        
-}
 
 p{
     margin-top: 40px;
@@ -174,4 +176,62 @@ padding: 10px;
 border-radius: 4px;
 display: none;
 
+}
+
+#popup{
+    opacity: 0;
+    height: 300px;
+    background-color: black;
+    width:600px;
+   
+   
+  
+}
+
+#popup.animar{
+    animation-name: popup-animation;
+    animation-duration: 4s;
+    animation-timing-function: ease ;
+    animation-fill-mode: forwards;
+    }
+
+#cadastrar.nono{
+    animation-name: nono;
+    animation-duration: 10s;
+   
+}
+    
+    
+  
+
+
+
+@keyframes popup-animation {
+    from{
+        opacity: 0;
+      
+        scale: (1.00 , 1.00);
+    }
+    to{
+        margin-top: -300px;
+        margin-left:-100px;
+        scale: (2.00, 2.00);
+    opacity: 1;  
+    }
+}
+
+
+@keyframes nono {
+    0%{
+        margin-left: 100px;
+    }
+    
+    50%{
+        margin-left:0px;
+    }
+
+    100%{
+        margin-right: 100px;
+    }
+    
 }

@@ -1,6 +1,6 @@
-let vulgo = window.document.getElementById("nome")
+let nome = window.document.getElementById("nome")
 let labelNome=window.document.getElementById("labelNome")
-let validvulgo = false
+let validnome = false
 
 let usuario = window.document.getElementById("usuario")
 let labelUsuario = window.document.getElementById("labelUsuario")
@@ -17,16 +17,18 @@ let validconfirmaSenha = false
 let msgError = window.document.getElementById('msgError')
 let msgSucess = window.document.getElementById('msgSucess')
 
-vulgo.addEventListener('keyup', () =>{
-   if(vulgo.value.length <=2 ){
+
+
+nome.addEventListener('keyup', () =>{
+   if(nome.value.length <=2 ){
     labelNome.setAttribute('style', 'color:blue')  
-    vulgo.setAttribute('style' , 'border-color:blue')
-    validvulgo= false
+    nome.setAttribute('style' , 'border-color:blue')
+    validnome= false
    }
     else{
     labelNome.setAttribute('style', 'color: white')
-    vulgo.setAttribute('style' , 'border-color:white')
-    validvulgo= true
+    nome.setAttribute('style' , 'border-color:white')
+    validnome= true
     }
     })
 
@@ -70,14 +72,24 @@ vulgo.addEventListener('keyup', () =>{
                  }
                  })
 
-                 function cadastrar(){
-                  
+                 function Cadastrar(){
+                    let caixadecastro = window.document.getElementById('cadastro')
+                    let modal = window.document.getElementById('popup')
+                    let cadastrar = window.document.getElementById('submit')
+                   
                     
                     if(validnome && validUsuario && validSenha && validconfirmaSenha ){
+                        
+
                         msgSucess.setAttribute('style' , 'display:block')
                         msgSucess.innerHTML="<strong>Usuario cadastrado com sucesso!</strong>"
                         msgError.setAttribute('style','display:none')
                         msgError.innerHTML=''
+                        modal.classList.toggle('animar')
+                      
+                     
+                       
+                        
 
                         setTimeout(()=>{
                         window.location.href="Login.html"
@@ -86,23 +98,21 @@ vulgo.addEventListener('keyup', () =>{
 
                         
                     }else{
+
+                    
+
+                        
                         msgError.setAttribute('style' , 'display:block') 
                         msgError.innerHTML="<strong>Preencha todos os campos!</strong>"  
                         msgSucess.setAttribute('style','display:none')
                         msgSucess.innerHTML='' 
+                       caixadecastro.classList.add('nono')
+                       
+                      
+                        
                     }
                         
-                        let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
-                    
-                        listaUser.push(
-                        {
-                         nomeCad:nome.value,
-                         usuarioCad: usuario.value ,
-                         senhaCad : senha.value
-                         }    
-                        )
-                    
-                        localStorage.setItem('listaUser', JSON.stringify(listaUser))
+                        
                         }
                     
               
@@ -129,3 +139,5 @@ vulgo.addEventListener('keyup', () =>{
                             confirmSenha.type= "password"    
                             }
                             }
+
+                          

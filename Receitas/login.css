@@ -34,7 +34,7 @@ a{
     background-color:#F5582C ;   
     width: 400px;
     height: 400px;
-    transform: translateX(-401px);
+    /*transform: translateX(-401px);*/
     border-radius: 20px;
 }
 
@@ -74,6 +74,7 @@ animation-duration: 4s;
 animation-timing-function: ease ;
 animation-fill-mode: forwards;
 }
+
 
 @keyframes slide {
    to{
@@ -174,6 +175,8 @@ h1{
     margin-top: 90px;
 
     }
+    
+    
 
 
 
