@@ -3,6 +3,8 @@
   let box = window.document.getElementById('box')
   ativar.addEventListener('click', () =>{
   box.classList.toggle('animar')
+
+return box
   })
 
 
@@ -12,11 +14,16 @@
 
 
 function clicar(){
+  let popup = window.document.getElementById('pop-up')
+
 let enviar = window.document.getElementById('enviar')
 let load = window.document.getElementById('load')
 enviar.style.display = 'none'
 load.style.display = 'block'
+popup.style.display='block'
+box.style.filter = 'blur(4px)'
 setTimeout(()=>{
+ 
   window.location.href = 'Home.html'
   },3000)
   }

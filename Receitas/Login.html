@@ -13,23 +13,32 @@
 <body>
 <a href="Home.html"><p>Voltar</p></a>
 <input type="submit" value="Ativar" id="animar">
+    
+    <div id="container">
+    
+    <div id="box" class="animar">
+    <div id="msgError"></div>
+    <div id="msgSucess"></div>
+    <br><label for="usuario" id="labelUsuario">Usuario:</label><br>
+    <input type="text" id="usuario" name="usuario" placeholder="Usuario" required>
+    <br><label for="senha" id="labelSenha">Senha:</label><br>
+    <input type="password" id="senha" name="senha" placeholder="Senha" required>
+    <img src="https://i.ibb.co/sjr5Mpz/65000.png" id= "mostrar" onclick="mostrar()" >
+    <p>Mantenha-me conectado</p>
+    <input type="checkbox" id="checkbox">
+    <br><a href="Senha.html">Esqueceu sua senha?</a>
+    <a href="Cadastro.html">Criar conta</a><br>
+    <button id="enviar" onclick="clicar()">Login</button>
+    </div>
 
-<div id="box" class="animar"> 
-<div id="msgError"></div>
-<div id="msgSucess"></div>
-<br><label for="usuario" id="labelUsuario">Usuario:</label><br>
-<input type="text" id="usuario" name="usuario" placeholder="Usuario" required>
-<br><label for="senha" id="labelSenha">Senha:</label><br>
-<input type="password" id="senha" name="senha" placeholder="Senha" required> 
-<img src="https://i.ibb.co/sjr5Mpz/65000.png" id= "mostrar" onclick="mostrar()" >
-<p>Mantenha-me conectado</p>
-<input type="checkbox" id="checkbox">
-<br><a href="Senha.html">Esqueceu sua senha?</a>
-<a href="Cadastro.html">Criar conta</a><br>
-<br><input type="submit" value="Entrar" id="enviar" onclick="clicar()">
-
-
-<br><div id="load"></div>
+    <div id="pop-up">
+     <p>Login realizado com sucesso  </p> 
+    </div>
+    
+    
+    
+    <br><div id="load"></div>
+  
 </div>
 
 

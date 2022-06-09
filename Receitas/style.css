@@ -1,0 +1,80 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body{
+display: grid;
+width: 100%;
+height: 100vh;   
+background-color: grey; 
+place-items: center;
+}
+
+.dashboard{
+height: 400px;
+width: 400px;
+background-image: linear-gradient(#090979, #ff661a, #00d4ff);
+
+margin: 0 auto;
+overflow: hidden;
+
+}
+h1{
+ color: white;   
+ text-align: center;
+ line-height: 200px;
+}
+
+p:nth-child(2){
+    font:normal 12pt arial;
+margin-top: 90px;
+color: white; 
+text-align: center;   
+
+}
+
+p:nth-child(3){
+    font:normal 12pt arial;
+    margin-top: 15px;
+    text-align: center;
+    color: white; 
+   
+    }
+
+    p:nth-child(4){
+        font:normal 12pt arial;
+        margin-top: 15px;
+        
+        color: white; 
+        text-align: center;   
+        
+        }
+
+
+        p:nth-child(2):hover{
+        font:bold 18pt arial;
+       
+        color: red; 
+        text-align: center;
+        cursor: pointer;   
+        
+        }
+        
+        p:nth-child(3):hover{
+            font:bold 18pt arial;
+          
+            color: red; 
+            text-align: center; 
+            cursor: pointer;  
+            
+            }
+        
+            p:nth-child(4):hover{
+                font:bold 18pt arial;
+                
+                color: red; 
+                text-align: center;   
+                cursor: pointer;
+                }
