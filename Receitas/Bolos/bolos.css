@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 110px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #E1B253;
+}
+
+.header h1 {
+  font-size: 52px;
+  color: red;
+}
+
+.header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .menu li {
+  margin-left: 15px;
+}
+
+.header .menu li:hover {
+  text-decoration: underline;
+  background-color: #614714;
+  -webkit-transition: 5s;
+  transition: 5s;
+}
+
+.header .menu li a {
+  color: white;
+}
+
+.header .menu li a:visited {
+  text-decoration: none;
+}
+
+.header .menu-icon {
+  display: none;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #DB970F;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.flex div {
+  margin: 20px;
+}
+
+.flex div a {
+  color: white;
+}
+
+.flex div a:hover {
+  text-decoration: underline;
+  background-color: #614714;
+}
+
+.flex div a p {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+footer {
+  background-color: red;
+}
+
+footer p {
+  text-align: center;
+  margin-top: 40px;
+  color: white;
+}
+/*# sourceMappingURL=bolos.css.map */

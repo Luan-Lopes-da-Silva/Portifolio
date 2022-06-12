@@ -3,8 +3,6 @@
   let box = window.document.getElementById('box')
   ativar.addEventListener('click', () =>{
   box.classList.toggle('animar')
-
-return box
   })
 
 
@@ -14,19 +12,19 @@ return box
 
 
 function clicar(){
-  let popup = window.document.getElementById('pop-up')
-
-let enviar = window.document.getElementById('enviar')
-let load = window.document.getElementById('load')
-enviar.style.display = 'none'
-load.style.display = 'block'
-popup.style.display='block'
-box.style.filter = 'blur(4px)'
-setTimeout(()=>{
- 
-  window.location.href = 'Home.html'
-  },3000)
-  }
+  
+  let enviar = window.document.getElementById('enviar') 
+  let load = window.document.getElementById('load')  
+  let usuario = document.getElementById('usuario')
+  let senha = document.getElementById('senha')
+  
+  if(usuario.value == ""){
+    box.classList.add('validate-error')
+  }else{
+  enviar.style.display = 'none' 
+  load.style.display = 'block'
+}
+}
 
 
 
