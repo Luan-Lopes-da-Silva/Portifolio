@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobremesas</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="Sobremesas.css">
 </head>
 
 <body>
@@ -16,20 +16,22 @@
 
     <header class="header">
     
-        <a href="#">Logo</a>
-    <nav>
+        <div id="Logo">
+         <h1>Logo</h1>   
+        </div>
+        <nav>
                 <ul class="menu">
-                    <li><a href="Home.html">Home</a></li>
-                    <li><a href="Bolos.html">Bolos</a></li>
-                    <li><a href="Sobremesas.html">Sobremesas</a></li>
-                    <li><a href="Login.html">Login</a></li>
+                    <li><a href="/Home/Home.html">Home</a></li>
+                    <li><a href="/Bolos/Bolos.html">Bolos</a></li>
+                    <li><a href="/Sobremesas/Sobremesas.html">Sobremesas</a></li>
+                    <li><a href="/Login/Login.html">Login</a></li>
                 </ul>
     </nav>
         <div class="menu-icon" onclick="abrirMenu()">
         <img src="https://i.ibb.co/B4jYVzZ/menu.png" ></div>
         </header>
         
-        <h1>Receitas</h1>
+        <h2>Receitas</h2>
 
         <section class="flex">
         <div>
@@ -64,6 +66,7 @@
              function abrirMenu(){
              menu.classList.toggle('open');
              }
-        </script>    
+        </script>   
+        <footer><p>Desenvolvido por Luan</p></footer>
 </body>
 </html>

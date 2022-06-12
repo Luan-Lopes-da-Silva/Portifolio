@@ -96,7 +96,8 @@ h2 {
 .flex div a p {
   text-align: center;
   margin-top: 15px;
-  margin-bottom: 15px;
+  padding: 20px;
+  background-color: black;
 }
 
 footer {
@@ -108,4 +109,4 @@ footer p {
   margin-top: 20px;
   color: white;
 }
-/*# sourceMappingURL=bolos.css.map */
+/*# sourceMappingURL=Sobremesas.css.map */

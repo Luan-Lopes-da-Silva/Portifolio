@@ -31,7 +31,7 @@ border-style: border-box;
             display: grid;
             place-items: center;
             width: 400px;
-            height: 350px;
+            height: 380px;
             background-color: red;
             border-radius: 20px; 
             label{
@@ -44,45 +44,75 @@ border-style: border-box;
             padding: 4px;    
             }
             
-            img{
+            #mostrar{
             margin-left: 280px;
-            margin-top:-80px ;    
+            margin-top:-90px ;  
+            cursor: pointer;
+            
             }
             #enviar{
             display: block;  
-            padding: 4px; 
+            padding: 6px; 
             font-size: 18px; 
             }
+            }
+            #load{
+    
+                display: none;
+                width: 20px;
+                height: 20px;
+                border: 10px solid;
+                border-radius: 50%;
+                border-top-color: transparent;
+                margin-top: 318px;
+                margin-left: -14px;
+                color: #ffb801;
+                animation: load .9s linear infinite;
+                position: absolute;
+            
             }
 
   }
 
+html{
+    padding-bottom: 100px;    
+    }
 
 
-#load{
+
     
-    display: none;
-    width: 20px;
-    height: 20px;
-    border: 10px solid;
-    border-radius: 50%;
-    border-top-color: transparent;
-    margin-top: 318px;
-    margin-left: -14px;
-    color: #ffb801;
-    animation: load .9s linear infinite;
-    position: absolute;
+
+
+    
+    
+/*Animações*/
+
+
+/*Animação Slide login*/
+#box.animar{
+animation-name:slide;
+animation-duration: 4s;
 
 }
 
 
-    
 
 
-    
-    
 
-
+@keyframes slide {
+0%{
+opacity: 0;
+transform: translateX(-400%);  
+}
+50%{
+opacity: 0.5;
+}
+100%{
+    opacity: 1;
+    transform: translateX(0%);   
+}    
+}
+/**/
 
         
 @keyframes load {
@@ -93,9 +123,37 @@ to{
 }
 
 
+/*Animação Squares*/
+.squares{
+    li{
+     width: 80px;
+     height: 80px;
+     background-color:black;
+     display: block;
+     position: absolute;
+     bottom: -40px;  
+     animation: up 2s infinite ;
+     } 
+ }
 
-html{
-padding-bottom: 100px;    
-}
+
+ @keyframes up {
+    from{
+    opacity: 0;
+    transform: translateY(0);
+    }
+    50%{
+      opacity: 1;
+    }
+    to{
+      opacity: 0;
+      transform: translateY(-800px) rotate(360deg);
+    }
+  }
+
+/**/     
+
+
+
 
             
