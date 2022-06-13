@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+
+
+.container {
+    display: grid;
+    place-items: center;
+    background-color: #E1B253;
+    width: 100%;
+    height: 100vh;
+    a{
+    text-decoration: none; 
+    &:hover{
+    text-decoration: underline; 
+        
+    }
+    p{
+        color: white;
+        font-size: 28px;    
+        }   
+    }
+    #cadastro{
+    display: grid;
+    place-items: center;
+    width: 500px ;
+    height: 600px;
+    background-color: red;
+    border-radius: 20px;
+    text-align: center;
+    position: absolute;
+    
+    #msgError{
+    display: none;
+    width: 100%;
+    background-color: aqua;
+    border-radius: 20px;
+    }
+    #msgSucess{
+    display:none ;
+    width: 100%;
+    background-color: green;
+    border-radius: 20px;
+    color: white;
+    }
+    label,input{
+    display: block;
+    }
+   
+    
+    img{
+    position: relative;
+    margin-left: 340px;
+    margin-top: -76px;  
+    cursor: pointer;
+    
+    }
+    button{
+        background-color: #E1B253;  
+        border-radius: 4px;
+        padding: 5px;
+        border: none;
+        transition: filter 4s;
+        &:hover{
+         filter: brightness(0.2);
+         cursor: pointer;   
+        } 
+        }
+    
+    }
+
+    
+   
+}
+
+
+    
+   
+
+
+
+
+
+
+#cadastro.hide{
+    animation-name: hide;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    overflow-y: hidden;
+}
+
+#cadastro.validate-error{
+    animation-name: nono;
+    animation-duration: 300ms;
+    animation-iteration-count: 2;
+
+}
+
+
+@keyframes nono {
+    0%,
+    100%{
+        transform: translateX(0%);
+    }
+    35%{
+        transform: translateX(-15%);
+    }
+    70%{
+        transform: translateX(15%);
+    }
+
+}
+
+
+@keyframes hide {
+    from{
+     opacity: 1;   
+     transform: translateY(0);
+    }
+
+    to{
+    opacity: 0;
+    transform: translateY(100vh);
+    }
+}
+
+
