@@ -105,7 +105,9 @@ nome.addEventListener('keyup', () =>{
                     msgError.innerHTML = ""
                     formulario.classList.add('hide')
                     document.body.style.overflow= 'hidden'
-                    popup.classList.add('subir')
+                    setTimeout(()=>{
+                    window.location.href = "Home/Home.html"    
+                    })
                    }
                  else{
                     msgError.setAttribute('style' , 'display:block')

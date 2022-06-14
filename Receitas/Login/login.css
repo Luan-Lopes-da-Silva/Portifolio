@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   border-style: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #container {
@@ -26,12 +27,12 @@
 
 #container #animar {
   padding: 10px;
-  background-color: rebeccapurple;
+  background-color: #E07A26;
 }
 
 #container #animar:hover {
-  -webkit-filter: brightness(1.6);
-          filter: brightness(1.6);
+  -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
 }
 
 #container #box {
@@ -40,7 +41,7 @@
   place-items: center;
   width: 400px;
   height: 380px;
-  background-color: red;
+  background-color: #7A4315;
   border-radius: 20px;
 }
 
@@ -145,7 +146,7 @@ html {
 .squares li {
   width: 80px;
   height: 80px;
-  background-color: black;
+  background-color: red;
   display: block;
   position: absolute;
   bottom: -40px;

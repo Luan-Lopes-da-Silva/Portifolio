@@ -61,59 +61,29 @@
 }
 
 h2 {
-  font-size: 40px;
   text-align: center;
-  position: relative;
+  font-size: 40px;
   margin-top: 100px;
-  margin-bottom: 100px;
 }
 
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #DB970F;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+h3 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.grid1 {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  background-color: #E1B253;
+  text-align: center;
+}
+
+.grid1 div {
   margin-top: 50px;
 }
-
-.flex div {
-  margin: 20px;
-}
-
-.flex div img {
-  border-radius: 0px 0px 15px 15px;
-}
-
-.flex div a {
-  color: white;
-}
-
-.flex div a:hover {
-  text-decoration: underline;
-  background-color: #614714;
-}
-
-.flex div a p {
-  text-align: center;
-  margin-top: 15px;
-  padding: 20px;
-  border-radius: 15px 15px 0px 0px;
-  background-color: black;
-}
-
-footer {
-  background-color: #FA882A;
-}
-
-footer p {
-  text-align: center;
-  margin-top: 20px;
-  color: white;
-}
-/*# sourceMappingURL=bolos.css.map */
+/*# sourceMappingURL=tortadefrango.css.map */

@@ -33,6 +33,9 @@ senha.type = 'password'
 function clicar(){
 btn.style.display='none'
 load.style.display='block'
+setTimeout(()=>{
+ window.location.href = "/Home/Home.html"   
+},3000)
 }
 
 //Squares//
