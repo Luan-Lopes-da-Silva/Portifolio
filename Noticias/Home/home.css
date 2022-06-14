@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0184C7;
+  height: 300px;
+}
+
+header h1 {
+  font-size: 58px;
+  color: white;
+  margin-left: 20px;
+}
+
+header nav #menu {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav #menu li {
+  margin: 20px;
+  font-size: 20px;
+}
+
+header nav #menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+header nav #menu li a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.content {
+  height: 520px;
+  width: 935px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.content h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.content .slides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 500%;
+  height: 100%;
+}
+
+.content .slide {
+  width: 20%;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+.content .slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.content .navigation {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content .navigation .bar {
+  width: 70px;
+  height: 17px;
+  border: 2px solid red;
+  margin: 5px;
+  border-radius: 9px;
+  -webkit-transition: .6s;
+  transition: .6s;
+  cursor: pointer;
+}
+
+.content .navigation .bar:hover {
+  background-color: white;
+}
+
+.content input {
+  display: none;
+}
+
+.content #slide1:checked ~ .s1 {
+  margin-left: 0;
+}
+
+.content #slide2:checked ~ .s1 {
+  margin-left: -20%;
+}
+
+.content #slide3:checked ~ .s1 {
+  margin-left: -40%;
+}
+
+.content #slide4:checked ~ .s1 {
+  margin-left: -60%;
+}
+
+.content #slide5:checked ~ .s1 {
+  margin-left: -80%;
+}
+/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    
+    <title>Gazeta</title>
+</head>
+
+<header id="header">
+
+    <h1>Gazeta</h1>
+
+    <div class="menu-icon" onclick="abrirMenu()" >
+       
+    </div>
+    
+    
+    <nav>
+
+        <ul id="menu">
+
+            <li><a href="home.html">Home</a></li>
+
+            <li><a href="cadastro.html">Cadastro</a></li>
+
+            <li><a href="login.html">Login</a></li>
+            
+            <li ><a href="#">Categorias</a></li>
+            
+        </ul>
+        
+
+    </nav>
+    
+   
+
+
+
+</header>
+
+
+
+
+
+        
+<div class="content">
+    <h2>Destaques</h2>
+  
+    <div class="slides">
+       
+        
+        <input type="radio" name="slide" id="slide1" checked class="radio">  
+        <input type="radio" name="slide" id="slide2" class="radio">
+        <input type="radio" name="slide" id="slide3" class="radio">
+        <input type="radio" name="slide" id="slide4" class="radio">
+        <input type="radio" name="slide" id="slide5" class="radio">
+        <div class="slide s1"><img src="https://i.ibb.co/JtpXdyk/pexels-sora-shimazaki-5926264-11.jpg"></div>
+        <div class="slide"><img src="https://i.ibb.co/WGsJHcC/pexels-sora-shimazaki-5926289.jpg"></div>
+        <div class="slide"> <img src="https://i.ibb.co/ynN51LY/pexels-pixabay-274506.jpg"></div>
+        <div class="slide"><img src="https://i.ibb.co/D1dD3wC/pexels-pixabay-47730.jpg"></div>
+        <div class="slide"><img src="https://i.ibb.co/qgvzgtL/pexels-vazhnik-7864620.jpg"></div>
+    </div>
+<div class="navigation">
+<label class="bar" for="slide1"></label>
+<label class="bar" for="slide2"></label>
+<label class="bar" for="slide3"></label>
+<label class="bar" for="slide4"></label>
+<label class="bar" for="slide5"></label>
+</div>
+</div>
+
+<div class="esportes">
+    
+</div>
+    
+    
+
+   
+       
+
+<body>
+    <script>
+        function abrirMenu(){
+            let menuIcon = document.querySelector('.menu-icon')
+            let menu = document.querySelector('.nav-ul')
+            menu.classList.toggle('.open')
+        }</script>
+</body>
+<script src="script.js"></script>
+</html>
