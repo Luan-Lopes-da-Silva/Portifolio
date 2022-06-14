@@ -24,6 +24,10 @@ let confirmaOlho = document.getElementById('confirmaolho')
 let formulario = document.getElementById('cadastro')
 let popup = document.getElementById('popup')
 
+
+
+
+
 nome.addEventListener('keyup', () =>{
     if(nome.value.length <=2){
     labelNome.setAttribute('style' , 'color:blue')
@@ -99,6 +103,21 @@ nome.addEventListener('keyup', () =>{
                 function cadastrar(){
 
                  if(validnome && validusuario && validsenha && validconfirmasenha ){
+                    //Caso já tenha algum valor so incrementar senão criar array vazio
+                    let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
+                    
+                    //Array com os parametros que deveremos puxar//
+                    listaUser.push(
+                     {
+                        nome:nome.value,
+                        userCad: usuario.value,
+                        senhaCad: senha.value
+                     }   
+                    )
+                    
+                    //Metodo para chamar e ativar o local storage
+                    localStorage.setItem('listaUser',JSON.stringify(listaUser))
+
                     msgSucess.setAttribute('style' , 'display:block')
                     msgSucess.innerHTML = "<strong>Cadastro feito com sucesso !!!</strong>"
                     msgError.setAttribute('style' , 'display:none')
@@ -106,8 +125,8 @@ nome.addEventListener('keyup', () =>{
                     formulario.classList.add('hide')
                     document.body.style.overflow= 'hidden'
                     setTimeout(()=>{
-                    window.location.href = "Home/Home.html"    
-                    })
+                    window.location.href = "/Login/Login.html"    
+                    },3000)
                    }
                  else{
                     msgError.setAttribute('style' , 'display:block')

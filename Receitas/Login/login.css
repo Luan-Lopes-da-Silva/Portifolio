@@ -45,6 +45,15 @@
   border-radius: 20px;
 }
 
+#container #box #msgError {
+  display: none;
+  width: 100%;
+  background-color: aqua;
+  border-radius: 20px;
+  color: red;
+  text-align: center;
+}
+
 #container #box label {
   display: block;
   text-align: center;
@@ -58,7 +67,7 @@
 
 #container #box #mostrar {
   margin-left: 280px;
-  margin-top: -90px;
+  margin-top: -102px;
   cursor: pointer;
 }
 
@@ -146,7 +155,7 @@ html {
 .squares li {
   width: 80px;
   height: 80px;
-  background-color: red;
+  background-color: black;
   display: block;
   position: absolute;
   bottom: -40px;

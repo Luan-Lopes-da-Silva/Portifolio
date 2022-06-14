@@ -22,8 +22,10 @@
         color: red;
         font-weight: bold;
         }
-    .menu {
+    nav ul{
         display: flex;
+      
+        
         li{
          margin-left: 15px;   
             &:hover{
@@ -41,10 +43,11 @@
             }    
             
         }
-        .menu-icon{
-            display: none;   
-           }
-          
+        
+        
+      .menu-icon{
+       display: none; 
+      }    
    }
 
  h2{
@@ -94,13 +97,45 @@ footer{
      color: white;
     }
     }
+
+
+
+   @media (max-width:868px) {
+    body{
+    overflow-x: hidden;    
+    }
+    
+    
+    .header{
+        align-items: center;
+    .menu{
+    position: absolute;
+    background-color:#614714;
+    right: 0;
+    height: 92vh;
+    width: 50vh;
+    flex-direction: column;   
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
    
+   
+    }
    
     
+    .menu-icon{
+        display: block; 
+        
+        }
 
+        .menu.open{
+            transform: translateX(0%);    
+            }
+}
 
-
-
+    
+ 
+    
 
 
 
@@ -108,4 +143,4 @@ footer{
  
             
  
-    
+   }
