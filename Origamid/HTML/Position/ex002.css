@@ -1,0 +1,19 @@
+h1{
+  border:  2px solid #ccc;
+  padding: 20px 20px 400px 20px;
+  font-size: 20px;
+}
+
+p{
+  background: #e7e7e7; 
+  border: 2px solid #ccc;
+  padding: 20px;
+}
+
+
+.fixo{
+  position: fixed;
+  bottom: 0;  
+  left: 50%;
+
+  }

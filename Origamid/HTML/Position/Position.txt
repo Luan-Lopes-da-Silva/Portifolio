@@ -1,0 +1,10 @@
+O top right left bottom só funcionara caso tenha determinado um posicionamento pro elemento.
+
+O position fixed deixa o elemento fixo na tela independente do scroll ele ainda vai aparecer na tela fixo.
+
+O position relative deixa o posicionamento do elemento relativo ao que ele esta dentro por exemplo se colocarmos position relativo em um P dentro de uma div o posicionamento do P sera modificado usando a div como parametro mesmo você alterando o posicionamento dele ele continuara ocupando o mesmo espaço de origem.
+
+O position absolute deixa o posicionamento do elemento relativo ao body é como se ele não existisse no fluxo da tela.Para não deixarmos o elemento solto pela tela temos que definir que o elemento pai do elemento com position absolute seja um position relative.
+
+o z-index é uma ordem de apararição dos elementos o padrao é todos os elementos vem com z-index 0 no exemplo proposto temos um o elemento de class index1 com position relative e o elemento de class index2 com position absolute quanto posto um perto do outro o elemento de class index2 aparece por cima não pelo seu position absolute mais simplesmente pq o z-index respeita a ordem de escrita de codigo ou seja o que vem escrito depois tem prioridade de aparição.
+Para contornar isso temos que definir o elemento desejado com z-index 1 assim estaremos falando que esse elemento esta acima de todos os outros o z-index só funciona caso tenhamos um position definido também
