@@ -1,0 +1,159 @@
+/*# Cores
+
+cinza-fundo: #f7f7f7
+cinza-texto: #c6c6c6
+vermelho: #ee2211
+
+# Tipografia
+
+fonte: Arial
+parágrafos: 20px
+Vantagens Bikcraft: 64px
+
+# Tamanhos
+conteúdo principal: máximo 1000px
+*/
+
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;  
+}
+
+h1,h2,h3,p{
+margin: 0;  
+}
+
+
+body{
+font-family: Arial;  
+background: #f7f7f7;
+display: grid;
+
+place-items: center;
+height: 100vh;
+
+}
+
+header{
+display: flex;
+flex-direction: column; 
+margin-top: 60px;
+}
+
+.logo{
+width: 150px;  
+margin: 0 auto;
+margin-bottom: 40px;
+}
+
+
+ul{
+list-style: none;
+display: flex;  
+}
+
+li{
+margin: 15px;  
+}
+
+li a{
+color: black;
+text-decoration: none; 
+background-color: #ffff;
+padding: 15px 30px;
+border-radius: 4px;
+text-transform: uppercase;
+}
+
+main{
+display: grid;
+place-items: center;
+margin-top: 60px;
+grid-template-columns: 1fr 1fr;  
+width: 1000px;
+
+}
+
+.foto{
+width: 100%;  
+grid-column: 2;
+}
+
+.informacoes{
+background: #ffff;  
+position: relative;
+display: grid;
+grid-template-columns: 1fr ;
+height: 100%;
+place-items:  end;
+padding: 60px;
+
+
+}
+
+h1::before{
+content: "";
+display: inline-block;  
+position: absolute;
+height: 4px;
+width: 64px;
+background: #ee2211;
+left: 468px;
+top: 30px;
+}
+
+.informacoes p {
+ font-size: 1.25rem; 
+text-align: right;
+}
+
+.informacoes a{
+ text-transform: uppercase; 
+background: #ee2211;
+color: #ffff; 
+text-decoration: none;
+padding: 15px 30px;
+border-radius: 4px; 
+}
+
+h2{
+text-transform: uppercase;
+align-items: center;
+text-align: right;
+font-size: 4rem;
+padding: 60px;
+color: #c6c6c6 ;
+}
+
+.vantagens{
+  background: #ffff;
+  width: 100%;
+  padding: 60px;
+  display: grid;
+  gap: 20px;
+}
+
+.vantagens-item{
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.vantagens-item p {
+  grid-column: 2;
+  margin-top: 10px;
+}
+
+.vantagens-item img {
+ margin-right: 15px;
+}
+
+footer{
+ font-size: 1.25rem;
+ background: #fff;
+ width: 100%;
+ text-align: center;
+ padding: 40px; 
+ margin-top: 60px;
+}
+
