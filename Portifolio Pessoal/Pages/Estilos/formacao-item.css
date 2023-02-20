@@ -1,0 +1,86 @@
+.formacao-container{
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  place-items: center;
+}
+.curso{
+  color: var(--c1);
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 100px;
+}
+
+#foto{
+  width:600px;
+  border-radius: 12px
+}
+
+.resumo-formacao{
+  width: 400px;
+  line-height: 1.5;
+  color: var(--c12);
+  text-align: center;
+}
+
+.projeto-formacao{
+  margin-top: 40px;
+  color: var(--a12);
+}
+
+.projetos{
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.projeto{
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+  background-color: var(--c10);
+  color: var(--c2);
+  display: grid;
+  place-items: center;
+}
+
+.projeto img{
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.resumo-projeto{
+  color: var(--a5);
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 12px;
+}
+
+
+@media(max-width:480px){
+  .curso{
+    margin-top: 40px;
+  }
+  #foto{
+    width: 300px;
+  }
+
+  .resumo-formacao{
+    width: 300px;
+  }
+
+  .projeto-formacao{
+    margin-top: 60px;
+  }
+
+  .projetos{
+    gap: 60px;
+  }
+  .projeto{
+    margin-bottom: 60px;
+    margin-top: 12px;
+  }
+}

@@ -1,0 +1,334 @@
+.projeto-header{
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  margin-top: 60px;
+  margin: auto auto;
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+  position: relative;
+}
+
+.projeto-galeria{
+  display: grid;
+}
+
+.principal{
+  width: 560px;
+  height: 400px;
+}
+
+.principal img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.secundarias .projeto1,
+.secundarias .projeto2,
+.secundarias .projeto3 {
+  width: 180px;
+  height: 125px;
+  margin-top: 60px;
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.secundarias2 .projeto3 {
+  width: 180px;
+  height:125px;
+  margin-top: 20px;
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.secundarias img{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.secundarias2 img{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.secundarias img:hover,
+.secundarias2 img:hover{
+  cursor: pointer;
+}
+
+.principal img:hover{
+  cursor:zoom-in;
+}
+
+.projeto-resumo{
+  height: max-content;
+}
+.sobre{
+  color: var(--c3);
+  text-align: center;
+}
+
+.resumo{
+  width: 400px;
+  line-height: 1.5;
+  margin-top: 8px;
+  color: var(--c12);
+  text-align: center;
+  margin: 8px auto;
+}
+
+.redes-sociais{
+display: flex;
+margin: 40px auto;
+gap: 12px;
+justify-content: center;
+}
+
+.rede-item img{
+  background-color: var(--c2);
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.rede-item img:hover{
+  cursor: pointer;
+}
+
+.tecnologia-titulo{
+  color: var(--c1);
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.tecnologias{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.tecnologia-item{
+  display: grid;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: var(--c1);
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.tecnologia-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.visao-titulo{
+  color: var(--c1);
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.sugestao{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  place-items: center;
+}
+
+.sugestao-titulo{
+  width: 390px;
+  color: var(--c1);
+  margin:auto auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: block;
+}
+#sugestao{
+  width: 350px;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: var(--c10);
+  color: var(--c3);
+}
+
+#sugestao::placeholder{
+color: var(--c11);
+}
+
+.btn{
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--c8);
+  color: var(--c1);
+}
+
+.btn:hover{
+  cursor: pointer;
+}
+
+.modal{
+  width: 800px;
+  height: 500px;
+  border-radius: 20px;
+  position: absolute;
+  left: 200px;
+  top: 100px;
+  display: none;
+}
+
+.modal img{
+border-radius: 20px;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+#projeto1 .close-modal,
+#projeto2 .close-modal,
+#projeto3 .close-modal{
+  display: block;
+  width: 50px;
+  height: 3px;
+  position: absolute;
+  background-color: var(--c12);
+  margin-top: -460px;
+  margin-left: 730px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.close-modal::after{
+  content: '';
+  width: 50px;
+  height: 3px;
+  display: inline-block;
+  background-color: var(--c12);
+  transform: rotate(90deg);
+  position: absolute;
+}
+
+
+
+#imgModal:hover{
+cursor: zoom-out;
+}
+
+.modal:hover::before,
+.modal:hover::after{
+  cursor: pointer;
+}
+@media(max-width:480px){
+.projeto-header{
+  grid-template-columns: 1fr;
+
+}
+.principal{
+  width: 350px;
+  height: 200px;
+}
+.secundarias .projeto1,
+.secundarias .projeto2,
+.secundarias .projeto3 {
+  width: 110px;
+  height: 90px;
+  margin-top: 30px;
+  display: inline-block;
+  margin-left: 4px;
+}
+.secundarias2 .projeto3 {
+  width: 110px;
+  height: 90px;
+  margin-top: 20px;
+  display: inline-block;
+  margin-left: 4px;
+}
+.resumo{
+  width: 300px;
+  line-height: 1.5;
+  margin-top: 8px;
+  color: var(--c12);
+  text-align: center;
+  margin: 8px auto;
+}
+
+.redes-sociais{
+display: flex;
+margin: 12px auto;
+gap: 8px;
+justify-content: center;
+}
+
+.tecnologia-titulo{
+  color: var(--c1);
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.tecnologias{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.tecnologia-item{
+  width: 70px;
+  height: 70px;
+}
+
+.tecnologia-item img{
+  width: 40px;
+  height: 40px;
+}
+.modal{
+  width: 350px;
+  height: 200px;
+  border-radius: 20px;
+  position: absolute;
+  left: 20px;
+  top: 100px;
+  display: none;
+}
+
+.modal img{
+border-radius: 20px;
+width: 100%;
+height: 100%;
+}
+
+#projeto1 .close-modal,
+#projeto2 .close-modal,
+#projeto3 .close-modal{
+  display: block;
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  background-color: var(--c12);
+  margin-top: -190px;
+  margin-left: 320px;
+  transform: rotate(45deg);
+}
+.close-modal::after{
+  content: '';
+  width: 20px;
+  height: 3px;
+  display: inline-block;
+  background-color: var(--c12);
+  transform: rotate(90deg);
+  position: absolute;
+}
+
+
+}
+
+   
+

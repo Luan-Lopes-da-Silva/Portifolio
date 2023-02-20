@@ -1,0 +1,133 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root{
+  --c1: #E4ECFF;
+  --c2: #D3DCF1 ;
+  --c3: #B0BAD0 ;
+  --c4: #9BA4B8;
+  --c5: #8994AA ;
+  --c6: #6F7A8F ;
+  --c7: #5B6477;
+  --c8: #4D5668 ;
+  --c9: #434D60 ;
+  --c10: #384051 ;
+  --c11: #2F3747;
+  --c12: #1C212D ;
+  --a1: #0394FC;
+  --a2: #0089EC ;
+  --a3: #0080DC;
+  --a4: #0076CA;
+  --a5: #056CB6;
+  --a6: #0664A7;
+  --a7: #06538B;
+  --a8: #00397C;
+  --a9: #003573;
+  --a10: #002264;
+  --a11: #020053;
+  --a12: #020045 ;
+}
+
+body{
+  padding-bottom: 900px;
+}
+
+.modal-ativo{
+  opacity: 0.2;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+.hack-s{
+  font-family: 'Hack';
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.roboto-b{
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.roboto-b2{
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.fira-s{
+  font-family: 'Fira Code';
+  font-weight: 400;
+  font-size: 16px;
+}
+
+body{
+  background-color: var(--c5);
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: max-content;
+  padding: 30px;
+}
+
+ul{
+  display: flex;
+  list-style: none;
+  gap: 16px;
+}
+
+nav a {
+  color:var(--c1);
+}
+nav a:hover{
+  text-decoration: none;
+}
+
+li{
+  cursor: pointer;
+  position: relative;
+  color:var(--c1) ;
+}
+
+li::after{
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: var(--a1);
+  transition: .7s;
+}
+
+li:hover::after{
+  width: 100%;
+}
+
+.separador{
+  content: '';
+  display: flex;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--a1);
+  align-self: center;
+}
+
+@media(max-width:480px){
+  .roboto-b2{
+    font-size: 30px;
+  }
+  body{
+    padding-bottom: 0;
+  }
+}
