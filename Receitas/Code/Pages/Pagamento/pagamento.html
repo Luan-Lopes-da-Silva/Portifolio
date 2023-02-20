@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagamento</title>
+  <link rel="stylesheet" href="Estilos/pagamento.css">
+</head>
+<body>
+  <h1>Pagamento</h1>
+  <main>
+    <br>
+    <div class="formas-de-pagamento">
+      <div class="item-1">
+        <img src="Svgs/payments_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+        <input type="radio" id="dinheiro" name="pagamento">
+      </div>
+      <div class="item-1">
+        <img src="Svgs/barcode_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+        <input type="radio" id="boleto" name="pagamento">
+      </div>
+      <div class="item-1">
+        <img src="Svgs/account_balance_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+        <input type="radio" id="transferencia" name="pagamento">
+      </div>
+      <div class="item-1">
+        <img src="Svgs/credit_card_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+        <input type="radio" id="cartao" name="pagamento">
+      </div>
+    </div>
+    <br>
+
+ 
+
+    <dialog id="modal">
+      <div class="close"></div>
+      <p>Compra realizada com sucesso agora é so aguardar nosso email de confirmação de pagamento,
+        e logo após iremos mandar um email com os prazos de entregas.
+        <br>Desde já agradeçemos pela confiança em nosso trabalho e pela preferencia por nosssos produtos.
+        <br>Att: Equipe Dev-Bolt
+     
+      </p>
+    </dialog>
+    <div class="form-pagamento">
+      
+      <div class="conteudo">
+        <img src="Imagens/qrcode-pix.png" alt="">
+        <p>Chave PIX : nlb#g5M*w7a</p>
+        <p>Nome : John Doe</p>
+        <p>Tipo de Chave : Aleatoria</p>
+      </div>
+    </div>
+    <div class="form-boleto">
+      <h2>Seu boleto no valor de R$ 260,00 foi gerado com sucesso</h2>
+      <p>Você podera vizualizar ou imprimir o boleto ao clicar no botao a baixo</p>
+      <button><a href="https://i.ibb.co/R6PFdz2/boleto31.jpg">Imprimir Boleto</a></button>
+    </div>
+ 
+    <div class="form-transferencia">
+      <p>Conta Corrente : 36779-9</p>
+      <p>Agência : 9694</p>
+      <p>Banco : Itaú</p>
+      <p>Cidade : Sao Paulo</p>
+      <p>Estado : SP</p>
+    </div>
+    <div class="form-cartao">
+      <label for="numero-cartao">Numero cartão</label>
+      <input class="text" type="text" name="numero-cartao" id="numero-cartao">
+      <label for="nome-cartao">Nome gravado no cartão</label>
+      <input class="text" type="text" name="nome-cartao" id="nome-cartao">
+      <div class="validade">
+        <label for="mm">MM</label>
+        <label for="yy">YY</label><br>
+        <input class="text" type="text" name="mm" id="mm">
+        <input class="text"type="text" name="yy" id="yy">
+      </div>
+      <label for="cvv">CVV</label>
+      <input class="text" type="text" name="cvv" id="cvv" placeholder="123">
+      <label for="cpf-cartao">CPF titular cartão</label>
+      <input class="text" type="text" name="cpf-cartao" id="cpf-cartao" placeholder="000.000.000-00">
+      <label for="parcelas">Numero de parcelas</label>
+      <select name="parcelas" id="parcelas">
+        <option value="1x">1 x de R$ 60,00 </option>
+        <option value="3x">3 x de R$ 20,00</option>
+        <option value="12x">12 x de R$ 5,00</option>
+      </select>
+    </select>
+    <div class="card-front">
+      <div class="bandeira">
+        <div class="logo"></div>
+        <div class="logo"></div>
+        <div class="inputs">
+          <input type="text" placeholder="John Doe" id="cardName"><br>
+          <input type="text" placeholder="0000 0000 0000 0000" id="cardNumber"><br>
+            <div class="validadeCard">
+            <input type="text" placeholder="00 /" id="cardMonth">
+            <input type="text" placeholder="00" id="cardYear">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="card-back">
+      <div class="cvv">
+        <input type="text" placeholder="123" id="cardCvv">
+      </div>
+    </div>
+    </div>
+  
+
+    <button id="btn">Finalizar a compra</button>
+    <br>
+  
+  </main>
+
+</body>
+<script src="Script/script.js" type="module"></script>
+</html>
+

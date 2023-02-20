@@ -1,0 +1,81 @@
+<DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Estilos/styles.css">
+  <link rel="shortcut icon" href="Imagens/favicon-32x32.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Estilos/style.css">
+  <title>Cadastre-se</title>
+</head>
+<body>
+
+  <div class="container">
+    <dialog class="preenchidoCorretamente">
+      <p>Todos os campos preenchidos corretamente, agora é so aguardar que no maximo em algumas horas iremos te enviar um email de confirmação com todas as informação sobre sua categoria, e todos os beneficios que ela contém.</p>
+      <div class="btnFecha"></div>
+    </dialog>
+    <dialog class="preenchidoIncorretamente">
+      <p>Por favor para finalizar o seu cadastro verifique todos os campos e veja aonde você não preencheu, ou preencheu incorretamente.</p>
+      <div class="btnFecha"></div>
+    </dialog>
+    <div class="col1">
+     <img src="Svgs/Logo.svg" alt="" id="logo">
+    </div>
+    <div class="col2">
+      <div class="form">
+        <h2>Sign Up</h2>
+        <p>Diga pra gente em qual categoria voce se encaixa?</p>
+        <div class="inputs-radios">
+         
+          
+
+
+          <div class="radio"><input type="radio" name="radio" id="chefe">
+              <label for="radio">Chefe</label>
+              <div class="resultadoChefe"></div>
+            </div>
+          <div class="radio"><input type="radio" name="radio" id="aprendiz">
+            <label for="radio">Aprendiz</label>
+          </div>
+      
+  </div>
+        <p class="resultadoChefe"></p>
+        <p class="resultadoAprendiz"></p>
+        <label for="email">Email</label>
+        <div class="msgSucess">Campo preenchido de acordo</div>
+        <div class="msgError">Preencha corretamente</div>
+        <input type="text" name="email" id="email" placeholder="email@email.com" minlength="1" maxlength="32">
+        <label for="confirmaEmail">Confirme o Email</label>
+        <div class="msgSucess">Campo preenchido de acordo</div>
+        <div class="msgError">Preencha corretamente</div>
+        <input type="text" name="confirmaEmail" id="confirmaEmail" placeholder="email@email.com" minlength="1" maxlength="32">
+        <label for="senha" class="senha">Senha</label>
+        <div class="msgSucess">Campo preenchido de acordo</div>
+        <div class="msgError">Preencha corretamente</div>
+        <img src="Svgs/mostra.svg" alt="" class="password">
+        <span></span>
+        <input type="password" name="senha" id="senha" placeholder="01234567" minlength="1" maxlength="20" >
+ 
+        <label for="confirmaSenha">Confirme a senha</label>
+        <div class="msgSucess">Campo preenchido de acordo</div>
+        <div class="msgError">Preencha corretamente</div>
+        <img src="Svgs/mostra.svg" alt="" class="password">
+        <span></span>
+        <input type="password" name="confirmaSenha" id="confirmaSenha"  placeholder="01234567" minlength="1" maxlength="20">
+
+     
+      
+        <button class="btn">Cadastrar-se</button>
+      </div>
+      
+
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>

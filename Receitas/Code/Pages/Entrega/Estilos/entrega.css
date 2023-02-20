@@ -1,0 +1,279 @@
+*{
+ margin:0 ;
+ padding: 0;
+ box-sizing: border-box; 
+}
+
+a{
+  text-decoration: none;
+  color: #B7BBB7;
+}
+
+body{
+ background-color: #4C4D4C;
+
+}
+
+h1{
+  margin-top: 120px;
+  margin-bottom: 10px;
+  margin-left: 120px;  
+  font-size: 3rem;
+  color: white;
+}
+
+ main{
+ background-color: #848985; 
+ width: 80%;
+ border-radius: 5px;
+ margin: 0 auto;
+ margin-bottom: 20px;
+}
+
+
+.form1{
+background-color: #CACECA;
+margin-left:40px ;
+margin-right: 40px;
+margin-top: 20px;
+border-radius: 5px;
+position: relative;
+height: 700px;
+padding-top: 20px ;
+}
+
+label{
+display: block;
+margin-left: 20px;
+margin-top:5px;
+position: absolute;
+z-index: 1;
+font-size: 1.5rem;
+color: #4C4D4C;
+}
+
+input{
+margin-left: 12px;  
+position: absolute;
+margin-top: 20px;
+width: 240px;
+height: 30px;
+border-radius: 5px;
+border: none;
+background-color:#B7BBB7 ;
+padding-left: 5px;
+}
+
+.item1>label{
+  margin-top: 5px;
+  transition: .5s;
+}
+
+.item1>input{
+  padding: 8px;
+      font-size: 1rem;
+}
+
+.item1>input:focus+label{
+  margin-top: -8px;
+  }
+
+
+
+.item2>input{
+margin-top: 100px;  
+padding: 8px;
+font-size: 1rem;
+}
+
+.item2>input:focus+label{
+margin-top: 75px;
+}
+
+.item2>label{
+margin-top: 85px;
+transition: .5s;
+
+}
+
+.item3>input{
+  margin-top: 200px;  
+  padding: 8px;
+  font-size: 1rem;
+  }
+  
+  .item3>label{
+  margin-top: 185px;
+  transition: .5s;
+  }
+
+  
+.item3>input:focus+label{
+  margin-top: 170px;
+  }
+  
+  .item4>input{
+    margin-top: 300px;  
+    padding: 8px;
+    font-size: 1rem;
+    }
+    
+    .item4>label{
+    margin-top: 285px;
+    transition: .5s;
+    }
+    .item4>input:focus+label{
+      margin-top: 270px;
+      }
+
+    .item5>input{
+      margin-top: 400px;  
+      padding: 8px;
+      font-size: 1rem;
+      }
+      
+      .item5>label{
+      margin-top: 385px;
+      transition: .5s;
+      }
+      .item5>input:focus+label{
+        margin-top: 370px;
+        }
+
+
+        .item6>input{
+        margin-top: 500px;
+        padding: 8px;
+        font-size: 1rem;
+        }
+        
+        .item6>label{
+        margin-top: 485px;
+        transition: .5s;
+        }
+
+        .item6>input:focus+label{
+          margin-top: 470px;
+          }
+
+        .item7>input{
+          margin-top: 600px;  
+          padding: 8px;
+        font-size: 1rem;
+          }
+          
+          .item7>label{
+          margin-top: 585px;
+          transition: .5s;
+          }
+          .item7>input:focus+label{
+            margin-top: 570px;
+            }
+          
+        
+          h2{
+          padding-top: 20px;
+          padding-left: 8px; 
+          padding-bottom: 8px; 
+          color: #3A3A3A;
+          font-size: 3rem;
+          }
+          .envio{
+            background-color: #4C4D4C;
+            margin-left:40px ;
+            margin-right: 40px;
+            margin-top: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            
+           }
+
+           .envio-item{
+            background-color: #3A3A3A;
+            margin-left: 10px;
+            width: 300px;
+            height: 80px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+           }
+
+           .col-1>p{
+           width: max-content;
+           margin-bottom: 5px;
+           margin-top: 5px; 
+           margin-left: 10px;
+           color: #B7BBB7;
+          }
+
+          h3{
+            margin-left: 10px; 
+            font-size: 2rem; 
+            font-weight: bold;
+            color: #4C4D4C;
+            margin-bottom: 10px;
+          }
+
+          
+
+           .col-2{
+            margin-right: 10px; 
+            }
+
+            .col-2>p{
+              color:#B7BBB7; 
+            }
+
+          
+
+           #radio{
+           width: 10px;
+           height: 10px;
+           margin-left: -25px;
+          }
+
+        button{
+          padding: 12px 16px;
+          margin-left: 40%;
+          margin-bottom: 5%;
+          border-radius: 5px;
+          border: none;
+          background: linear-gradient(#3A3A3A,#515050);
+          color: #81FF95;
+          cursor: pointer;
+        }
+
+       button a{
+         color: #81FF95;
+       }
+
+        button:hover{
+          background: linear-gradient(#3A3A3A,#6F6C6C);
+          
+        }
+
+       @media(max-width:550px){
+        h1{
+          margin-top: 40px;
+          margin-bottom: 20px;
+          margin-left: 0px;
+          text-align: center;
+        }
+        h2{
+          font-size: 2rem;
+          text-align: center;
+        }
+
+        .envio-item{
+          width: 280px;
+        }
+
+        button{
+          margin-left: 26%;
+         text-align: center;
+        }
+
+       }
+        

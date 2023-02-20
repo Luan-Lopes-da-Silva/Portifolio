@@ -1,0 +1,379 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;  
+}
+
+
+header{
+background-image:url("../Imagens/paulo-doi-6uTQmtqcAzs-unsplash.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+width: 100%;
+height: 400px;  
+display: grid;
+place-items: center;
+}
+
+h1{
+font-size: 4rem;  
+color: white;
+}
+
+main{
+background-color: black;
+width: 100%;  
+display: grid;
+place-items: center;
+position: relative;
+}
+
+.nutritivos{
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background-color: white ;
+  width: 600px;
+  height: 300px;
+  position: relative;
+  border-radius: 5px;
+}
+
+h2{
+ text-align: center;
+ margin-top: 60px; 
+ color: black;
+}
+
+.itens{
+position: absolute;
+bottom: 20%;
+width: 100%;
+display: inline-flex;
+justify-content: center;
+}
+
+.btn{
+  position: absolute;
+  margin-top: -15%;
+  margin-left: -5%;
+  background-color: #023F6A;
+  color: white;
+  padding: 12px 32px;
+  border-radius: 5px;
+  }
+  
+  a{
+  text-decoration: none;  
+  color: white;
+  }
+  
+  .btn:hover{
+  background-color: darkblue;
+  cursor: pointer;
+  }
+
+.nutritivos-itens{
+height: 100px;
+width: 100px; 
+background-color: #E52222; 
+margin-left: 20px;
+position: relative;
+border-radius: 5px;
+}
+
+
+  .circulo{
+    display: grid;
+    place-items: center;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background-color: #CB9DB3;
+    right: 10%;
+    top: 10%;
+    border-radius: 50%;
+    z-index: 0;
+    }
+
+
+    .img-nutritivo{
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;  
+    position:absolute;
+    }
+
+  
+
+  .subtitulo{
+   text-align: center; 
+   bottom: -30%;
+   position: absolute;
+   width: 100px;
+   color: black;
+   font-size: 1rem;
+  }
+
+  
+
+  
+
+    .depoimento{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #AD1C00;
+    width: 800px;
+    height: 300px;
+    border-radius: 5px;
+    margin-bottom: 100px;
+    text-align: center;
+    }
+
+  .texto{
+    display: grid;
+   width: 500px;
+   grid-column: 2; 
+   height: fit-content;
+   font-size: 2rem;
+   margin-right: 60px;
+   margin-top: 20px;
+   color: white;
+  }
+
+  .avatar{
+    display: grid;
+    place-items: center;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    z-index: 0;
+    position: absolute;
+    grid-column: 1;
+    margin-left: 60px;
+    margin-top: 20px;
+  }
+
+  .avatar-face{
+   width: 100%; 
+   height: 100%;
+   border-radius: 50%;
+   position: absolute;
+   object-fit: cover;
+  }
+
+  .stars{
+  display: flex;  
+  align-self: center;
+  margin-left: 115%;
+  }
+
+  .receita{
+  background-color: #E52222;
+  width: 1000px;
+  margin-bottom: 250px;
+  border-radius: 5px;
+ 
+  }
+
+  .ingredientes p{
+    margin-left: 60px;
+    margin-top: 20px;
+    color: #FDFFB0;
+
+  }
+  
+  h3{
+  text-align: center;
+  margin-top: 20px;  
+  margin-bottom: 20px;  
+  color: #FEFFC7;
+  }
+
+  .modo-de-preparo{
+   text-align: start; 
+   margin-left: 10px;
+  }
+
+  .modo-de-preparo p {
+   margin-bottom: 20px; 
+   margin-top: 10px;
+   width: 500px; 
+   color: #FDFFB0;
+  }
+
+
+
+  .post{
+    
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 5%;
+  right: 20%;
+  border-radius: 50% ;
+  z-index: 0;
+  display: flex; 
+  align-items: center;
+}
+
+.post-img{
+ width: 100%;
+ object-fit: cover; 
+ border-radius: 50%;
+ }
+
+.post-texto {
+ margin-left: 10px;
+ text-align: start;
+ color: white;
+}
+
+#clipboard{
+  margin-left: 90%;
+}
+#clipboard:hover{
+  fill: white;
+  cursor: pointer;
+}
+
+#copy{
+  display: none;
+}
+
+@media(max-width:800px){
+  body{
+    overflow-x: hidden;
+  }
+
+  main{
+   display: grid;
+   place-items: center; 
+  }
+ .nutritivos{
+ width: 500px;
+ height: 300px;
+
+}
+
+.depoimento{
+  width: 500px;
+  height: 300px;
+ 
+}
+.texto{
+  font-size: 1.5rem;
+  text-align: center;
+  width: 300px;
+  margin-left: -100px;
+  margin-top: 40px;
+
+}
+
+.avatar{
+ margin-left: 40px; 
+ margin-top: 40px;
+}
+
+.stars{
+  margin-left: 50%;
+}
+
+.receita{
+  width: 500px;
+ }
+
+ #clipboard{
+  margin-top: -50px;
+  margin-left: 85%;
+ }
+
+ .copy-content>p{
+  font-size: 1.4rem;
+ }
+
+ .modo-de-preparo>p{
+  font-size: 1.4rem;
+  width: 80%;
+  text-align: center;
+  margin: 20px auto;
+  }
+  .btn{
+    margin-left: -6%;
+    margin-top: -30%;
+  }
+  .post-texto{
+    font-size: 1.5rem;
+  }
+  .post{
+    bottom: 3%;
+  }
+}
+
+
+@media(max-width:600px){
+  body{
+    overflow-x: hidden;
+  }
+
+  main{
+   display: grid;
+   place-items: center; 
+  }
+ .nutritivos{
+ width: 400px;
+ height: 300px;
+
+}
+
+.depoimento{
+  width: 400px;
+  height: 300px;
+ 
+}
+.texto{
+  font-size: 1.5rem;
+  text-align: center;
+  width: 250px;
+  margin-left: -120px;
+}
+
+.avatar{
+ margin-left: 20px; 
+}
+
+.stars{
+  margin-left: 30%;
+}
+
+.receita{
+  width: 400px;
+ }
+
+ #clipboard{
+  margin-top: -50px;
+  margin-left: 85%;
+ }
+
+ .copy-content>p{
+  font-size: 1.4rem;
+ }
+
+ .modo-de-preparo>p{
+  font-size: 1.4rem;
+  width: 80%;
+  text-align: center;
+  margin: 20px auto;
+  }
+  .btn{
+    margin-left: -8%;
+    margin-top: -40%;
+  }
+  .post-texto{
+    font-size: 1.5rem;
+  }
+
+  .post{
+    bottom: 2%;
+  }
+}
