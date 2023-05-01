@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha carteira</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<body>
+  <h1>Minha carteira</h1>
+  <main>
+    <label for="nome">Nome do usuario</label>
+    <input type="text" id="nome" name="nome">
+    <select name="fins" id="fins">
+      <option value="Para que ira usar o aplicativo" hidden>Para que ira usar o aplicativo</option>
+      <option value="Controle de gastos">Controle de gastos</option>
+      <option value="Controle das finanças">Controle das finanças</option>
+      <option value="Ter noção de quanto posso investir por mes">Ter noção de quanto posso investir por mes</option>
+    </select>
+    <input type="submit" id="btn" value="Criar carteira">
+    <div class="servicos">
+      <div class="servicos-container">
+        <div class="servico-item">
+          <img src="add_FILL0_wght400_GRAD0_opsz48 (1).svg" alt="adicionar-novos-passivos">
+        </div>
+        <div class="servico-item">
+          <img src="show_chart_FILL0_wght400_GRAD0_opsz48.svg" alt="adicionar-novos-transitorios">
+        </div>
+        <div class="servico-item">
+          <img src="wallet_FILL0_wght400_GRAD0_opsz48.svg" alt="adicionar-novos-ativos">
+        </div>
+        <div class="servico-item">
+          <img src="paid_FILL0_wght400_GRAD0_opsz48.svg" alt="remover-passivos">
+        </div>
+        <div class="resumo">
+          
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="index.js"></script>
+</html>

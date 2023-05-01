@@ -1,0 +1,67 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+width: 100%;
+height: 100vh;
+display: grid;
+place-items: center;
+font-family: 'Ubuntu';
+background-color: #4f772d;
+}
+ 
+h1{
+color: #ecf39e;
+}
+label{
+  display: block;
+  color: #ffffff;
+}
+
+input,
+select{
+padding: 8px ;
+border-radius: 8px;
+border: 2px solid green;
+font-family: 'Ubuntu';
+}
+
+input[type='submit'],
+button{
+padding: 12px ;
+border-radius: 8px;
+border: 2px solid #ecf39e;
+cursor: pointer;
+transition: .7s;
+margin-left: 12px;
+}
+
+input[type='submit']:hover,
+button:hover{
+ background-color: #90a955;
+ color: #ffffff;
+}
+
+#login{
+  margin-top: 4px;
+  width: 320px;
+}
+
+.servicos-container{
+  display:none;
+  justify-content:center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.servico-item{
+
+  background-color: red;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
