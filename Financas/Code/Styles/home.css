@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Banks';
+  src: url('../Assets/Font/Banks&MilesSingleLine.ttf');
+}
+
+body{
+  font-family: 'Banks';
+  background-color: darkblue;
+}
+
+header{
+background-color: red;
+height: 300px;
+}
+ul{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 10px;
+  justify-content: end;
+}
+li{
+  list-style: none;
+  background-color: black;
+  width: max-content;
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+li img{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+h1{
+  text-align: center;
+  margin: 20px auto;
+  font-size: 4rem;
+  width: 250px;
+}
