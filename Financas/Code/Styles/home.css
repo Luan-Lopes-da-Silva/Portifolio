@@ -9,13 +9,16 @@
   src: url('../Assets/Font/Banks&MilesSingleLine.ttf');
 }
 
+span{
+  width: max-content;
+}
+
 body{
   font-family: 'Banks';
-  background-color: darkblue;
 }
 
 header{
-background-color: red;
+background-color: #453F49;
 height: 300px;
 }
 ul{
@@ -27,7 +30,7 @@ ul{
 }
 li{
   list-style: none;
-  background-color: black;
+  background-color: #89848C;
   width: max-content;
   display: grid;
   place-items: center;
@@ -46,4 +49,128 @@ h1{
   margin: 20px auto;
   font-size: 4rem;
   width: 250px;
+  color: #E2E1E3;
+}
+
+.score{
+  margin: 20px auto;
+  text-align: center;
+  color: #9EEF41 ;
+}
+
+.score .circle{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #E2E1E3;
+  margin: 20px auto;
+}
+
+main{
+  padding: 20px;
+  background-color: #5E5962;
+}
+article.saldo{
+  margin-top: 60px;
+}
+
+h3{
+font-size: 16px;
+color: #E2E1E3;
+}
+
+.saldo span{
+  font-size: 32px;
+}
+
+.cartoes{
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+}
+
+
+.cartao{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+.cartao img{
+  width: 400px;
+  margin-top: -26px;
+  order: 1;
+}
+
+.cartao span:nth-child(2){
+  margin-top: -60px;
+
+  order: 2;
+  color: #E2E1E3;
+}
+
+.cartao span:nth-child(3){
+  order: 3;
+  font-size: 32px;
+}
+
+.operacoes span:nth-child(2){
+  font-size: 32px;
+}
+
+.operacoes .progresso{
+  width: 400px;
+  height: 20px;
+  background-color: #E2E1E3;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.operacoes .progresso::after{
+  content: '';
+  display: flex;
+  position: absolute;
+  width: 360px;
+  height: 20px;
+  border-radius: 8px;
+  background-color: red;
+}
+
+.operacoes img{
+  width: 20px;
+}
+
+.medidor{
+  display: flex;
+  gap: 12px;
+}
+
+.investimentos h3{
+  text-align: center;
+  font-size: 32px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.investimentos span{
+  color: #E2E1E3;
+}
+
+.investimentos .progresso{
+  width: 200px;
+  height: 20px;
+  background-color: #E2E1E3;
+  border-radius: 8px;
+  position: relative;
+}
+
+.investimentos .progresso::after{
+  content: '';
+  display: block;
+  width: 60px;
+  height: 20px;
+  background-color: #453F49;
+  border-radius: 8px;
+  position: absolute;
 }
