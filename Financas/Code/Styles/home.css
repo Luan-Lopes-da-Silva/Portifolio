@@ -27,6 +27,7 @@ ul{
   align-items: center;
   padding: 10px;
   justify-content: end;
+  margin-right: 50px;
 }
 li{
   list-style: none;
@@ -70,8 +71,67 @@ input{
   display: none;
 }
 
+.container-saldo,
+.container-operacoes,
+.container-cartoes,
+.container-investimentos{
+display: none;
+}
+
 select{
   display: block;
+}
+
+#avatar{
+  position: relative;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+a:hover{
+  text-decoration: underline;
+}
+p a{
+  position: absolute;
+  right: 3%;
+  top: 7%;
+}
+.inputs{
+  display: none;
+}
+
+.container-cartoes{
+  grid-template-columns: repeat(4,300px);
+  gap: 12px;
+}
+
+.container-cartao{
+  width: 300px;
+  height: 300px;
+  margin-bottom: 12px;
+  margin-top: 30px;
+}
+
+.container-cartao img{
+  width: 200px;
+  height: 200px;
+}
+
+.container-cartao .nome,
+.container-cartao .saldo,
+.container-cartao .text{
+  display:block;
+  color: #E2E1E3;
+}
+
+.container-cartao .nome{
+  margin-bottom: -30px;
+}
+
+.container-cartao .text{
+  margin-top: -30px;
 }
 
 

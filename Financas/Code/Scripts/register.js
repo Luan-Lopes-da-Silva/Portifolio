@@ -3,7 +3,7 @@ const emailInput = document.querySelector('#email')
 const confirmEmail = document.querySelector('#confirmEmail')
 const senha = document.querySelector('#senha')
 const confirmSenha = document.querySelector('#confirmSenha')
-
+const salario = document.querySelector('#salario')
 
 nome.addEventListener('keyup',function(ev){
   if(nome.value.length === 0 || nome.value.length<2){
@@ -82,26 +82,36 @@ if(ev.currentTarget.previousElementSibling.type === 'password'){
 }
 }
 
-document.querySelector('#register .form .senha img').addEventListener('click', showPassword)
-document.querySelector('#img2').addEventListener('click', showPassword)
+function criarPerfil(ev){
+ev.preventDefault();
+if(emailInput.previousElementSibling.innerText === 'Campo Preenchido corretamente' && confirmEmail.previousElementSibling.innerText === 'Campo Preenchido corretamente'  && senha.parentElement.previousElementSibling.innerText === 'Campo Preenchido corretamente' && confirmSenha.parentElement.previousElementSibling.innerText === 'Campo Preenchido corretamente' && nome.previousElementSibling.innerText === 'Campo Preenchido corretamente'){
+let usuario = {
+  nome:nome.value,
+  email:emailInput.value,
+  senha:senha.value,
+  salario:salario.value
+}
+localStorage.setItem(nome.value, JSON.stringify(usuario))
+setTimeout(function() {
+window.location.href = 'http://127.0.0.1:5500/Pages/login/login.html';
+}, 3000);
+}else{
+   alert('Preencha todos os campos')
+}
+}
+  
 
-document.querySelector('button').addEventListener('click',function(ev){
-  ev.preventDefault();
-  if(emailInput.previousElementSibling.innerText === 'Campo Preenchido corretamente' && confirmEmail.previousElementSibling.innerText === 'Campo Preenchido corretamente'  && senha.parentElement.previousElementSibling.innerText === 'Campo Preenchido corretamente' && confirmSenha.parentElement.previousElementSibling.innerText === 'Campo Preenchido corretamente' && nome.previousElementSibling.innerText === 'Campo Preenchido corretamente'){
-  let usuario = {
-    nome:nome.value,
-    email:emailInput.value,
-    senha:senha.value
-  }
-  localStorage.setItem(nome.value, JSON.stringify(usuario))
-   setTimeout(function() {
-    window.location.href = 'http://127.0.0.1:5500/Pages/login/login.html';
-    }, 3000);
-  }else{
-    alert('Preencha todos os campos')
-  }
- 
- 
-})
+const mostrarSenha1 = document.querySelector('#register .form .senha img')
+const mostrarSenha2 = document.querySelector('#img2')
+const btnConfirma = document.querySelector('button')
+mostrarSenha1.addEventListener('click',showPassword)
+mostrarSenha2.addEventListener('click',showPassword)
+btnConfirma.addEventListener('click',criarPerfil)
+
+
+
+
+
+
 
 

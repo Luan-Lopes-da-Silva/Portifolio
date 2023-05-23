@@ -13,28 +13,15 @@ keys.forEach((key)=>{
   let logado = {
     usuario : usuarioObj.nome,
     logado : true,
-    acess: 0
+    acess:0
   }
-
- 
-
   setTimeout(function(){
+    logado.acess++
     window.location.href = 'http://127.0.0.1:5500/Pages/home/home.html'
-    logado.acess++
     localStorage.setItem('logado',JSON.stringify(logado))
-    logado.acess++
-    localStorage.setItem('logado',JSON.stringify(logado))
-    const logadoStorage = localStorage.getItem('logado')
-    const logadoObj = JSON.parse(logadoStorage)
-    if(logadoObj.acess === 1){
-      alert('É a primeira vez no site')
-    }else if(logadoObj.acess>1){
-      alert('Pode mostrar home')
-    }
     },2000)
     }
   })
-
 } 
 document.querySelector('#login').addEventListener('click',checkUser)
 
