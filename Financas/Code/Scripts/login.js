@@ -1,28 +1,32 @@
 const email = document.querySelector('#email')
 const senha = document.querySelector('#senha')
-const keys = Object.keys(localStorage)
+const localStorageItem = localStorage.getItem('Usuarios')
+const objLocalStorage = JSON.parse(localStorageItem)
+const keysObjeto = Object.keys(JSON.parse(localStorageItem))
+let spanSenha = senha.previousElementSibling
+let spanEmail = email.previousElementSibling
 
 function checkUser(){
- 
-keys.forEach((key)=>{
-  const usuarioStr = localStorage.getItem(key)
-  let usuarioObj = JSON.parse(usuarioStr)
-  if(email.value === usuarioObj.email && senha.value === usuarioObj.senha){
-    document.querySelector('#login').style.display = 'none'
-    document.querySelector('.loading').style.display = 'block'
-  let logado = {
-    usuario : usuarioObj.nome,
-    logado : true,
-    acess:0
+  if(objLocalStorage.email === email.value && objLocalStorage.senha === senha.value){
+  objLocalStorage.logado = true
+  localStorage.setItem('Usuarios',JSON.stringify(objLocalStorage))
+  document.querySelector('#login').style.display = 'none'
+  document.querySelector('.loading').style.display = 'block'
+  spanSenha.innerText = ''
+  spanEmail.innerText = ''
+  setTimeout(()=>{
+  window.location.href = 'http://127.0.0.1:5500/Pages/home/home.html'
+  },2000)
+  }else if(objLocalStorage.email === email.value && objLocalStorage.senha !== senha.value){
+  spanSenha.innerText = 'Senha incorreta'
+  }else if(objLocalStorage.senha === senha.value && objLocalStorage.email !== email.value){
+    spanSenha.innerText = ''
+    spanEmail.innerText = 'Email invalido'
   }
-  setTimeout(function(){
-    logado.acess++
-    window.location.href = 'http://127.0.0.1:5500/Pages/home/home.html'
-    localStorage.setItem('logado',JSON.stringify(logado))
-    },2000)
-    }
-  })
-} 
+  else{
+    alert('Usuario não encontrado')
+  }
+  } 
 document.querySelector('#login').addEventListener('click',checkUser)
 
 

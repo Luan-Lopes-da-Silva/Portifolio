@@ -121,6 +121,10 @@ color: #9EEF41;
 margin-bottom: 4px;
 }
 
+.msg{
+margin-bottom: 8px;
+}
+
 #register .senha input{
   margin-bottom: 0;
   background-color: transparent;
@@ -160,6 +164,14 @@ margin-bottom: 4px;
   margin: auto auto;
   margin-top: -2px;
   margin-bottom: 12px ;
+}
+#loginRegister{
+  display: none;
+}
+
+#loginRegister a{
+  text-decoration: none;
+  color: inherit;
 }
 
 @keyframes spinner-d3wgkg {

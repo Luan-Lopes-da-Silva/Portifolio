@@ -21,18 +21,18 @@ nome.addEventListener('keyup',function(ev){
 
 
 emailInput.addEventListener('keyup',function(ev){
-if(emailInput.value.length === 0 || emailInput.value.length<12){
-const span = ev.currentTarget.previousElementSibling
-span.classList.remove('right')
-span.classList.add('error')
-span.innerText = 'Preencha Corretamente'
-}else{
-const span = ev.currentTarget.previousElementSibling
-span.classList.remove('error')
-span.classList.add('right')
-span.innerText = 'Campo Preenchido corretamente'
-}
-})
+  if(!emailInput.value.match((/.{2,}(?<=)@(?=)\w{2,}\.(?=)\w{2,}/g))){
+  const span = ev.currentTarget.previousElementSibling
+  span.classList.remove('right')
+  span.classList.add('error')
+  span.innerText = 'Preencha Corretamente'
+  }else{
+  const span = ev.currentTarget.previousElementSibling
+  span.classList.remove('error')
+  span.classList.add('right')
+  span.innerText = 'Campo Preenchido corretamente'
+  }
+  })
 
 confirmEmail.addEventListener('keyup',function(ev){
  if(confirmEmail.value !=emailInput.value){
@@ -84,33 +84,34 @@ if(ev.currentTarget.previousElementSibling.type === 'password'){
 
 function criarPerfil(ev){
 ev.preventDefault();
-if(emailInput.previousElementSibling.innerText === 'Campo Preenchido corretamente' && confirmEmail.previousElementSibling.innerText === 'Campo Preenchido corretamente'  && senha.parentElement.previousElementSibling.innerText === 'Campo Preenchido corretamente' && confirmSenha.parentElement.previousElementSibling.innerText === 'Campo Preenchido corretamente' && nome.previousElementSibling.innerText === 'Campo Preenchido corretamente'){
-let usuario = {
+const usersLocalStorage = localStorage.getItem('Usuarios')
+const objLocalStorage = JSON.stringify(usersLocalStorage)
+const emailExiste = objLocalStorage.includes(emailInput.value)
+if(emailInput.previousElementSibling.innerText === 'Campo Preenchido corretamente' && confirmEmail.previousElementSibling.innerText === 'Campo Preenchido corretamente'  && senha.parentElement.previousElementSibling.innerText === 'Campo Preenchido corretamente' && confirmSenha.parentElement.previousElementSibling.innerText === 'Campo Preenchido corretamente' && nome.previousElementSibling.innerText === 'Campo Preenchido corretamente' && !emailExiste){
+ let usuario = {
   nome:nome.value,
   email:emailInput.value,
   senha:senha.value,
   salario:salario.value
-}
-localStorage.setItem(nome.value, JSON.stringify(usuario))
-setTimeout(function() {
-window.location.href = 'http://127.0.0.1:5500/Pages/login/login.html';
-}, 3000);
-}else{
-   alert('Preencha todos os campos')
-}
-}
-  
-
-const mostrarSenha1 = document.querySelector('#register .form .senha img')
-const mostrarSenha2 = document.querySelector('#img2')
+ }
+ localStorage.setItem('Usuarios',JSON.stringify(usuario))
+ setTimeout(()=>{
+  window.location.href = 'http://127.0.0.1:5500/Pages/login/login.html'
+ },1000)
+ }else if(nome.value === '' || emailInput.value === '' || confirmEmail.value==='' || senha.value==='' || confirmSenha.value === '' || salario.value === ''){
+  alert('Preencha todos os campos')
+ }else{
+   emailInput.previousElementSibling.innerText = 'Email já utilizado'
+   emailInput.previousElementSibling.classList.add('error')
+   emailInput.previousElementSibling.classList.remove('right')
+ }
+ }
+const img1 = document.querySelector('.form .senha img')
+img1.addEventListener('click',showPassword)
+const img2 = document.querySelector('#img2')
+img2.addEventListener('click',showPassword)
 const btnConfirma = document.querySelector('button')
-mostrarSenha1.addEventListener('click',showPassword)
-mostrarSenha2.addEventListener('click',showPassword)
 btnConfirma.addEventListener('click',criarPerfil)
-
-
-
-
 
 
 

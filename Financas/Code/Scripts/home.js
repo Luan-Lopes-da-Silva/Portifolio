@@ -1,8 +1,9 @@
-const obj = localStorage.getItem('logado')
+const obj = localStorage.getItem('Usuarios')
 const objReal = JSON.parse(obj)
 const main = document.querySelector('main')
 const inputs = document.querySelector('.inputs')
 const inputsRadios = document.querySelectorAll('input[type="radio"]')
+const regex = objReal.nome.replace(/(?<=\s)\w{1,}/g,"")
 
 
 function hello(){
@@ -11,12 +12,12 @@ function hello(){
  const hours = date.getHours()
  const minutes = date.getMinutes()
  if(hours>6 && hours<13){
-  sayHello.innerText = `Bom dia ${objReal.usuario.slice(0,4)}`
+  sayHello.innerText = `Bom dia ${regex}`
  }else if(hours>13 && hours<=18){
-  sayHello.innerText = `Boa tarde ${objReal.usuario.slice(0,4)}`
+  sayHello.innerText = `Boa tarde ${regex}`
   sayHello.style.width = 300+'px'
  }else{
-  sayHello.innerText = `Boa noite ${objReal.usuario.slice(0,4)}`
+  sayHello.innerText = `Boa noite ${regex}`
   sayHello.style.width = 300+'px'
  }
 }
@@ -24,20 +25,13 @@ function hello(){
 function logout(ev){
   ev.preventDefault();
   objReal.logado = false
-  objReal.acess++
-  localStorage.setItem('logado',JSON.stringify(objReal))
+  localStorage.setItem('Usuarios',JSON.stringify(objReal))
   setTimeout(()=>{
   alert('Você foi desconectado')
   window.location.href = 'http://127.0.0.1:5500/Pages/login/login.html'
   },1000)
 }
-
-
-  inputs.style.display = 'block'
-
-
-
-
+inputs.style.display = 'block'
 function checkInput(ev){
 if(ev.currentTarget.id === 'saldo'){
 document.querySelector('.saldo').style.display = 'block'
