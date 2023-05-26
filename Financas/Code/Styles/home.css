@@ -19,7 +19,7 @@ body{
 
 header{
 background-color: #453F49;
-height: 300px;
+height: max-content;
 }
 ul{
   display: flex;
@@ -47,7 +47,7 @@ li img{
 
 h1{
   text-align: center;
-  margin: 20px auto;
+  margin:auto;
   font-size: 4rem;
   width: 250px;
   color: #E2E1E3;
@@ -82,9 +82,7 @@ select{
   display: block;
 }
 
-#avatar{
-  position: relative;
-}
+
 a{
   text-decoration: none;
   color: #fff;
@@ -93,10 +91,10 @@ a{
 a:hover{
   text-decoration: underline;
 }
-p a{
+.avatar p a{
   position: absolute;
-  right: 3%;
-  top: 7%;
+  left: 14%;
+  bottom: -48%;
 }
 .inputs{
   display: none;
@@ -133,6 +131,37 @@ p a{
 .container-cartao .text{
   margin-top: -30px;
 }
+
+.avatar{
+ width: 70px; 
+ height: 70px;
+ position: relative;
+ display: grid;
+ place-items: center;
+}
+
+input[type='file']{
+  display: none;
+}
+
+label[for='avatarInput']{
+  font-size: 12px;
+  width: 60px;
+  text-align: center;
+  margin: auto auto;
+  cursor: pointer;
+  position: absolute;
+}
+
+#avatar{
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
 
 
 

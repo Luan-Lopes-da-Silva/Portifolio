@@ -76,6 +76,7 @@ button{
   margin: auto auto;
   margin-bottom: 40px;
   transition: .7s;
+  margin-top: 20px;
 }
 
 button:hover{
@@ -143,7 +144,7 @@ margin-bottom: 8px;
   display: flex;
   align-items: center;
   height: max-content;
-  background-color: #fff;
+  background-color: #E2E1E3;
   border-radius: 8px;
   margin-bottom: 20px;
 }
@@ -162,7 +163,7 @@ margin-bottom: 8px;
   border-right-color: #9EEF41;
   animation: spinner-d3wgkg 1s infinite linear;
   margin: auto auto;
-  margin-top: -2px;
+  margin-top: 6px;
   margin-bottom: 12px ;
 }
 #loginRegister{
@@ -172,6 +173,24 @@ margin-bottom: 8px;
 #loginRegister a{
   text-decoration: none;
   color: inherit;
+}
+.password{
+  display: flex;
+  align-items: center;
+  height: max-content;
+  background-color: #E2E1E3;
+  border-radius: 8px;
+}
+
+.password input{
+  background-color: transparent;
+  margin-bottom: 0px;
+}
+#showPassword{
+  width: 30px;
+  align-items: center;
+  margin-left: -40px;
+  cursor: pointer;
 }
 
 @keyframes spinner-d3wgkg {
