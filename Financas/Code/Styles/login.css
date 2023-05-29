@@ -4,6 +4,10 @@
   box-sizing: border-box; 
   font-family: 'Roboto';
 }
+
+body{
+  position: relative;
+}
 #register h1{
   width: 90px;
   text-align: center;
@@ -126,6 +130,14 @@ margin-bottom: 4px;
 margin-bottom: 8px;
 }
 
+.msg.error{
+  font-weight: 700;
+  color: #FF0000;
+  margin-bottom: 4px; 
+}
+
+
+
 #register .senha input{
   margin-bottom: 0;
   background-color: transparent;
@@ -153,19 +165,7 @@ margin-bottom: 8px;
   background-color: #65AE11;
 }
 
-.loading {
-  display: none;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  border: 9px solid;
-  border-color: #453F49;
-  border-right-color: #9EEF41;
-  animation: spinner-d3wgkg 1s infinite linear;
-  margin: auto auto;
-  margin-top: 6px;
-  margin-bottom: 12px ;
-}
+
 #loginRegister{
   display: none;
 }
@@ -193,6 +193,68 @@ margin-bottom: 8px;
   cursor: pointer;
 }
 
+.register{
+  display: none;
+  width: 400px;
+  text-align: center;
+  background-color: #211D24;
+  padding: 24px;
+  border-radius: 4px;
+  position: absolute;
+  top: 20%;
+  right: 45%;
+  transition: .7s;
+}
+
+.exit p{
+  font-size: 2.5rem;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: .5s;
+}
+
+.exit p:hover{
+  color: #5E5962;
+}
+
+main.ativo{
+opacity: 0.7; 
+}
+.register.ativo{
+  display: block;
+  z-index: 1000;
+  opacity: 1;
+}
+
+.register h1{
+  margin-top: 0px;
+  color: #E2E1E3;
+  margin-bottom: 4px;
+}
+
+.register p{
+ margin-top: 8px; 
+}
+#recovery{
+  font-size: 4rem;
+}
+
+.loading {
+  display: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 9px solid;
+  border-color: #453F49;
+  border-right-color: #9EEF41;
+  animation: spinner-d3wgkg 1s infinite linear;
+  margin: auto auto;
+  margin-top: 6px;
+  margin-bottom: 12px ;
+}
 @keyframes spinner-d3wgkg {
   to {
      transform: rotate(1turn);

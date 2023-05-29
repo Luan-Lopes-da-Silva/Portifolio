@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -26,104 +26,65 @@
             <p><a href="">Logout</a></p>
           </div>
         </li>
-       
+
     </ul></nav>
-    <h1>Bom dia Luan</h1>
+    <h1></h1>
   </header>
   <main class="main">
-    <div class="inputs">
-      <label for="saldo">Saldo a conta</label>
-      <input type="radio" name="option" id="saldo">
-      <label for="budget">Budget para investimento</label>
-      <input type="radio" name="option" id="budget">
-      <label for="cartao">Novo cartão</label>
-      <input type="radio" name="option" id="cartao">
-      <label for="operacao">Nova operação financeira</label>
-      <input type="radio" name="option" id="operacao">
-      <label for="investimento">Novo Investimento</label>
-      <input type="radio" name="option" id="investimento">
-    </div>
-    <div class="forms">    
-      <div class="saldo">
-        <form action="">
-          <h2>Saldo Contas</h2>
-          <label for="valorDeSaldo">Qual é o saldo da conta?</label>
-          <input type="text" name="valorDeSaldo" id="valorDeSaldo">
-          <label for="conta">De qual banco e essa conta?</label>
-          <input type="text" name="conta" id="conta">
-          <button id="saldo">Incluir</button>
-        </form>
-      </div>
-      <div class="budget">
-        <form action="">
-          <h2>Budget para investimentos</h2>
-          <label for="valorParaInvestimento">Qual é o valor que você tem destinado para investimentos?</label>
-          <input type="text" id="valorParaInvestimento" name="valorParaInvestimento">
-          <label for="dataEmissao">Quando foi feito esse deposito?</label>
-          <input type="date" id="dataEmissao" name="dataEmissao">
-          <button id="budget">Incluir</button>
-        </form>
-      </div>
-      <div class="cartao">
-        <h2>Adicionar novo cartão</h2>
-        <form action="">
-          <label for="nomeCartao">Qual nome ou banco do cartão?</label>
-          <input type="text" id="nomeCartao" name="nomeCartao">
-          <label for="saldoCartao">Coloque o saldo disponivel no cartão</label>
-          <input type="text" id="saldoCartao" name="saldoCartao" placeholder="Somente numeros">
-          <button id="cartao">Incluir</button>
-        </form>
-      </div>
-      <div class="operacao">
-        <h2>Adicionar nova operacao</h2>
-        <form action="">
-          <label for="nomeOperacao">Qual é o nome da operação?</label>
-          <input type="text" id="nomeOperacao" name="nomeOperacao">
-          <label for="dataDePagamento">Qual é a data de pagamento desse boleto?</label>
-          <input type="date" name="dataDePagamento" id="dataDePagamento">
-          <button id="operacao">Incluir</button>
-        </form>
-      </div>
-      <div class="investimento">
-        <h2>Adicionar novo investimento</h2>
-        <form action="">
-          <label for="fundo">Qual é o nome do fundo de investimento?</label>
-          <input type="text" name="fundo" id="fundo">
-          <label for="valor">Qual é o valor que tem nesse fundo?</label>
-          <input type="text" id="valor" name="valor">
-          <button id="investimento">Incluir</button>
-        </form>
-      </div>
+    <div class="score">
+        <div class="circular-progress">
+          <div class="value-container">
+            <p>Seu score esta normal</p>
+          </div>
+        </div>
     </div>
     <div class="container-saldo">
-    <span>Seu saldo</span>
-    <p id="saldo-conta"></p>
+    <span class="title">Seu saldo</span>
+    <p class ="saldo">R$ 0.20</p>
     </div>
+     <span class="title">Seus cartões</span>
     <div class="container-cartoes">
-      <span>Seus cartões</span>
+    <div class="container-cartao">
+      <img src="../../Assets/Svgs/credit-card-svgrepo-com (2).svg" alt="cartao-1">
+      <span class="title">Seu saldo</span>
+      <span class="saldo">R$ 8.20</span>
+    </div>
+    <div class="container-cartao">
+      <img src="../../Assets/Svgs/credit-card-svgrepo-com.svg" alt="cartao-2">
+      <span class="title">Seu saldo</span>
+      <span class="saldo">R$ 200.20</span>
+    </div>
+    <div class="container-cartao">
+      <img src="../../Assets/Svgs/credit-card-svgrepo-com (2).svg" alt="cartao-3">
+      <span class="title">Seu saldo</span>
+      <span class="saldo">R$ 20.20</span>
+    </div>
     </div>
     <div class="container-operacoes">
-    <h2>Suas Operações financeiras</h2>
-    <span class="valor"></span>
+    <span  class="title2">Suas Operações financeiras</span>
+    <span class="valor">R$ 3800.00</span>
     <div class="progress-bar">
-
     </div>
     <div class="msg">
+      <span></span>
       <img src="" alt="">
     </div>
     </div>
+    <h2>Investimentos</h2>
+    <span id="budget">R$ 5000.00 para investimentos</span>
     <div class="container-investimentos">
-      <h2>Investimentos</h2>
-      <span></span>
       <div class="investimento">
-        <span class="nome"></span>
-        <span class="valorEmAcoes"></span>
-        <div class="progress-bar"></div>
+        <span class="nome">HLG11</span>
+        <span class="valorEmAcoes">R$ 800,00</span>
+        <div class="progress"></div>
         <span class="porcentagemDoBudget"></span>
       </div>
-      <div class="investimento"></div>
-      <div class="investimento"></div>
-      <div class="investimento"></div>
+      <div class="investimento">
+        <span class="nome">HCTR11</span>
+        <span class="valorEmAcoes">R$ 1200,00</span>
+        <div class="progress"></div>
+        <span class="porcentagemDoBudget"></span>
+      </div>
     </div>
 
   </main>

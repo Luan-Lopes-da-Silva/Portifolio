@@ -4,6 +4,8 @@ const confirmEmail = document.querySelector('#confirmEmail')
 const senha = document.querySelector('#senha')
 const confirmSenha = document.querySelector('#confirmSenha')
 const salario = document.querySelector('#salario')
+const main = document.querySelector('main')
+const aviso = document.querySelector('.register')
 
 nome.addEventListener('keyup',function(ev){
   if(nome.value.length === 0 || nome.value.length<2){
@@ -107,6 +109,8 @@ else if(nome.value === '' || emailInput.value === '' || confirmEmail.value==='' 
    emailInput.previousElementSibling.innerText = 'Email já utilizado'
    emailInput.previousElementSibling.classList.add('error')
    emailInput.previousElementSibling.classList.remove('right')
+   aviso.classList.add('ativo')
+   main.classList.add('ativo')
  }
  }
 

@@ -1,16 +1,84 @@
 const obj = localStorage.getItem('Usuarios')
 let objReal = JSON.parse(obj)
 const main = document.querySelector('main')
-const inputs = document.querySelector('.inputs')
 const inputsRadios = document.querySelectorAll('input[type="radio"]')
 const regex = objReal.nome.replace(/(?<=\s)\w{1,}/g,"")
+let progressBar = document.querySelector('.circular-progress')
+let valueContainer = document.querySelector('.value-container')
+let text = valueContainer.querySelector('p')
+const saldos = document.querySelectorAll('.saldo')
+const msg = document.querySelector('.msg span')
+const valor = document.querySelector('.valor')
+const valorRegex = valor.innerText.replace(/[R$\s]/g,'')
+const salario = objReal.salario
+const after = document.styleSheets[0].cssRules[29]
+console.log(after)
 
+
+saldos.forEach((saldo)=>{
+const saldoNumb = parseFloat(saldo.innerText.replace(/[R$\s]/g,''))
+if(saldoNumb<10){
+saldo.style.color = '#f00' 
+}else if(saldoNumb<40){
+saldo.style.color = '#EBFF00' 
+}else if(saldoNumb<250){
+saldo.style.color = '#9EEF41' 
+}
+})
+
+let progressValue = 0 
+let progressEndValue = 0
+let speed = 10
+
+let progress = setInterval(()=>{
+  progressValue++;
+  if(valueContainer.innerText === 'Seu score esta normal'){
+  progressBar.style.background = `conic-gradient(
+  #fb8500 ${progressValue * 3.6}deg,
+  #E2E1E3 ${progressValue*3.6}deg 
+  )`;
+  text.style.color = '#fb8500'
+  progressEndValue = 25
+  if(progressValue === progressEndValue){
+    clearInterval(progress)
+  }  
+  }else if(valueContainer.innerText === 'Seu score esta ruim'){
+    progressBar.style.background = `conic-gradient(
+      #d00000 ${progressValue * 3.6}deg,
+      #E2E1E3 ${progressValue*3.6}deg 
+     )`;
+     text.style.color = '#d00000'
+      progressEndValue = 10
+      if(progressValue === progressEndValue){
+        clearInterval(progress)
+      } 
+  }else if(valueContainer.innerText === 'Seu score esta bom'){
+    progressBar.style.background = `conic-gradient(
+      #4d5bf9 ${progressValue * 3.6}deg,
+      #E2E1E3 ${progressValue*3.6}deg 
+     )`;
+     text.style.color = '#4d5bf9'
+      progressEndValue = 50
+      if(progressValue === progressEndValue){
+        clearInterval(progress)
+      } 
+  }else if(valueContainer.innerText === 'Seu score esta excelente'){
+    progressBar.style.background = `conic-gradient(
+      #9EEF41 ${progressValue * 3.6}deg,
+      #E2E1E3 ${progressValue*3.6}deg 
+     )`;
+     text.style.color = '#9EEF41'
+      progressEndValue = 100
+      if(progressValue === progressEndValue){
+        clearInterval(progress)
+      }
+  }
+},speed)
 
 function hello(){
  const sayHello = document.querySelector('h1') 
  const date =  new Date()
  const hours = date.getHours()
- const minutes = date.getMinutes()
  if(hours>6 && hours<13){
   sayHello.innerText = `Bom dia ${regex}`
  }else if(hours>13 && hours<=18){
@@ -31,95 +99,22 @@ function logout(ev){
   window.location.href = 'http://127.0.0.1:5500/Pages/login/login.html'
   },1000)
 }
-inputs.style.display = 'block'
-function checkInput(ev){
-if(ev.currentTarget.id === 'saldo'){
-document.querySelector('.saldo').style.display = 'block'
-document.querySelector('.operacao').style.display = 'none'
-document.querySelector('.investimento').style.display = 'none'
-document.querySelector('.cartao').style.display = 'none'
-document.querySelector('.budget').style.display = 'none'
-}else if(ev.currentTarget.id === 'cartao'){
-document.querySelector('.cartao').style.display = 'block'
-document.querySelector('.operacao').style.display = 'none'
-document.querySelector('.investimento').style.display = 'none'
-document.querySelector('.saldo').style.display = 'none'
-document.querySelector('.budget').style.display = 'none'
-}
-else if(ev.currentTarget.id === 'operacao'){
-  document.querySelector('.operacao').style.display = 'block'
-  document.querySelector('.saldo').style.display = 'none'
-  document.querySelector('.investimento').style.display = 'none'
-  document.querySelector('.cartao').style.display = 'none'
-  document.querySelector('.budget').style.display = 'none'
-}
-else if(ev.currentTarget.id === 'budget'){
-  document.querySelector('.budget').style.display = 'block'
-  document.querySelector('.operacao').style.display = 'none'
-  document.querySelector('.saldo').style.display = 'none'
-  document.querySelector('.investimento').style.display = 'none'
-  document.querySelector('.cartao').style.display = 'none'
-}
-else{
-  document.querySelector('.investimento').style.display = 'block'
-  document.querySelector('.operacao').style.display = 'none'
-  document.querySelector('.saldo').style.display = 'none'
-  document.querySelector('.cartao').style.display = 'none'
-  document.querySelector('.budget').style.display = 'none'
 
-}
-}
 
-inputsRadios.forEach((input)=>{
-  input.addEventListener('click',checkInput)
-})
+
 
 const logoutBtn = document.querySelector('.avatar p')
 logoutBtn.addEventListener('click',logout)
-const btns = document.querySelectorAll('button')
-btns.forEach((btn)=>{
-  btn.addEventListener('click',(ev)=>{
-  ev.preventDefault()
-    if(btn.id==='saldo'){
-    document.querySelector('.container-saldo').style.display = 'block'
-    document.querySelector('#saldo-conta').innerText = `R$ ${document.querySelector('#valorDeSaldo').value}`
-    }else if(btn.id==='budget'){
-    document.querySelector('.container-investimentos').style.display = 'block'
-    document.querySelector('.container-investimentos span').innerText = `Valor para investimento R$ ${document.querySelector('#valorParaInvestimento').value}`
-    }else if(btn.id ==='cartao'){
-    const containerCartoes = document.querySelector('.container-cartoes')
-    containerCartoes.style.display = 'grid'
-    const divCartao = document.createElement('div')
-    divCartao.classList.add('container-cartao')
-    const spanNome = document.createElement('span')
-    spanNome.classList.add('nome')
-    spanNome.innerText = `${document.querySelector('#nomeCartao').value}`
-    const img = document.createElement('img')
-    img.setAttribute('src','../../Assets/Svgs/credit-card-svgrepo-com (2).svg')
-    const spanText = document.createElement('span')
-    spanText.classList.add('text')
-    spanText.innerText = 'Seu saldo'
-    const spanSaldo = document.createElement('span')
-    spanSaldo.classList.add('saldo')
-    spanSaldo.innerText = `R$ ${document.querySelector('#saldoCartao').value}`
-    containerCartoes.appendChild(divCartao)
-    divCartao.append(spanNome,img,spanText,spanSaldo)
-    document.querySelector('#saldoCartao').value = ''  
-    document.querySelector('#nomeCartao').value = ''
-    }
-  })
-})
+
 
 function avatarImg(){
 const img = this.files[0]
-
 const reader = new FileReader()
 reader.onload = ()=>{
   const imgUrl = reader.result
   objReal.avatar = imgUrl
+  objReal.salario = 3800.00
   localStorage.setItem('Usuarios',JSON.stringify(objReal))
-  
-  
 }
 reader.readAsDataURL(img)
 }
@@ -133,7 +128,31 @@ window.onload = ()=>{
   }else{
     console.log('Perfil sem foto')
   }
+
 }
+
+function operations(){
+  const valorEmPorcentagem = valorRegex/salario*100
+  const valorAjustado = valorEmPorcentagem.toFixed(2)
+  
+  if(valorEmPorcentagem<75){
+  valor.style.color = '#9EEF41'
+  msg.innerText = `${valorAjustado}% de seu salario mensal`
+  msg.style.color = '#9EEF41'
+  after.style.setProperty('width',`${valorEmPorcentagem}`+ '%')
+  after.style.setProperty('background-color', '#9EEF41')
+  msg.nextElementSibling.setAttribute('src','../../Assets/Svgs/thumb_up_FILL0_wght400_GRAD0_opsz48.svg')
+  }else{
+  valor.style.color = '#f00'
+  msg.innerText = `${valorAjustado}% de seu salario mensal`
+  msg.style.color = '#f00'
+  after.style.setProperty('width',`${valorEmPorcentagem}`+ '%')
+  after.style.setProperty('background-color', '#f00')
+  msg.nextElementSibling.setAttribute('src','../../Assets/Svgs/SVGRepo_iconCarrier.svg')
+  }
+  }
+  
+  operations()
 
 const avatar = document.querySelector('#avatar') 
 avatar.addEventListener('click',function(){

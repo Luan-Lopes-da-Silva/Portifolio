@@ -15,14 +15,18 @@ function checkUser(){
   document.querySelector('.loading').style.display = 'block'
   spanSenha.innerText = ''
   spanEmail.innerText = ''
+  spanEmail.classList.remove('error')
+  spanSenha.classList.remove('error')
   setTimeout(()=>{
   window.location.href = '../../Pages/home/home.html'
   },2000)
   }else if(objLocalStorage.email === email.value && objLocalStorage.senha !== senha.value){
   spanSenha.innerText = 'Senha incorreta'
+  spanSenha.classList.add('error')
   }else if(objLocalStorage.senha === senha.value && objLocalStorage.email !== email.value){
     spanSenha.innerText = ''
     spanEmail.innerText = 'Email invalido'
+    spanEmail.classList.add('error')
   }
   else{
     alert('Usuario não encontrado')
