@@ -1,0 +1,23 @@
+{
+  "name": "balance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^4.3.0",
+    "npm": "^9.6.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.4",
+    "babel-loader": "^9.1.2",
+    "webpack": "^5.85.0",
+    "webpack-cli": "^5.1.1"
+  }
+}

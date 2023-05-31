@@ -12,16 +12,24 @@ const valor = document.querySelector('.valor')
 const valorRegex = valor.innerText.replace(/[R$\s]/g,'')
 const salario = objReal.salario
 const after = document.styleSheets[0].cssRules[29]
-console.log(after)
+const valorEmAcoes = document.querySelectorAll('.valorEmAcoes')
+const budget = parseFloat(document.querySelector('#budget').innerText.replace(/[a-zR$]/g,''))
+const after2 =  document.styleSheets[0].cssRules[35]
+const saldoConta = parseFloat(document.querySelector('#saldo-conta').innerText.replace(/[R/$/s]/g,''))
+
+valorEmAcoes.forEach((valor)=>{
+const valorNovo = valor.innerText.replace(/[R$\s]/g,'')
+valor.nextElementSibling.nextElementSibling.innerText = `${valorNovo/budget*100}% de budget de investimento`
+})
 
 
 saldos.forEach((saldo)=>{
 const saldoNumb = parseFloat(saldo.innerText.replace(/[R$\s]/g,''))
 if(saldoNumb<10){
 saldo.style.color = '#f00' 
-}else if(saldoNumb<40){
+}else if(saldoNumb<200){
 saldo.style.color = '#EBFF00' 
-}else if(saldoNumb<250){
+}else{
 saldo.style.color = '#9EEF41' 
 }
 })
@@ -32,7 +40,8 @@ let speed = 10
 
 let progress = setInterval(()=>{
   progressValue++;
-  if(valueContainer.innerText === 'Seu score esta normal'){
+  if(saldoConta<50 && operations()<74 && operations()>35){
+  text.innerText = 'Seu score esta normal'
   progressBar.style.background = `conic-gradient(
   #fb8500 ${progressValue * 3.6}deg,
   #E2E1E3 ${progressValue*3.6}deg 
@@ -42,7 +51,8 @@ let progress = setInterval(()=>{
   if(progressValue === progressEndValue){
     clearInterval(progress)
   }  
-  }else if(valueContainer.innerText === 'Seu score esta ruim'){
+  }else if(saldoConta<10 && operations()>74){
+    text.innerText = 'Seu score esta ruim'
     progressBar.style.background = `conic-gradient(
       #d00000 ${progressValue * 3.6}deg,
       #E2E1E3 ${progressValue*3.6}deg 
@@ -52,7 +62,8 @@ let progress = setInterval(()=>{
       if(progressValue === progressEndValue){
         clearInterval(progress)
       } 
-  }else if(valueContainer.innerText === 'Seu score esta bom'){
+  }else if(saldoConta<200 && saldoConta>50 && operations()<=34 && operations()>25){
+    text.innerText = 'Seu score esta bom'
     progressBar.style.background = `conic-gradient(
       #4d5bf9 ${progressValue * 3.6}deg,
       #E2E1E3 ${progressValue*3.6}deg 
@@ -62,7 +73,8 @@ let progress = setInterval(()=>{
       if(progressValue === progressEndValue){
         clearInterval(progress)
       } 
-  }else if(valueContainer.innerText === 'Seu score esta excelente'){
+  }else if(saldoConta>200 && operations()<24){
+    text.innerText = 'Seu score esta excelente'
     progressBar.style.background = `conic-gradient(
       #9EEF41 ${progressValue * 3.6}deg,
       #E2E1E3 ${progressValue*3.6}deg 
@@ -134,7 +146,6 @@ window.onload = ()=>{
 function operations(){
   const valorEmPorcentagem = valorRegex/salario*100
   const valorAjustado = valorEmPorcentagem.toFixed(2)
-  
   if(valorEmPorcentagem<75){
   valor.style.color = '#9EEF41'
   msg.innerText = `${valorAjustado}% de seu salario mensal`
@@ -150,9 +161,11 @@ function operations(){
   after.style.setProperty('background-color', '#f00')
   msg.nextElementSibling.setAttribute('src','../../Assets/Svgs/SVGRepo_iconCarrier.svg')
   }
+  return valorEmPorcentagem
   }
   
   operations()
+  console.log(operations()<=100)
 
 const avatar = document.querySelector('#avatar') 
 avatar.addEventListener('click',function(){
