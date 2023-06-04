@@ -102,6 +102,18 @@ function hello(){
  }
 }
 
+function avatarImg(){
+  const img = this.files[0]
+  const reader = new FileReader()
+  reader.onload = ()=>{
+    const imgUrl = reader.result
+    objReal.avatar = imgUrl
+    objReal.salario = 3800.00
+    localStorage.setItem('Usuarios',JSON.stringify(objReal))
+  }
+  reader.readAsDataURL(img)
+  }
+
 function logout(ev){
   ev.preventDefault();
   objReal.logado = false
@@ -111,37 +123,8 @@ function logout(ev){
   window.location.href = 'http://127.0.0.1:5500/Pages/login/login.html'
   },1000)
 }
-
-
-
-
 const logoutBtn = document.querySelector('.avatar p')
 logoutBtn.addEventListener('click',logout)
-
-
-function avatarImg(){
-const img = this.files[0]
-const reader = new FileReader()
-reader.onload = ()=>{
-  const imgUrl = reader.result
-  objReal.avatar = imgUrl
-  objReal.salario = 3800.00
-  localStorage.setItem('Usuarios',JSON.stringify(objReal))
-}
-reader.readAsDataURL(img)
-}
-
-window.onload = ()=>{
-  if(objReal.avatar){
-    const avatar = document.querySelector('#avatar')
-    avatarInput.previousElementSibling.style.zIndex =0
-    avatar.style.zIndex = 1000
-    avatar.setAttribute('src',objReal.avatar)
-  }else{
-    console.log('Perfil sem foto')
-  }
-
-}
 
 function operations(){
   const valorEmPorcentagem = valorRegex/salario*100
@@ -150,7 +133,7 @@ function operations(){
   valor.style.color = '#9EEF41'
   msg.innerText = `${valorAjustado}% de seu salario mensal`
   msg.style.color = '#9EEF41'
-  after.style.setProperty('width',`${valorEmPorcentagem}`+ '%')
+  after.style.setProperty('width',`${valorAjustado}`+ '%')
   after.style.setProperty('background-color', '#9EEF41')
   msg.nextElementSibling.setAttribute('src','../../Assets/Svgs/thumb_up_FILL0_wght400_GRAD0_opsz48.svg')
   }else{

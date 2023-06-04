@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My financies - Add to acount</title>
+  <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+  <link rel="stylesheet" href="./src/styles/index.css">
+</head>
+<body>
+  <header></header>
+  <main>
+    <h1>Adicionar operações a conta</h1>
+    <form>
+      <div class="radios">
+        <label for="debit">Debito</label>
+        <input type="radio" name="operation" id="debit">
+        <label for="credit">Credito</label>
+        <input type="radio" name="operation" id="credit">
+      </div>
+      <label for="name">Nome da Operação</label>
+      <input type="text" id="name" name="name">
+      <label for="month">Mês da Operação</label>
+      <input type="text" id="month" name="month">
+      <label for="value">Valor da operação</label>
+      <input type="text" id="value" name="value">
+      <button>Criar Operação</button>
+    </form>
+
+    <div class="container">
+      <h2>Janeiro</h2>
+      <div class="operacao-container">
+        <span class="credit"></span>
+        <span class="value"></span>
+        <span class="type">
+        </span>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="./src/index.js"></script>
+</html>

@@ -7,8 +7,30 @@
   <title>My financies - Balance monthly</title>
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../add/"><img src="../../Assets/Svgs/Plus.svg" alt=""></a></li>
+        <li><img src="../../Assets/Svgs/Group.svg" alt=""></li>
+        <li><img src="../../Assets/Svgs/Transfer.svg" alt=""></li>
+        <li><img src="../../Assets/Svgs/Invest.svg" alt=""></li>
+        <li><img src="../../Assets/Svgs/Credit.svg" alt=""></li>
+        <li>
+          <div class="avatar">
+            <label for="avatarInput">Selecione um arquivo</label>
+            <input type="file" name="avatarInput" id="avatarInput">
+            <img src="" alt="" id="avatar">
+            <p><a href="">Logout</a></p>
+          </div>
+        </li>
+    </ul></nav>
+  </header>
 <h1>Balance Monthly</h1>
-<canvas id="myChart"></canvas>
+<main>
+  <div class="chart-container">
+    <canvas id="myChart" ></canvas>
+  </div>
+</main>
 </body>
-<script src="dist/main.min.js"></script>
+<script src="dist/main.min.js" type="module"></script>
 </html>

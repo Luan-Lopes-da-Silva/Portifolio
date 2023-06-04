@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.operacao-container{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.value-credit{
+  color: green;
+}
+
+.value-debit{
+  color: red;
+}
+input[type='text']{
+  display: block;
+}

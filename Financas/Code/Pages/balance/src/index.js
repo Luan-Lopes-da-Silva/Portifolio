@@ -1,21 +1,8 @@
-import Chart from 'chart.js/auto';
-const ctx = document.querySelector('#myChart')
+import './styles/index.css';
+import createChart from './Modules/createChart.js';
+import Avatar from '../../../Scripts/Avatar.js';
+import Logout from '../../../Scripts/Logout.js';
 
-new Chart(ctx,{
-  type: 'bar',
-  data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [{
-      label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  }
-})
+createChart();
+Avatar();
+Logout();
