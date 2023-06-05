@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My financies - Add to acount</title>
+  <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../add/"><img src="../../../Assets/Svgs/avatar-svgrepo-com.svg" alt=""></a></li>
+        <li><img src="../../../Assets/Svgs/Group.svg" alt=""></li>
+        <li><img src="../../../Assets/Svgs/Transfer.svg" alt=""></li>
+        <li><img src="../../../Assets/Svgs/Invest.svg" alt=""></li>
+        <li><img src="../../../Assets/Svgs/Credit.svg" alt=""></li>
+        <li>
+          <div class="avatar">
+            <label for="avatarInput">Selecione um arquivo</label>
+            <input type="file" name="avatarInput" id="avatarInput">
+            <img src="" alt="" id="avatar">
+            <p><a href="">Logout</a></p>
+          </div>
+        </li>
+    </ul></nav>
+  </header>
+  <main>
+    <h1>Adicionar operações a conta</h1>
+    <form>
+      <div class="radios">
+        <label for="debit">Debito</label>
+        <input type="radio" name="operation" id="debit">
+        <label for="credit">Credito</label>
+        <input type="radio" name="operation" id="credit">
+      </div>
+      <label for="name">Nome da Operação</label>
+      <input type="text" id="name" name="name">
+      <label for="month">Mês da Operação</label>
+      <input type="text" id="month" name="month">
+      <label for="value">Valor da operação</label>
+      <input type="text" id="value" name="value">
+      <button>Criar Operação</button>
+    </form>
+    <div class="container">
+      <div class="operacao-container">
+        <div class="operacao desativo">
+          <h2 class="month">Janeiro</h2>
+          <lord-icon class="icon"
+              src="https://cdn.lordicon.com/rxufjlal.json"
+              colors="primary:#121331"
+              style="width:20px;height:20px">
+          </lord-icon>
+        </div>
+        <div class="operacao desativo">
+          <h2 class="month">Fevereiro</h2>
+          <lord-icon class="icon"
+          src="https://cdn.lordicon.com/rxufjlal.json"
+          colors="primary:#121331"
+          style="width:20px;height:20px">
+          </lord-icon>
+        </div>
+        <div class="operacao desativo">
+          <h2 class="month">Março</h2>
+          <lord-icon class="icon"
+          src="https://cdn.lordicon.com/rxufjlal.json"
+          colors="primary:#121331"
+          style="width:20px;height:20px">
+          </lord-icon>
+        </div>
+        <div class="operacao desativo">
+          <h2 class="month">Abril</h2>
+          <lord-icon class="icon"
+          src="https://cdn.lordicon.com/rxufjlal.json"
+          colors="primary:#121331"
+          style="width:20px;height:20px">
+          </lord-icon>
+        </div>
+        <div class="operacao desativo">
+          <h2 class="month">Maio</h2>
+          <lord-icon class="icon"
+          src="https://cdn.lordicon.com/rxufjlal.json"
+          colors="primary:#121331"
+          style="width:20px;height:20px">
+          </lord-icon>
+        </div>
+        <div class="operacao desativo">
+          <h2 class="month">Junho</h2>
+          <lord-icon class="icon"
+          src="https://cdn.lordicon.com/rxufjlal.json"
+          colors="primary:#121331"
+          style="width:20px;height:20px">
+          </lord-icon>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="main.min.js"></script>
+</html>
