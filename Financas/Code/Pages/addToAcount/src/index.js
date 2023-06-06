@@ -5,7 +5,7 @@ const array = Array.from(months)
 const icons = document.querySelectorAll('.icon')
 const iconRefence = document.querySelector('.icon')
 const srcPrimaryIcon = iconRefence.getAttribute('src')
-console.log()
+let balance = document.querySelector('#balance')
 
 function showOrHide(ev){
   if(ev.currentTarget.getAttribute('src') === srcPrimaryIcon){
@@ -21,44 +21,55 @@ function renderContainer(ev){
   ev.preventDefault()
   const foundMonth = array.find(month => month.innerText == monthInput.value)
   if(radiosInputs[0].checked && foundMonth){
-   const operacao = foundMonth.parentElement
-   operacao.classList.add('ativo')
-   operacao.classList.remove('desativo')
-   operacao.children[1].setAttribute('src','https://cdn.lordicon.com/xsdtfyne.json')
+   const operation = foundMonth.parentElement
+   const balanceOfTheContainer = operation.querySelector('#balance')
+   operation.classList.add('ativo')
+   operation.classList.remove('desativo')
+   operation.children[1].setAttribute('src','https://cdn.lordicon.com/xsdtfyne.json')
    
    const spanName = document.createElement('span')
    spanName.textContent = nameInput.value
 
    const spanValue = document.createElement('span')
-   spanValue.textContent = valueInput.value
-
+   spanValue.classList.add('value')
+   spanValue.textContent = parseFloat(valueInput.value.replace(/[\D]/g,'.')).toFixed(2)
+  
    const spanType = document.createElement('span')
    spanType.textContent = 'D'
    spanType.classList.add('debit')
-    
-   operacao.append(spanName,spanValue,spanType)
+   
+   balanceOfTheContainer.innerText = `${parseFloat(balanceOfTheContainer.innerText) - parseFloat(valueInput.value)}.00`
+   operation.append(spanName,spanValue,spanType)
    form.reset();
    }else if(radiosInputs[1].checked && foundMonth){
-    const operacao = foundMonth.parentElement
-    operacao.classList.add('ativo')
-    operacao.classList.remove('desativo')
-    operacao.children[1].setAttribute('src','https://cdn.lordicon.com/xsdtfyne.json')
+    const operation = foundMonth.parentElement
+    const balanceOfTheContainer = operation.querySelector('#balance')
+    operation.classList.add('ativo')
+    operation.classList.remove('desativo')
+    operation.children[1].setAttribute('src','https://cdn.lordicon.com/xsdtfyne.json')
    
     const spanName = document.createElement('span')
     spanName.textContent = nameInput.value
  
     const spanValue = document.createElement('span')
-    spanValue.textContent = valueInput.value
+    spanValue.textContent = parseFloat(valueInput.value.replace(/[\D]/g,'.')).toFixed(2)
     spanValue.classList.add('value')
- 
+    
+    
     const spanType = document.createElement('span')
     spanType.textContent = 'C'
     spanType.classList.add('credit')
-     
-    operacao.append(spanName,spanValue,spanType)
+    balanceOfTheContainer.innerText = `${parseFloat(balanceOfTheContainer.innerText)+ parseFloat(valueInput.value.replace(/[\D]/g,'.'))}.00`
+    operation.append(spanName,spanValue,spanType)
     form.reset();
   }
 }
+
+
+
+
+
+
 
 
 const nameInput =  document.querySelector('#name')
@@ -68,6 +79,7 @@ const radiosInputs = document.querySelectorAll('input[type="radio"]')
 
 const button = document.querySelector('button')
 button.addEventListener('click',renderContainer)
+
 icons.forEach((icon)=>{
 icon.addEventListener('click',showOrHide)
 })
