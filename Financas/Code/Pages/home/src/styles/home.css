@@ -1,0 +1,257 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Banks';
+  src: url('../../../../Assets/Font/Banks&MilesSingleLine.ttf');
+}
+
+
+body{
+  font-family: 'Banks';
+  width: 100%;
+  height: 100vh;
+}
+
+header{
+background-color: #453F49;
+height: max-content;
+}
+ul{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 10px;
+  justify-content: end;
+  margin-right: 50px;
+}
+li{
+  list-style: none;
+  background-color: #89848C;
+  width: max-content;
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+li img{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+h1{
+  text-align: center;
+  margin:auto;
+  font-size: 4rem;
+  width: 250px;
+  color: #E2E1E3;
+}
+
+main{
+  background-color: #5E5962;
+  padding: 20px;
+}
+
+
+a{
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+a:hover{
+  text-decoration: underline;
+}
+.avatar p a{
+  position: absolute;
+  left: 14%;
+  bottom: -48%;
+}
+
+.avatar{
+ width: 70px; 
+ height: 70px;
+ position: relative;
+ display: grid;
+ place-items: center;
+}
+
+input[type='file']{
+  display: none;
+}
+
+label[for='avatarInput']{
+  font-size: 12px;
+  width: 60px;
+  text-align: center;
+  margin: auto auto;
+  cursor: pointer;
+  position: absolute;
+}
+
+#avatar{
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+.circular-progress{
+  position: relative;
+  height: 250px;
+  width: 250px;
+  background-color: orange;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: auto auto;
+}
+
+.circular-progress::before{
+  content: '';
+  position: absolute;
+  height: 84%;
+  width: 84%;
+  background-color: #89848C;
+  border-radius: 50%;
+}
+
+.value-container{
+  position: relative;
+  font-size: 24px;
+  width: 100px;
+  text-align: center;
+}
+.container-balance{
+margin-top: 40px;
+margin-bottom: 20px;
+}
+
+.title{
+  color: #E2E1E3;
+  font-family: 'Banks';
+  font-size: 20px;
+  display: block;
+}
+
+.title2{
+  color: #E2E1E3;
+  font-family: 'Banks';
+  font-size: 24px; 
+}
+
+.balance,
+.value{
+font-size: 2rem;
+font-family: 'Banks';
+display: block;
+}
+
+.container-cards{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+
+.container-card img{
+  width: 300px;
+}
+
+
+.container-card .title{
+  margin-top: -48px;
+}
+
+.container-card{
+  margin-top: -40px;
+}
+
+.container-operations{
+  margin-bottom: 40px;
+}
+
+.progress-bar{
+width: 600px;
+height: 20px;
+background-color: #E2E1E3;
+border-radius: 4px;
+position: relative;
+margin-top: 8px;
+}
+
+.progress-bar::after{
+content: '';
+position: absolute;
+width:480px;
+height: 20px;
+border-radius: 4px;
+background-color: black;
+}
+
+.container-investiments{
+display: flex;
+flex-direction: row;
+gap: 20px;
+}
+
+h2{
+text-align: center;
+color: #E2E1E3;
+margin-bottom: 12px;
+}
+
+.investiment{
+  width: 200px;
+  position: relative;
+}
+.investiment span{
+  color: #E2E1E3;
+}
+
+.investiment .progress{
+width: 100%;
+height: 20px;
+background-color: #E2E1E3;
+border-radius: 4px;
+position: relative;
+}
+
+.investiment .progress::after{
+content: '';
+position: absolute;
+width:60px;
+height: 20px;
+border-radius: 4px;
+background-color: #89848C;
+}
+
+.valueInActions{
+right: 0;
+position: absolute
+}
+
+#budget{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 28px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.msg img{
+  width: 12px;
+}
+
+
+
+
+

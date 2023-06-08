@@ -65,13 +65,6 @@ function renderContainer(ev){
   }
 }
 
-
-
-
-
-
-
-
 const nameInput =  document.querySelector('#name')
 const monthInput = document.querySelector('#month')
 const valueInput = document.querySelector('#value')
