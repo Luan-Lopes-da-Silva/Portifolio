@@ -1,4 +1,5 @@
 import Chart, { plugins } from 'chart.js/auto';
+
 export default function(){
   const ctx = document.querySelector('#myChart')
   new Chart(ctx,{

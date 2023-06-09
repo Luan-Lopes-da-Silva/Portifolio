@@ -1,0 +1,155 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+}
+
+body{
+  overflow-x: hidden;
+}
+
+h1{
+  color: #5E5962;
+  width: 250px;
+  text-align: center;
+  margin: 30px auto;
+  font-size: 4rem;
+  }
+  
+  img{
+    width: 400px;
+  }
+  
+  main{
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    width: 100%;
+    height: 100vh;
+    place-items: center;
+  }
+  
+  .welcome{
+  background-color: #9EEF41;
+  height: 100%;
+  padding: 50px;
+  display: grid;
+  }
+  
+  label{
+    display: block;
+    font-weight: 500;
+    color: #E2E1E3;
+    margin-bottom:4px;
+  }
+  
+  input{
+   display: block;
+   width: 300px;
+   height: 40px;
+   padding: 12px;
+   border-radius: 8px;
+   border: 2px solid #453F49;
+   margin-top: 8px;
+   margin-bottom: 20px;
+   transition: .4s;
+  }
+  
+  input:focus{
+    background-color: #65AE11;
+    outline: 2px solid #9EEF41;
+    border-color: #9EEF41;
+    color: #fff;
+  }
+
+button{
+  display: block;
+  color: #1B4F13 ;
+  background-color: #E2E1E3;
+  width: 120px;
+  height: 30px;
+  border-radius: 8px ;
+  border: 2px solid #B9B6BB;
+  cursor: pointer;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: auto auto;
+  transition: .7s;
+}
+
+button:hover{
+  background-color: #1B4F13;
+  color: #E2E1E3;
+  border-color: #9EEF41;
+}
+
+.form{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-self: center;
+  place-content: center;
+  background-color: #211D24;
+}
+
+a{
+  color: #B9B6BB;
+  width: max-content ;
+  gap: 12px;
+  transition: .3s;
+}
+
+a:hover{
+  color: #fff;
+}
+
+.form1{
+  transition: .7s;
+}
+
+.form1.active{
+  transform: translateX(1000px);
+}
+
+.newPassword{
+  transform: translateX(1000px);
+  transition: .7s;
+}
+
+.newPassword.active{
+  transform: translateX(0px);
+}
+.loading {
+  display: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 9px solid;
+  border-color: #453F49;
+  border-right-color: #9EEF41;
+  animation: spinner-d3wgkg 1s infinite linear;
+  margin: auto auto;
+  margin-top: 6px;
+  margin-bottom: 12px ;
+}
+@keyframes spinner-d3wgkg {
+  to {
+     transform: rotate(1turn);
+  }
+}
+
+.msg{
+  margin-bottom: 8px;
+}
+
+.error{
+  font-weight: 700;
+  color: #FF0000;
+  margin-bottom: 4px;
+  }
+  
+.right{
+  font-weight: 700;
+  color: #9EEF41;
+  margin-bottom: 4px;
+  }

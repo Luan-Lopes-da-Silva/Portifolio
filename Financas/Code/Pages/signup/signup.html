@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../Styles/login.css">
   <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
 </head>
 <body>
@@ -32,32 +31,32 @@
       <img src="../../Assets/Svgs/undraw_sign_up_n6im.svg" alt="signup-image">
     </div>
     <div class="form">
-      <label for="nome">Como gostaria de ser chamado?</label>
+      <label for="name">Como gostaria de ser chamado?</label>
       <span class="msg"></span>
-      <input type="text" name="nome" id="nome" placeholder="seunome">
+      <input type="text" name="name" id="name" placeholder="yourname">
       <label for="email">Email</label>
       <span class="msg"></span>
-      <input type="text" name="email" id="email" placeholder="seunome@email.com" class="verificar">
+      <input type="text" name="email" id="email" placeholder="seunome@email.com">
       <label for="confirmEmail">Confirmação de email</label>
       <span class="msg"></span>
-      <input type="text" name="confirmEmail" id="confirmEmail" placeholder="seunome@email.com" class="verificar">
-        <label for="senha">Senha</label>
+      <input type="text" name="confirmEmail" id="confirmEmail" placeholder="seunome@email.com">
+        <label for="password">Senha</label>
         <span class="msg"></span>
-        <div class="senha">
-          <input type="password" name="senha" id="senha" placeholder="**********" class="verificar">
-          <img src="../../Assets/Svgs/visibility_FILL0_wght400_GRAD0_opsz48 (1).svg" alt="mostrar-senha">
+        <div class="password">
+          <input type="password" name="password" id="password" placeholder="**********">
+          <img src="../../Assets/Svgs/visibility_FILL0_wght400_GRAD0_opsz48 (1).svg" alt="show-password" id="show-password">
         </div>
-      <label for="confirmSenha">Confirmação de senha</label>
+      <label for="confirmPassword">Confirmação de senha</label>
       <span class="msg"></span>
-      <div class="senha">
-        <input type="password" name="confirmSenha" id="confirmSenha" placeholder="**********" class="verificar">
-        <img src="../../Assets/Svgs/visibility_FILL0_wght400_GRAD0_opsz48 (1).svg" alt="mostrar-senha" id="img2">
+      <div class="password">
+        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="**********">
+        <img src="../../Assets/Svgs/visibility_FILL0_wght400_GRAD0_opsz48 (1).svg" alt="show-password" id="img2">
       </div>
-      <label for="salario">Qual é o seu salario mensal?</label>
-      <input type="text" id="salario" name="salario" placeholder="Campo obrigatorio">
+      <label for="wage">Qual é o seu salario mensal?</label>
+      <input type="text" id="wage" name="wage" placeholder="Campo obrigatorio">
       <button>Criar conta</button>
     </div>
   </main>
 </body>
-<script src="../../Scripts/register.js" ></script>
+<script src="dist/main.min.js" type="Module" ></script>
 </html>
