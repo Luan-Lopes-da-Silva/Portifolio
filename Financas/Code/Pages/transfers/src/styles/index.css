@@ -1,0 +1,154 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Banks';
+  src: url('../../../../Assets/Font/Banks&MilesSingleLine.ttf');
+}
+
+
+body{
+  font-family: 'Banks';
+  width: 100%;
+  height: 100vh;
+}
+
+header{
+background-color: #453F49;
+height: 200px;
+}
+
+ul{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 10px;
+  justify-content: end;
+  margin-right: 50px;
+}
+li{
+  list-style: none;
+  background-color: #89848C;
+  width: max-content;
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+li img{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+a:hover{
+  text-decoration: underline;
+}
+.avatar p a{
+  position: absolute;
+  left: 14%;
+  bottom: -48%;
+}
+
+.avatar{
+ width: 70px; 
+ height: 70px;
+ position: relative;
+ display: grid;
+ place-items: center;
+}
+
+input[type='file']{
+  display: none;
+}
+
+label[for='avatarInput']{
+  font-size: 12px;
+  width: 60px;
+  text-align: center;
+  margin: auto auto;
+  cursor: pointer;
+  position: absolute;
+}
+
+#avatar{
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+main{
+  height: 100%;
+  background-color: #5E5962;
+  padding: 20px;
+}
+
+h1{
+color: #E2E1E3;
+}
+
+label{
+color: #FFF;
+width: max-content;
+}
+
+.type-account{
+  display: grid;
+  grid-template-columns: repeat(2,100px);
+  width: max-content;
+  text-align: center;
+}
+
+main label:nth-child(6){
+  display: block;
+}
+select{
+  display: block;
+  padding: 4px 4px;
+  margin-top: 4px; 
+  margin-bottom: 8px;
+}
+
+div label:nth-child(2){
+width: max-content;
+display: block;
+}
+
+input{
+  display: block;
+  padding: 4px 4px;
+  border-radius: 4px;
+  border: 2px solid black;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+input[type='radio']{
+  margin: auto auto;
+  margin-bottom: 8px;
+}
+
+button{
+padding: 8px 24px;
+border-radius: 4px;
+border: none;
+cursor: pointer;
+margin-top: 12px;
+}
+
+form{
+  width: max-content;
+  padding: 20px;
+}

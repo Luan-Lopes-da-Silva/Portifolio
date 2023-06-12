@@ -9,9 +9,11 @@ export default function(){
     if(ev.currentTarget.value.length<8){
       ev.currentTarget.previousElementSibling.innerText = 'Preencha corretamente'
       ev.currentTarget.previousElementSibling.classList.add('error')
+      ev.currentTarget.previousElementSibling.classList.remove('right')
     }else{
       ev.currentTarget.previousElementSibling.innerText = 'Preenchido corretamente'
       ev.currentTarget.previousElementSibling.classList.add('right')
+      ev.currentTarget.previousElementSibling.classList.remove('error')
       btn2.addEventListener('click',changePassword)
     } 
     })
@@ -20,9 +22,11 @@ export default function(){
     if(confirmPassword.value!==newPassword.value){
       confirmPassword.previousElementSibling.innerText = 'Senhas diferentes'
       confirmPassword.previousElementSibling.classList.add('error')
+      confirmPassword.previousElementSibling.classList.remove('right')
     }else{
       confirmPassword.previousElementSibling.innerText = 'Preenchido corretamente'
       confirmPassword.previousElementSibling.classList.add('right')
+      confirmPassword.previousElementSibling.classList.remove('error')
       btn2.addEventListener('click',changePassword)
     } 
     })
@@ -33,7 +37,7 @@ export default function(){
     btn2.style.display = 'none'
     document.querySelector('.loading').style.display = 'block'
     setTimeout(()=>{
-    window.location.href = '../../Pages/login/login.html'
+    window.location.href = '../../login/dist/login.html'
     },2000)
   
   }

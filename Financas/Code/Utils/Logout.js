@@ -8,7 +8,7 @@ export function Logout(){
     localStorage.setItem('Usuarios',JSON.stringify(realObj))
     setTimeout(()=>{
     alert('Você foi desconectado')
-    window.location.href = 'http://127.0.0.1:5500/Pages/login/login.html'
+    window.location.href = '../../login/dist/login.html'
     },1000)
   }
   const logoutBtn = document.querySelector('.avatar p')

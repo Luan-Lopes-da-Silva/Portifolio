@@ -23,7 +23,7 @@ export default function(){
        }
        localStorage.setItem('Usuarios',JSON.stringify(usuario))
       setTimeout(()=>{
-       window.location.href = '../../Pages/login/login.html'
+       window.location.href = '../../login/dist/login.html'
       },1000)
     }
     else if(name.value === '' || emailInput.value === '' || confirmEmail.value==='' || password.value==='' || confirmPassword.value === '' || wage.value === ''){

@@ -15,14 +15,14 @@ export function operations(){
   msg.style.color = '#9EEF41'
   after.style.setProperty('width',`${fixValue}`+ '%')
   after.style.setProperty('background-color', '#9EEF41')
-  msg.nextElementSibling.setAttribute('src','../../Assets/Svgs/thumb_up_FILL0_wght400_GRAD0_opsz48.svg')
+  msg.nextElementSibling.setAttribute('src','../../../Assets/Svgs/thumb_up_FILL0_wght400_GRAD0_opsz48.svg')
   }else{
   value.style.color = '#f00'
   msg.innerText = `${fixValue}% de seu salario mensal`
   msg.style.color = '#f00'
   after.style.setProperty('width',`${valueInPercent}`+ '%')
   after.style.setProperty('background-color', '#f00')
-  msg.nextElementSibling.setAttribute('src','../../Assets/Svgs/SVGRepo_iconCarrier.svg')
+  msg.nextElementSibling.setAttribute('src','../../../Assets/Svgs/SVGRepo_iconCarrier.svg')
   }
   return valueInPercent
   }

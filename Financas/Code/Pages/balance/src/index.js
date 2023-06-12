@@ -1,7 +1,8 @@
 import './styles/index.css';
 import createChart from './Modules/createChart.js';
-import Avatar from '../../../Scripts/Avatar.js';
-import Logout from '../../../Scripts/Logout.js';
+import { Avatar } from '../../../Utils/Avatar';
+import { Logout } from '../../../Utils/Logout';
+
 
 createChart();
 Avatar();

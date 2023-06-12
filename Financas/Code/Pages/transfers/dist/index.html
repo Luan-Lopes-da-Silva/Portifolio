@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My financies - Transfers</title>
+  <link rel="stylesheet" href="../src/styles/index.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../../addToAcount/dist/index.html"><img src="../../../Assets/Svgs/Plus.svg" alt="addToAcount"></a></li>
+        <li><a href="../../balance/dist/index.html"><img src="../../../Assets/Svgs/Group.svg" alt="Balance"></a></li>
+        <li><a href="../../transfers/dist/index.html"><img src="../../../Assets/Svgs/Transfer.svg" alt="Transfer"></a></li>
+        <li><img src="../../../Assets/Svgs/Invest.svg" alt="Investiments"></li>
+        <li><img src="../../../Assets/Svgs/Credit.svg" alt="Bills in Credit"></li>
+        <li>
+          <div class="avatar">
+            <label for="avatarInput">Selecione um arquivo</label>
+            <input type="file" name="avatarInput" id="avatarInput">
+            <img src="" alt="" id="avatar">
+            <p><a href="">Logout</a></p>
+          </div>
+        </li>
+    </ul></nav>
+  </header>
+<main>
+  <h1>Fazer uma transferencia</h1>
+  <form>
+    <label for="cpf">CPF Destinatario</label>
+    <input type="text" id="cpf" name="cpf">
+    <label for="banco">Banco destinatario</label>
+    <select name="banco" id="banco">
+      <option value="Selecione um banco">Selecione um banco</option>
+      <option value="Nubank">Nubank</option>
+      <option value="Bradesco">Bradesco</option>
+      <option value="Itau">Itau</option>
+      <option value="Santander">Santander</option>
+      <option value="Caixa">Caixa</option>
+    </select>
+    <label>Tipo de Conta</label>
+    <div class="type-account">
+      <div>
+        <label for="type">Corrente</label>
+        <input type="radio" name="type" id="chain" value="Conta-Corrente">
+      </div>
+      <div>
+        <label for="type">Salario</label>
+        <input type="radio" name="type" id="wage" value="Conta-Salario">
+      </div>
+    </div>
+    <label for="transfer">Valor da transferencia</label>
+    <input type="text" id="transfer" name="transfer">
+    <button>TRANSFERIR</button>
+  </form>
+
+  <h2>Suas transferencias</h2>
+  <div class="transfers-containers"></div>
+</main>  
+</body>
+<script src="../src/index.js"></script>
+</html>
