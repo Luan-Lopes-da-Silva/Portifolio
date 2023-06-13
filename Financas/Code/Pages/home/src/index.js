@@ -1,5 +1,6 @@
 import { Avatar } from '../../../Utils/Avatar';
 import { Logout } from '../../../Utils/Logout';
+import { controlBalance } from './Modules/controlBalance';
 
 import './styles/home.css'
 
@@ -10,7 +11,7 @@ const { operations } = require("./Modules/operations");
 const { scorePerson } = require("./Modules/scorePerson");
 const { warningBalance } = require("./Modules/verifyBalance");
 
-
+controlBalance()
 warningBalance();
 scorePerson();
 helloMsg();
