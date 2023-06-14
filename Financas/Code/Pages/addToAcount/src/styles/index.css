@@ -36,9 +36,18 @@ li{
   border-radius: 50%;
   cursor: pointer;
 }
+
+nav{
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
 li img{
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   object-fit: cover;
 }
 

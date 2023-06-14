@@ -177,6 +177,10 @@ button:hover{
   border-color: #9EEF41;
 }
 
+nav{
+  padding: 20px;
+}
+
 form{
   width: max-content;
   padding: 20px;

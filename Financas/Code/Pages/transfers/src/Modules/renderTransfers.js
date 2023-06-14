@@ -4,7 +4,7 @@ export function render(){
   const form = document.querySelector('form')
   const radios = document.querySelectorAll('input[type=radio]')
   const values = []
-  const regexValue = transferInput.value.replace(/[,]/g,'.')
+
   
   function createTransfer(transferData){
   const article = document.createElement('article')

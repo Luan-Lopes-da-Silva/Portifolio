@@ -1,6 +1,7 @@
 import { Avatar } from '../../../Utils/Avatar';
 import { Logout } from '../../../Utils/Logout';
 import { controlBalance } from './Modules/controlBalance';
+import { controlCardBalance } from './Modules/controlBalanceCard';
 
 import './styles/home.css'
 
@@ -19,3 +20,4 @@ Logout();
 operations();
 controlActions();
 Avatar();
+controlCardBalance()
