@@ -2,10 +2,10 @@ export default function(){
   function showPassword(ev){
     if(ev.currentTarget.previousElementSibling.type === 'password'){
       ev.currentTarget.previousElementSibling.type = 'text'
-      ev.currentTarget.setAttribute('src','../../Assets/Svgs/visibility_off_FILL0_wght400_GRAD0_opsz48.svg')
+      ev.currentTarget.setAttribute('src','../../../Assets/Svgs/visibility_off_FILL0_wght400_GRAD0_opsz48.svg')
     }else{
       ev.currentTarget.previousElementSibling.type ='password'
-      ev.currentTarget.setAttribute('src','../../Assets/Svgs/visibility_FILL0_wght400_GRAD0_opsz48 (1).svg')
+      ev.currentTarget.setAttribute('src','../../../Assets/Svgs/visibility_FILL0_wght400_GRAD0_opsz48 (1).svg')
     }
     }
     

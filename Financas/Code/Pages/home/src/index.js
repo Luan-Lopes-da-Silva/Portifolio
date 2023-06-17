@@ -1,23 +1,27 @@
-import { Avatar } from '../../../Utils/Avatar';
-import { Logout } from '../../../Utils/Logout';
-import { controlBalance } from './Modules/controlBalance';
-import { controlCardBalance } from './Modules/controlBalanceCard';
-
 import './styles/home.css'
+import { Avatar } from "../../../Utils/Avatar";
+import { Logout } from "../../../Utils/Logout";
+import { controlActions } from "./Modules/controlActions";
+import { controlBalance } from "./Modules/controlBalance";
+import { controlCardBalance } from "./Modules/controlBalanceCard";
+import { operationsFunc } from "./Modules/operations";
+import { warningBalance } from "./Modules/verifyBalance";
+import { helloMsg } from "./Modules/helloMsg";
+import { scorePerson } from "./Modules/scorePerson";
+import { controlOperation } from "./Modules/controlOperation";
 
 
-const { controlActions } = require("./Modules/controlActions");
-const { helloMsg } = require("./Modules/helloMsg");
-const { operations } = require("./Modules/operations");
-const { scorePerson } = require("./Modules/scorePerson");
-const { warningBalance } = require("./Modules/verifyBalance");
 
 controlBalance()
-warningBalance();
-scorePerson();
-helloMsg();
-Logout();
-operations();
-controlActions();
-Avatar();
+Avatar()
+Logout()
+helloMsg()
+scorePerson()
+controlActions()
 controlCardBalance()
+operationsFunc()
+warningBalance()
+controlOperation()
+
+
+

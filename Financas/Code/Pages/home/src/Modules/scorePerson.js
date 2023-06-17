@@ -1,4 +1,6 @@
-import { operations } from "./operations.js"
+import { operationsFunc } from "./operations"
+
+
 
 const balanceAccount = parseFloat(document.querySelector('#balance-account').innerText.replace(/[R/$/s]/g,''))
 let progressBar = document.querySelector('.circular-progress')
@@ -61,4 +63,4 @@ export function scorePerson(){
 }
 
 scorePerson();
-operations();
+operationsFunc()

@@ -1,3 +1,6 @@
+import { controlOperation } from "../Pages/home/src/Modules/controlOperation"
+
+
 export function Avatar(){
   const obj = localStorage.getItem('Usuarios')
   let realObj = JSON.parse(obj)
@@ -23,6 +26,7 @@ export function Avatar(){
       }else{
         console.log('Perfil sem foto')
       }
+      controlOperation()
     }
 
   const avatar = document.querySelector('#avatar') 

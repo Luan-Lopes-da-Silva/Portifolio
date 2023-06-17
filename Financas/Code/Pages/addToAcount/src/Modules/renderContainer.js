@@ -1,9 +1,15 @@
 export function render(){
   const form = document.querySelector('form')
-const months = document.querySelectorAll('.month')
-const array = Array.from(months)
+  const months = document.querySelectorAll('.month')
+  const array = Array.from(months)
+  const nameInput =  document.querySelector('#name')
+  const monthInput = document.querySelector('#month')
+  const valueInput = document.querySelector('#value')
+  const radiosInputs = document.querySelectorAll('input[type="radio"]')
+  const button = document.querySelector('#create')
 
-function renderContainer(ev){
+
+  function renderContainer(ev){
   ev.preventDefault()
   const foundMonth = array.find(month => month.innerText == monthInput.value)
   if(radiosInputs[0].checked && foundMonth){
@@ -48,16 +54,7 @@ function renderContainer(ev){
     balanceOfTheContainer.innerText = `${parseFloat(balanceOfTheContainer.innerText)+ parseFloat(valueInput.value.replace(/[\D]/g,'.'))}.00`
     operation.append(spanName,spanValue,spanType)
     form.reset();
-  }
+  } 
 }
-
-const nameInput =  document.querySelector('#name')
-const monthInput = document.querySelector('#month')
-const valueInput = document.querySelector('#value')
-const radiosInputs = document.querySelectorAll('input[type="radio"]')
-
-const button = document.querySelector('button')
 button.addEventListener('click',renderContainer)
-
-
 }
