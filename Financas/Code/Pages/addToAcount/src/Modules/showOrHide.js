@@ -7,6 +7,7 @@ export function hideContainer(){
     if(ev.currentTarget.getAttribute('src') === srcPrimaryIcon){
      ev.currentTarget.setAttribute('src','https://cdn.lordicon.com/xsdtfyne.json')
      ev.currentTarget.parentElement.classList.add('ativo')
+     ev.currentTarget.parentElement.classList.remove('desativo')
     }else{
     ev.currentTarget.setAttribute('src', srcPrimaryIcon)
     ev.currentTarget.parentElement.classList.add('desativo')

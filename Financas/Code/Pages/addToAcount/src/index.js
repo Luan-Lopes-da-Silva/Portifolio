@@ -4,7 +4,7 @@ import operationValues from './Modules/sumValues';
 import { render } from './Modules/renderContainer';
 import { hideContainer } from './Modules/showOrHide';
 
-import './styles/index.css';
+import './css/style.css';
 
 
 Avatar()
