@@ -15,49 +15,41 @@ body{
 
 header{
   background-color: $header-bg;
-  height: 200px;
+  height: 12.5rem;
   nav{
-    padding: 40px;
+    padding: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     ul{ 
       display: flex; 
-      gap: 20px; 
+      gap: 1.25rem; 
       align-items: center; 
-      padding: 10px; 
+      padding: 0.625rem; 
       justify-content: end;  
-      margin-right: 50px;
+      margin-right: 3.125rem;
       li{
         list-style: none;
         background-color: $li-bg;
         width: max-content;
         display: grid;
         place-items: center;
-        padding: 12px;
+        padding: 0.75rem;
         border-radius: 50%;
         cursor: pointer;
-        a{
-          text-decoration: none;
-          color: $label-color;
-          cursor: pointer;
-          &:hover{
-            text-decoration: underline;
-          }
-        }
-        li img{
-          width: 40px;
-          height: 40px;
+        & img{
+          width: 2.5rem;
+          height: 2.5rem;
           object-fit: cover;
         }
-}
+      }
     }
   }
 }
 
 .avatar{
-  width: 70px; 
-  height: 70px;
+  width: 4.375rem; 
+  height: 4.375rem;
   position: relative;
   display: grid;
   place-items: center;
@@ -66,6 +58,12 @@ header{
         position: absolute;
         left: 14%;
         bottom: -48%;
+        text-decoration: none;
+        color: $label-color;
+        cursor: pointer;
+        &:hover{
+          text-decoration: underline;
+        }
       }
     }
     input[type='file']{
@@ -73,8 +71,8 @@ header{
     }
     
     label[for='avatarInput']{
-      font-size: 12px;
-      width: 60px;
+      font-size: 0.75rem;
+      width: 3.75rem;
       text-align: center;
       margin: auto auto;
       cursor: pointer;
@@ -83,62 +81,62 @@ header{
     
     #avatar{
       position: absolute;
-      width: 90px;
-      height: 90px;
+      width: 5.625rem;
+      height: 5.625rem;
       border-radius: 50%;
-      margin-top: 0px;
-      margin-left: 0px;
+      margin-top: 0;
+      margin-left: 0;
     }
  }
 
 .inputs{
   display: block;
-  width: 300px;
-  height: 40px;
-  padding: 12px;
-  border-radius: 8px;
-  border: 2px solid $header-bg;
-  margin-bottom: 20px;
+  width: 18.75rem;
+  height: 2.5rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 0.125rem solid $header-bg;
+  margin-bottom: 1.25rem;
   transition: .4s;
 }
 
 main{
   background-color: $main-bg;
-  padding: 20px;
-  height: 100%;
+  padding: 1.25rem;
+  height: 100vh;
 }
 
 .operacao{
   display: grid;
-  grid-template-columns: repeat(3,100px);
+  grid-template-columns: repeat(3,6.25rem);
   background-color: $label-color;
-  margin-bottom: 12px;
-  border-radius: 4px;
-  padding: 6px;
+  margin-bottom: 0.75rem;
+  border-radius: 0.25rem;
+  padding:0.375rem;
   align-items: center;
   width: 100%;
   position: relative;
   overflow: hidden;
   &.desativo{
-    height: 40px;
+    height: 2.5rem;
   }
   &.ativo{
   height: max-content;
   }
   .icon{
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: 0.75rem;
+    right: 0.75rem;
     cursor: pointer;
   }
   .balance{
     display: flex;
     align-items: end;
-    gap: 4px;
+    gap: 0.25rem;
     grid-row: 2;
     grid-column: 1/-1;
     #balance{
-      margin-left: -2px;
+      margin-left: -0.125rem;
     }
   }
   h2{
@@ -166,7 +164,7 @@ form{
     @extend .inputs;
     &:focus{
       background-color: $focus-bg;
-      outline: 2px solid $input-color;
+      outline: 0.125rem solid $input-color;
       border-color: $input-color;
       color: $label-color  
     }

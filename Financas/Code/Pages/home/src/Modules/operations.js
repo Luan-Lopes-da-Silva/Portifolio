@@ -4,7 +4,7 @@ export  function operationsFunc(){
   const value = document.querySelector('.value')
   const wage = realObj.salario
   const msg = document.querySelector('.msg span')
-  const after = document.styleSheets[0].cssRules[29]
+  const after = document.styleSheets[0].cssRules[32]
 
   if(localStorage.getItem('Contas Junho')){
     const monthValue = localStorage.getItem('Contas Junho')

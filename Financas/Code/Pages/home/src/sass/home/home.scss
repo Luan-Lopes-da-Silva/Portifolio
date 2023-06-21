@@ -1,0 +1,270 @@
+@mixin progress($content,$position,$width,$height,$bg-color,$bd-radius){
+content: $content;
+position: $position;
+width: $width;
+height: $height;
+background-color: $bg-color;
+border-radius: $bd-radius;
+}
+
+@mixin text-config($font-family,$font-size,$display){
+font-family: $font-family;
+font-size: $font-size;
+display: $display;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Banks';
+  src: url('../../../../Assets/Font/Banks&MilesSingleLine.ttf');
+}
+
+
+body{
+  font-family: 'Banks';
+  width: 100%;
+  height: 100vh;
+}
+
+header{
+background-color: $header-bg;
+height: max-content;
+  ul{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 0.625rem;
+    justify-content: end;
+    margin-right: 3.125rem;
+    li{
+      list-style: none;
+      background-color: $li-bg;
+      width: max-content;
+      display: grid;
+      place-items: center;
+      padding: 0.75rem;
+      border-radius: 50%;
+      cursor: pointer;
+      & img{
+        width: 2.5rem;
+        height: 2.5rem;
+        object-fit: cover;
+      }
+    }
+}
+  h1{
+  text-align: center;
+  margin:auto;
+  font-size: 4rem;
+  width: 15.625rem;
+  color: $color-text;
+  padding-bottom: 1.5rem;
+  }
+}
+
+.avatar{
+ width: 4.375rem; 
+ height: 4.375rem;
+ position: relative;
+ display: grid;
+ place-items: center;
+ 
+ p{
+  a{
+    position: absolute;
+    left: 14%;
+    bottom: -48%;
+    text-decoration: none;
+    color: $color-text;
+    cursor: pointer;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+ }
+ 
+ input[type='file']{
+  display: none;
+ }
+
+  label[for='avatarInput']{
+    font-size: 0.75rem;
+    width: 3.75rem;
+    text-align: center;
+    margin: auto auto;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  #avatar{
+    position: absolute;
+    width: 5.625rem;
+    height: 5.625rem;
+    border-radius: 50%;
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+
+main{
+  background-color: $main-bg;
+  padding: 1.25rem;
+  
+  .score{
+    .circular-progress{
+      position: relative;
+      height: 15.625rem;
+      width: 15.625rem;
+      background-color: $bg-circle-progress;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin: auto auto;
+      &::before{
+        @include progress('',absolute,84%,84%,$li-bg,50%)
+      }
+    }
+    
+    .value-container{
+      position: relative;
+      font-size: 1.5rem;
+      width: 6.25rem;
+      text-align: center;
+    }
+  }
+  
+  h2{
+    text-align: center;
+    color: $color-text;
+    margin-bottom: 0.75rem;
+  }
+  
+  #budget{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.75rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .title{
+  @include text-config('Banks',1.5rem,block); 
+  color: $color-text;
+  }
+}
+
+
+
+.container-balance{
+margin-top: 2.5rem;
+margin-bottom: 1.5rem;
+  
+  .title{
+    @include text-config('Banks',1.5rem,block);
+    color: $color-text;
+  }
+  .balance{
+    @include text-config('Banks',2rem,block);
+  }
+}
+
+.container-cards{
+display: flex;
+align-items: center;
+gap: 1.5rem;
+margin-bottom: 2.5rem;
+  
+  .container-card{
+    .title{
+      @include text-config('Banks',1.5rem,block);
+      color: $color-text;
+      margin-top: -3rem;
+    }
+    
+    .balance{
+      @include text-config('Banks',2rem,block)
+    }
+
+    img{
+    width: 18.75rem;
+    }
+  }
+ 
+}
+
+.container-operations{
+margin-bottom: 2.5rem;
+  
+  .title2{
+    @include text-config('Banks',24px,block);
+    color: $color-text;
+  }
+
+  .value{
+    @include text-config('Banks',2rem,block);
+  }
+
+  .progress-bar{
+    width: 37.5rem;
+    height: 1.25rem;
+    background-color: $color-text;
+    border-radius: 0.25rem;
+    position: relative;
+    margin-top: 0.5rem;
+    
+    &::after{
+    @include progress('',absolute,480px,1.25rem,$bg-after-progress,0.25rem)
+    }
+    }
+    
+    .msg{
+      img{
+        width: 0.75rem;
+      }
+    }   
+}
+
+.container-investiments{
+display: flex;
+flex-direction: row;
+gap: 1.25rem;
+  .investiment{
+    width:12.5rem;
+    position: relative;
+    .progress{
+      width: 100%;
+      height: 1.25rem;
+      background-color: $color-text;
+      border-radius: 0.25rem;
+      position: relative;
+      &::after{
+      @include progress('',absolute,3.75rem,1.25rem,$li-bg,0.25rem)  
+      }
+    }
+    .valueInActions{
+      right: 0;
+      position: absolute
+    }
+    span{
+      color: $color-text;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

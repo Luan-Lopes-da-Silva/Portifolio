@@ -1,4 +1,4 @@
-import './styles/index.css';
+import './css/style.css';
 import createChart from './Modules/createChart.js';
 import { Avatar } from '../../../Utils/Avatar';
 import { Logout } from '../../../Utils/Logout';

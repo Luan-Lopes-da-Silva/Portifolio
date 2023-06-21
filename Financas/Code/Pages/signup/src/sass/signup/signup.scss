@@ -1,0 +1,189 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  font-family: 'Roboto';
+}
+
+body{
+  position: relative;
+}
+
+.register{
+  display: none;
+  width: 25rem;
+  text-align: center;
+  background-color: $form-bg;
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+  position: absolute;
+  top: 20%;
+  right: 45%;
+  transition: .7s;
+  
+  &.active{
+    display: block;
+    z-index: 1000;
+    opacity: 1;
+  }
+  
+  h1{
+    color: $h1-color;
+    width: 15.75rem;
+    text-align: center;
+    margin: 2rem auto;
+  }
+  
+  p{
+   margin-top: 0.5rem; 
+  }
+
+  .exit{
+    p{
+      font-size: 2.5rem;
+      position: absolute;
+      right: 0.75rem;
+      top: 0.75rem;
+      cursor: pointer;
+      font-weight: 700;
+      transition: .5s;
+      
+      &:hover{
+        color: $h1-color;
+      }
+    }
+  }
+}
+
+#register{
+  display: grid;
+  grid-template-columns: 31.25rem 1fr;
+  width: 100%;
+  height: 100vh;
+  place-items: center;
+
+  &.active{
+    opacity: 0.7; 
+  }
+  
+  &.error{
+    font-weight: 700;
+    color: $warning-color;
+    margin-bottom: 0.25rem;
+  }
+    
+  &.right{
+  font-weight: 700;
+  color: $primary-color;
+  margin-bottom: 0.25rem;
+  }
+
+  .welcome{
+    background-color: $primary-color;
+    height: 100%;
+    padding: 3.25rem;
+    display: grid;
+      h1{
+        width: 15.625rem;
+        text-align: center;
+        margin: 1.875rem auto;
+        font-size: 4rem;
+        color: $color-text;
+    } 
+    img{
+      width: 25rem;
+    }
+  }
+
+  .form{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-self: center;
+    place-content: center;
+    background-color: $form-bg;
+
+    img{
+      width: 2rem;
+      cursor: pointer;
+    }
+  
+    label{
+      display: block;
+      font-weight: 500;
+      color: $color-text;
+      margin-bottom:0.25rem;
+    }
+    
+    input{
+     width: 18.75rem;
+     height: 2.5rem;
+     padding: 0.75rem;
+     border-radius: 0.5rem;
+     border: 0.125rem solid $border-input;
+     margin-bottom: 1.25rem;
+     transition: .4s;
+      &:focus{
+        background-color: $secondary-color;
+        outline: 0.125rem solid $primary-color;
+        border-color: $primary-color;
+        color: $color-text;
+      }
+    }
+    
+    button{
+      display: block;
+      color: $dark-green ;
+      background-color: $color-text;
+      width: 7.5rem;
+      height: 2rem;
+      border-radius: 0.5rem ;
+      border: 0.125rem solid $border-button;
+      cursor: pointer;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin: auto auto;
+      margin-bottom: 2.5rem;
+      transition: .7s;
+      margin-top: 1.5rem;
+        &:hover{
+          background-color: $dark-green;
+          color: $color-text;
+          border-color: $primary-color;
+        }
+    }
+  
+    .msg{
+      margin-bottom: 0.5rem;
+      &.error{
+        font-weight: 700;
+        color: $warning-color;
+        margin-bottom: 0.25rem; 
+      }
+      }
+      
+    
+      
+  }
+  
+    .password{
+      display: flex;
+      align-items: center;
+      height: max-content;
+      background-color: $color-text;
+      border-radius: 0.5rem;
+      margin-bottom: 1.5rem;
+
+      input{
+        background-color: transparent;
+        margin-bottom: 0px;
+        &:focus{
+          background-color: $secondary-color;
+        }
+      }
+
+      img{
+        margin-left: -2.1875rem;
+      }
+    }
+}

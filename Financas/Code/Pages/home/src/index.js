@@ -1,4 +1,4 @@
-import './styles/home.css'
+import './css/style.css'
 import { Avatar } from "../../../Utils/Avatar";
 import { Logout } from "../../../Utils/Logout";
 import { controlActions } from "./Modules/controlActions";

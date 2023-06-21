@@ -1,0 +1,150 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+}
+
+body{
+  overflow-x: hidden;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 31.25rem 1fr;
+    width: 100%;
+    height: 100vh;
+    place-items: center;
+
+    .welcome{
+      background-color: $primary-color;
+      height: 100%;
+      padding: 3.25rem;
+      display: grid;
+      
+      h1{
+        color: $h1-color;
+        width: 15.625rem;
+        text-align: center;
+        margin: 1.875rem auto;
+        font-size: 4rem;
+        }
+        
+      img{
+        width: 25rem;
+      }
+    }
+  }
+
+.form{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-self: center;
+  place-content: center;
+  background-color: $form-bg;
+
+  label{
+    display: block;
+    font-weight: 500;
+    color: $color-text;
+    margin-bottom:0.25rem;
+  }
+  
+  input{
+   display: block;
+   width: 18.75rem;
+   height: 2.5rem;
+   padding: 0.75rem;
+   border-radius: 0.5rem;
+   border: 0.125rem solid $border-input;
+   margin-top: 0.5rem;
+   margin-bottom: 1.25rem;
+   transition: .4s;
+    &:focus{
+     background-color: $secondary-color;
+     outline: 0.125rem solid $primary-color;
+     border-color: $primary-color;
+     color: $color-text;
+    }
+  }
+  
+  button{
+  display: block;
+  color: $dark-green;
+  background-color: $color-text;
+  width: 7.5rem;
+  height: 1.875rem;
+  border-radius: 0.5rem ;
+  border: 0.125rem solid $border-button;
+  cursor: pointer;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: auto auto;
+  transition: .7s;
+    &:hover{
+      background-color: $dark-green;
+      color: $color-text;
+      border-color: $primary-color;
+    }
+  }
+  
+.form1{
+  transition: .7s;
+
+  &.active{
+    transform: translateX(62.5rem);
+  }
+}
+   
+.newPassword{
+  transform: translateX(62.5rem);
+  transition: .7s;
+
+  &.active{
+    transform: translateX(0);
+  }
+  
+.msg{
+  margin-bottom: 0.5rem;
+}
+
+ .error{
+    font-weight: 700;
+    color: $warning-color;
+    margin-bottom: 0.25rem;
+    }
+    
+  .right{
+    font-weight: 700;
+    color: $sucess-color;
+    margin-bottom: 0.25rem;
+    }
+
+  .loading {
+    display: none;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: 0.5rem solid;
+    border-color: $border-input;
+    border-right-color: $primary-color;
+    animation: spinner-d3wgkg 1s infinite linear;
+    margin: auto auto;
+    margin-top: 0.375rem;
+    margin-bottom: 0.75rem ;
+  }
+  @keyframes spinner-d3wgkg {
+    to {
+       transform: rotate(1turn);
+    }
+  }
+}
+}
+
+
+
+
+
+
+
