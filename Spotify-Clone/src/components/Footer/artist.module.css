@@ -1,0 +1,27 @@
+.container{
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.resume{
+  display: flex;
+  flex-direction: column;
+  color: #FFF;
+  gap: 6px;
+}
+
+.resume span:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+img{
+  width: 60px;
+  border-radius: 4px;
+}
+.svg{
+  width: 30px;
+}
+
+.svg:hover{
+  cursor: pointer;
+}

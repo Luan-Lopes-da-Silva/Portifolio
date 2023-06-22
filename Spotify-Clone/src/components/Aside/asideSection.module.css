@@ -1,0 +1,24 @@
+.container{
+background-color: #121212;
+display: flex;
+flex-direction: column;
+width: 80px;
+height: max-content;
+padding: 12px;
+gap: 12px;
+border-radius: 10px;
+margin-bottom: 12px;
+grid-column: 1;
+justify-content: end;
+}
+
+.container img{
+ width: 100%; 
+ border-radius: 4px;
+ object-fit: cover;
+}
+
+.container img:hover{
+  cursor: pointer;
+}
+
