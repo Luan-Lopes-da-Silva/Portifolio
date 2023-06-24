@@ -3,18 +3,18 @@ export default function operationValues(){
   const radiosInputs = document.querySelectorAll('input[type="radio"]')
   const monthInput = document.querySelector('#month')
   const valueInput = document.querySelector('#value')
-  const valuesJanuary = []
-  const valuesFebruary = []
-  const valuesMarch = []
-  const valuesApril = []
-  const valuesMay = []
-  const valuesJune = []
-  const valuesJuly = []
-  const valuesAugust = []
-  const valuesSeptember = []
-  const valuesOctober = []
-  const valuesNovember = []
-  const valuesDecember = []
+  let valuesJanuary = []
+  let valuesFebruary = []
+  let valuesMarch = []
+  let valuesApril = []
+  let valuesMay = []
+  let valuesJune = []
+  let valuesJuly = []
+  let valuesAugust = []
+  let valuesSeptember = []
+  let valuesOctober = []
+  let valuesNovember = []
+  let valuesDecember = []
 
   function sumOfValues(ev){
     ev.preventDefault() 

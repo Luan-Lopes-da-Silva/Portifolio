@@ -1,0 +1,53 @@
+{
+  "operations": [
+    {
+      "name": "Luan",
+      "type": "Debit",
+      "value": "250.00",
+      "month": "Janeiro",
+      "id": 1
+    },
+    {
+      "name": "Luan",
+      "type": "Debit",
+      "value": "250.00",
+      "month": "Janeiro",
+      "id": 2
+    },
+    {
+      "name": "Loan",
+      "type": "Debit",
+      "value": "360.00",
+      "month": "Junho",
+      "id": 3
+    },
+    {
+      "name": "Luan",
+      "type": "Debit",
+      "value": "250.00",
+      "month": "Junho",
+      "id": 4
+    },
+    {
+      "name": "Luan",
+      "type": "Debit",
+      "value": "400.00",
+      "month": "Junho",
+      "id": 5
+    },
+    {
+      "name": "Luan",
+      "type": "Debit",
+      "value": "250.00",
+      "month": "Janeiro",
+      "id": 6
+    },
+    {
+      "name": "Luan",
+      "type": "Debit",
+      "value": "250.00",
+      "month": "Fevereiro",
+      "id": 7
+    }
+  ]
+}
