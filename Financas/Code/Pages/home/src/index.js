@@ -8,7 +8,8 @@ import { operationsFunc } from "./Modules/operations";
 import { warningBalance } from "./Modules/verifyBalance";
 import { helloMsg } from "./Modules/helloMsg";
 import { scorePerson } from "./Modules/scorePerson";
-import { controlOperation } from "./Modules/controlOperation";
+import { controlOperation } from './Modules/controlOperation';
+
 
 
 
@@ -22,6 +23,7 @@ controlCardBalance()
 operationsFunc()
 warningBalance()
 controlOperation()
+
 
 
 

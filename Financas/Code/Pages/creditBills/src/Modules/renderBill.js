@@ -9,58 +9,141 @@ const accountsCard1 = []
 const accountsCard2 = []
 const accountsCard3 = []
 const button = document.querySelector('button')
-console.log(cards)
+
+
   
-  function render(ev){
-    ev.preventDefault()
-    let bill = {
-      id:parseFloat(idInput.value),
+
+  //function decrementBalance(ev){
+  //ev.preventDefault()
+  //const sumCards1 = accountsCard1.reduce(function(acc, currentValue) {
+  //  return acc + currentValue.value;
+  //}, 0);
+  //const sumCards2 = accountsCard2.reduce(function(acc, currentValue) {
+  //  return acc + currentValue.value;
+  //}, 0);
+  //
+  //const sumCards3 = accountsCard3.reduce(function(acc, currentValue) {
+  //  return acc + currentValue.value;
+  //}, 0);
+  //
+  //localStorage.setItem('Fatura Cartão 1', parseFloat(sumCards1))
+  //localStorage.setItem('Fatura Cartão 2', parseFloat(sumCards2))
+  //localStorage.setItem('Fatura Cartão 3', parseFloat(sumCards3))
+  //}
+
+function render(billData){
+const findCard = arrayCards.find(card => card.id === idInput.value)
+if(findCard){
+  const operationContainer = document.createElement('div')
+  operationContainer.classList.add('card-operation')
+  const name = document.createElement('span')
+  name.textContent = `${billData.name.toUpperCase()}`
+  const value = document.createElement('span')
+  value.textContent = `${billData.value}`
+  value.classList.add('value')
+  operationContainer.append(name,value)
+  findCard.append(operationContainer)
+}
+}
+
+async function fetchBills(){
+const bills = await fetch("http://localhost:3000/bills").then(res => res.json())
+const billsID1 =  bills.filter(bills => bills.idCard === '1')
+const billsID2 =  bills.filter(bills => bills.idCard === '2')
+const billsID3 =  bills.filter(bills => bills.idCard === '3')
+const values1 = billsID1.map(bill => parseFloat(bill.value))
+const values2 = billsID2.map(bill => parseFloat(bill.value))
+const values3 = billsID3.map(bill => parseFloat(bill.value))
+
+const initialValue = 0
+const billsCard1 = values1.reduce(
+  (accumulator, value) => 
+  accumulator + value,
+  initialValue
+);
+localStorage.setItem('Fatura Cartão 1' , billsCard1)
+
+billsID1.forEach((bill)=>{
+  const operationContainer = document.createElement('div')
+  operationContainer.classList.add('card-operation')
+
+  const name = document.createElement('span')
+  name.textContent = `${bill.name.toUpperCase()}`
+  const value = document.createElement('span')
+  value.textContent = `${bill.value}`
+  value.classList.add('value')
+
+  operationContainer.append(name,value)
+  arrayCards[0].append(operationContainer)
+})
+
+billsID2.forEach((bill)=>{
+  const operationContainer = document.createElement('div')
+  operationContainer.classList.add('card-operation')
+
+  const name = document.createElement('span')
+  name.textContent = `${bill.name.toUpperCase()}`
+  const value = document.createElement('span')
+  value.textContent = `${bill.value}`
+  value.classList.add('value')
+
+  operationContainer.append(name,value)
+  arrayCards[1].append(operationContainer)
+})
+
+const billsCard2 = values2.reduce(
+  (accumulator, value) => 
+  accumulator + value,
+  initialValue
+);
+localStorage.setItem('Fatura Cartão 2' , billsCard2)
+
+billsID3.forEach((bill)=>{
+  const operationContainer = document.createElement('div')
+  operationContainer.classList.add('card-operation')
+
+  const name = document.createElement('span')
+  name.textContent = `${bill.name.toUpperCase()}`
+  const value = document.createElement('span')
+  value.textContent = `${bill.value}`
+  value.classList.add('value')
+
+  operationContainer.append(name,value)
+  arrayCards[2].append(operationContainer)
+})
+
+const billsCard3 = values3.reduce(
+  (accumulator, value) => 
+  accumulator + value,
+  initialValue
+);
+localStorage.setItem('Fatura Cartão 3' , billsCard3)
+}
+
+document.addEventListener("DOMContentLoaded", () =>{
+  fetchBills()
+})
+
+
+async function renderBills(ev) {
+  if (valueInput.value != '' && nameInput.value != '' && idInput.value != '') {
+    const billData = {
+      idCard:idInput.value,
       name:nameInput.value,
-      value:parseFloat(valueInput.value.replace('\[,]\g','.'))
-    }
-    const findCard = arrayCards.find((card=>card.id === idInput.value))
-    if(findCard){
-    const operationContainer = document.createElement('div')
-    operationContainer.classList.add('card-operation')
-
-    const name = document.createElement('span')
-    name.textContent = `${bill.name.toUpperCase()}`
-
-    const value = document.createElement('span')
-    value.textContent = `R$ ${bill.value}.00`
-    value.classList.add('value')
-
-    operationContainer.append(name,value)
-    findCard.append(operationContainer)
-    if(findCard.id === '1'){
-    accountsCard1.push(bill)
-    }else if(findCard.id === '2'){
-    accountsCard2.push(bill)
-    }else if(findCard.id === '3'){
-    accountsCard3.push(bill)
-    }
-    }else{
-    alert('Cartão inexistente')
-    }
-}
-
-  function decrementBalance(ev){
-  ev.preventDefault()
-  const sumCards1 = accountsCard1.reduce(function(acc, currentValue) {
-    return acc + currentValue.value;
-  }, 0);
-  const sumCards2 = accountsCard2.reduce(function(acc, currentValue) {
-    return acc + currentValue.value;
-  }, 0);
-  
-  const sumCards3 = accountsCard3.reduce(function(acc, currentValue) {
-    return acc + currentValue.value;
-  }, 0);
-
- localStorage.setItem('Fatura Cartão 1', parseFloat(sumCards1))
- localStorage.setItem('Fatura Cartão 2', parseFloat(sumCards2))
- localStorage.setItem('Fatura Cartão 3', parseFloat(sumCards3))
+      value:valueInput.value.replace('\[,]\g','.')
+    };
+    const response = await fetch("http://localhost:3000/bills", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(billData),
+    });
+    const savedBill = await response.json();
+    render(savedBill);
   }
-  form.addEventListener('submit',render)
-  form.addEventListener('submit',decrementBalance)
 }
+button.addEventListener('click',renderBills)
+}
+
+

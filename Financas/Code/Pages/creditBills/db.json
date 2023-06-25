@@ -1,0 +1,58 @@
+{
+  "bills": [
+    {
+      "idCard": "1",
+      "name": "ML",
+      "value": "250,00",
+      "id": 1
+    },
+    {
+      "idCard": "1",
+      "name": "Light bill",
+      "value": "250,00",
+      "id": 2
+    },
+    {
+      "idCard": "2",
+      "name": "Loan",
+      "value": "250,00",
+      "id": 3
+    },
+    {
+      "idCard": "3",
+      "name": "Loan",
+      "value": "250,00",
+      "id": 4
+    },
+    {
+      "idCard": "3",
+      "name": "Kleiton",
+      "value": "20.00",
+      "id": 5
+    },
+    {
+      "idCard": "3",
+      "name": "Loan",
+      "value": "200,00",
+      "id": 6
+    },
+    {
+      "idCard": "1",
+      "name": "Caio",
+      "value": "200,00",
+      "id": 7
+    },
+    {
+      "idCard": "2",
+      "name": "Caio Souza",
+      "value": "400,00",
+      "id": 8
+    },
+    {
+      "idCard": "3",
+      "name": "Caio",
+      "value": "400,00",
+      "id": 9
+    }
+  ]
+}

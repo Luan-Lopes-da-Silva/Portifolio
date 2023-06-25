@@ -6,17 +6,12 @@ export  function operationsFunc(){
   const msg = document.querySelector('.msg span')
   const after = document.styleSheets[0].cssRules[32]
 
-  if(localStorage.getItem('Contas Junho')){
-    const monthValue = localStorage.getItem('Contas Junho')
+  const monthValue = localStorage.getItem('Contas Junho')
     const values = JSON.parse(monthValue)
-    var sum = values.reduce(function(acc,value){
-    return acc+value
-    })
-  }else{
-    console.log('Mes não existe ainda')
-  }
-  const valueInPercent = sum/wage*100
+     const valueInPercent = values/wage*100
   const fixValue = valueInPercent.toFixed(2)
+  console.log(fixValue)
+
   
     function operations(){
       if(!localStorage.getItem('Contas Junho')){
