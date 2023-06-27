@@ -1,4 +1,4 @@
-import { controlOperation } from "../Pages/home/src/Modules/controlOperation"
+import { operationsControl } from "../Pages/home/src/modules/controlOperation"
 
 
 export function Avatar(){
@@ -26,7 +26,7 @@ export function Avatar(){
       }else{
         console.log('Perfil sem foto')
       }
-      controlOperation()
+      operationsControl()
     }
 
   const avatar = document.querySelector('#avatar') 

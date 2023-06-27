@@ -4,13 +4,14 @@ export  function operationsFunc(){
   const value = document.querySelector('.value')
   const wage = realObj.salario
   const msg = document.querySelector('.msg span')
-  const after = document.styleSheets[0].cssRules[32]
+  const after = document.styleSheets[0].cssRules[61]
+  
 
   const monthValue = localStorage.getItem('Contas Junho')
     const values = JSON.parse(monthValue)
      const valueInPercent = values/wage*100
   const fixValue = valueInPercent.toFixed(2)
-  console.log(fixValue)
+  
 
   
     function operations(){

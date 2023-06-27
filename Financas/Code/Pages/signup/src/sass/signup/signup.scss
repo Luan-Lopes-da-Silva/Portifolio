@@ -160,10 +160,12 @@ body{
         color: $warning-color;
         margin-bottom: 0.25rem; 
       }
+      &.right{
+        font-weight: 700;
+        color: $sucess-color;
+        margin-bottom: 0.25rem; 
       }
-      
-    
-      
+      }      
   }
   
     .password{

@@ -1,16 +1,15 @@
 import './css/style.css'
 import { Avatar } from "../../../Utils/Avatar";
 import { Logout } from "../../../Utils/Logout";
-import { controlActions } from "./Modules/controlActions";
-import { controlBalance } from "./Modules/controlBalance";
-import { controlCardBalance } from "./Modules/controlBalanceCard";
-import { operationsFunc } from "./Modules/operations";
-import { warningBalance } from "./Modules/verifyBalance";
-import { helloMsg } from "./Modules/helloMsg";
-import { scorePerson } from "./Modules/scorePerson";
-import { controlOperation } from './Modules/controlOperation';
-
-
+import { controlActions } from "./modules/actions";
+import { controlBalance } from "./modules/balance";
+import { operationsFunc } from "./modules/operations";
+import { warningBalance } from "./modules/verifyBalance";
+import { helloMsg } from "./modules/helloMsg";
+import { scorePerson } from "./modules/scorePerson";
+import { operationsControl } from './modules/controlOperation';
+import showMenu from './modules/showMenu';
+import creditCardContainer from './modules/creditCardContainers';
 
 
 controlBalance()
@@ -19,10 +18,11 @@ Logout()
 helloMsg()
 scorePerson()
 controlActions()
-controlCardBalance()
 operationsFunc()
 warningBalance()
-controlOperation()
+operationsControl()
+showMenu()
+creditCardContainer()
 
 
 

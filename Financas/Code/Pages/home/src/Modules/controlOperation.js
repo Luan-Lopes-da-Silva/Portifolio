@@ -1,7 +1,6 @@
-export function controlOperation(){
+export function operationsControl(){
  const date = new Date().getMonth()
  let textOperation = document.querySelector('.container-operations .value')
-  textOperation.innerText = 'R$ 0.00'
   
  function checkOperationMonth(){
   if(date === 5){
