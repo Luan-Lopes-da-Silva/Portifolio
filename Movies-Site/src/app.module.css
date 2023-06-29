@@ -1,0 +1,29 @@
+.movies{
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: red;
+  justify-content: center;
+}
+
+.movie{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title{
+  text-align: center;
+}
+
+.cover{
+  width: 200px;
+  display: block;
+}
+
+.description{
+  width: 250px;
+  text-align: center;
+  margin-top: 12px;
+}
