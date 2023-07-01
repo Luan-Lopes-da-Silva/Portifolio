@@ -7,12 +7,12 @@ export  function operationsFunc(){
   const after = document.styleSheets[0].cssRules[61]
   
 
-  const monthValue = localStorage.getItem('Contas Junho')
-    const values = JSON.parse(monthValue)
-     const valueInPercent = values/wage*100
+  const monthValue = localStorage.getItem('Contas Julho')
+  const values = JSON.parse(monthValue)
+  const valueInPercent = values/wage*100
   const fixValue = valueInPercent.toFixed(2)
   
-
+ 
   
     function operations(){
       if(!localStorage.getItem('Contas Junho')){
@@ -37,7 +37,8 @@ export  function operationsFunc(){
         after.style.setProperty('width',`${valueInPercent}`+'%')
         after.style.setProperty('background-color', '#F00')
       }
-      return valueInPercent
+
+      return parseInt(fixValue)
     }
 
 

@@ -13,6 +13,20 @@
       "value": "400.00",
       "month": "Junho",
       "id": 2
+    },
+    {
+      "name": "Kleiton",
+      "type": "Debit",
+      "value": "250.00",
+      "month": "Junho",
+      "id": 3
+    },
+    {
+      "name": "Luan",
+      "type": "Debit",
+      "value": "500.00",
+      "month": "Julho",
+      "id": 4
     }
   ]
 }

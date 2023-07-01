@@ -4,7 +4,7 @@
   "description": "",
   "main": "babel.config.js",
   "scripts": {
-    "json-server": "json-server --watch db.json",
+    "json-server": "json-server --watch db.json --port 3002",
     "build": "npx webpack",
     "dev": "webpack-dev-server"
   },

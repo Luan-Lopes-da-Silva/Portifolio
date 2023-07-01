@@ -31,7 +31,7 @@ export function render() {
   }
 
   async function fetchTransfers() {
-    const transfers = await fetch("http://localhost:3000/transfers").then(
+    const transfers = await fetch("http://localhost:3001/transfers").then(
       (res) => res.json()
     );
     transfers.forEach(createTransfer);
@@ -50,7 +50,7 @@ export function render() {
         value: parseFloat(transferInput.value),
         createdAt: createdAt.toLocaleString("pt-br"),
       };
-      const response = await fetch("http://localhost:3000/transfers", {
+      const response = await fetch("http://localhost:3001/transfers", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -69,7 +69,7 @@ export function render() {
         value: parseFloat(transferInput.value.replace(/[,]/g, ".")),
         createdAt: createdAt.toLocaleString("pt-br"),
       };
-      const response = await fetch("http://localhost:3000/transfers", {
+      const response = await fetch("http://localhost:3001/transfers", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -18,20 +18,20 @@ body{
 
 header{
 background-color: $bg-header;
-height: 200px;
+height: 12.5rem;
 display: flex;
 align-items: center;
 justify-content: space-between;
-padding: 40px;
+padding: 2.5rem;
 
 nav{
-  padding: 40px;
+  padding: 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   ul{
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
     align-items: center;
     justify-content: end;
     li{
@@ -40,12 +40,12 @@ nav{
       width: max-content;
       display: grid;
       place-items: center;
-      padding: 12px;
+      padding: 0.75rem;
       border-radius: 50%;
       cursor: pointer;
       & img{
-        width: 40px;
-        height: 40px;
+        width: 2.5rem;
+        height: 2.5rem;
         object-fit: cover;
       }
     }
@@ -56,8 +56,8 @@ nav{
 }
 
 .avatar{
- width: 70px; 
- height: 70px;
+ width: 4.5rem; 
+ height: 4.5rem;
  position: relative;
  display: grid;
  place-items: center;
@@ -67,8 +67,8 @@ nav{
  }
  
  label[for='avatarInput']{
-  font-size: 12px;
-  width: 60px;
+  font-size: 0.75rem;
+  width: 3.75rem;
   text-align: center;
   margin: auto auto;
   cursor: pointer;
@@ -77,11 +77,11 @@ nav{
 
  #avatar{
    position: absolute;
-   width: 90px;
-   height: 90px;
+   width: 5.75rem;
+   height: 5.75rem;
    border-radius: 50%;
-   margin-top: 0px;
-   margin-left: 0px;
+   margin-top: 0;
+   margin-left: 0;
  }
 
  p{
@@ -106,7 +106,7 @@ nav{
 main{
   height: 100%;
   background-color: $main-bg;
-  padding: 20px;
+  padding: 1.5rem;
   
   h1{
     color: $color-text;
@@ -114,7 +114,7 @@ main{
 
   form{
     width: max-content;
-    padding: 20px;
+    padding: 1.5rem;
     
     label{
       color: $color-text;
@@ -122,17 +122,17 @@ main{
       }
       
     input{
-      width: 200px;
-      height: 30px;
-      padding: 12px;
-      border-radius: 8px;
-      border: 2px solid $bg-header;
-      margin-bottom: 20px;
+      width: 12.5rem;
+      height: 2rem;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      border: 0.125rem solid $bg-header;
+      margin-bottom: 1.5rem;
       transition: .4s;
       display: block;
       &:focus{
         background-color: $secondary-color;
-        outline: 2px solid $primary-color;
+        outline: 0.125rem solid $primary-color;
         border-color: $primary-color;
         color: $color-text;
       }
@@ -142,17 +142,17 @@ main{
       display: block;
       color: $dark-green;
       background-color: $color-text;
-      width: 120px;
-      height: 30px;
-      border-radius: 8px ;
-      border: 2px solid $border-button;
+      width: 7.5rem;
+      height: 2rem;
+      border-radius: 0.5rem ;
+      border: 0.125rem solid $border-button;
       cursor: pointer;
       font-weight: 500;
       text-transform: uppercase;
       margin: auto auto;
-      margin-bottom: 40px;
+      margin-bottom: 2.5rem;
       transition: .7s;
-      margin-top: 20px;
+      margin-top: 1.25rem;
       
       &:hover{
         background-color: $dark-green;
@@ -167,15 +167,15 @@ main{
   display: flex;
   width: 300px;
   height: max-content;
-  padding: 12px;
+  padding: 0.75rem;
   background-color: $color-text;
   border-radius: 4px;
-  margin-top: 12px;
+  margin-top: 0.75rem;
   flex-direction: column;
   .card-operation{
     display: flex;
     justify-content: space-between;
-    padding: 2px;
+    padding: 0.125rem;
   }
 }
 

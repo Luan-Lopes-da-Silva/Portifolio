@@ -105,7 +105,7 @@ height: max-content;
         display: none;
         flex-direction: column-reverse;
         background-color: $bg-after-progress;
-        padding: 12px;
+        padding: 0.75rem;
         align-items: center;
 
         li{
@@ -125,8 +125,8 @@ height: max-content;
           position: relative;
           display: grid;
           place-items: center;
-          margin-bottom: 12px;
-          border-radius: 8px;
+          margin-bottom: 0.75rem;
+          border-radius: 0.5rem;
           p{
            a{
              position: absolute;
@@ -186,11 +186,11 @@ main{
   #card3,
   #card4{
     background-color: $form-bg;
-    width: 600px;
-    height: 600px;
+    width: 37.5rem;
+    height: 37.5rem;
     display: none;
     place-items: center;
-    border-radius: 12px;
+    border-radius: 0.75rem;
     position: absolute;
     transform: translateX(70%);
     transform: translate(100%,50%);
@@ -242,7 +242,7 @@ main{
     }
     .models{
       display: flex;
-      gap: 12px;
+      gap: 0.75rem;
       list-style: none;
       margin: 0;
       padding: 0;
@@ -252,23 +252,23 @@ main{
       }
       
       .radio {
-        border: 1px solid #ccc;
+        border: 0.0625rem solid #ccc;
         box-sizing: border-box;
-        border-radius: 8px;
+        border-radius: 0.5rem;
         float: left;
-        height: 70px;
+        height: 4.5rem;
         position: relative;
-        width: 96px;
-        margin-left: 12px;
-        margin-top: 12px;
-        margin-bottom: 12px;
+        width: 6rem;
+        margin-left: 0.75rem;
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
         &+&{
-          margin-left: 25px;
+          margin-left: 1.5625rem;
         }
 
         label{
           background: #fff no-repeat center center;
-          border-radius: 8px;
+          border-radius: 0.5rem;
           cursor: pointer;
           display: flex;
           justify-content: center;
@@ -283,7 +283,7 @@ main{
           img{
             z-index: 500;
             width: 100%;
-            height: 100px;
+            height: 6.25rem;
             position: absolute;
           }
           input[type=radio] {
@@ -371,10 +371,10 @@ margin-bottom: 2.5rem;
 
   
   .container-card{
-      border: 2px solid $header-bg;
+      border: 0.125rem solid $header-bg;
       border-style: dashed;
-      width: 300px;
-      height: 300px;
+      width: 18.75rem;
+      height: 18.75rem;
       display: grid;
       place-items: center;
 
@@ -386,13 +386,13 @@ margin-bottom: 2.5rem;
       }
 
       button{
-        padding: 8px 24px;
+        padding: 0.5rem 1.5rem;
         cursor: pointer;
         text-transform: uppercase;
         font-family: 'Banks';
         background-color: $header-bg;
         color : $color-text;
-        border-radius: 8px;
+        border-radius: 0.5rem;
         border: transparent;
         transition: .3s;
         &:hover{
@@ -422,7 +422,7 @@ margin-bottom: 2.5rem;
 margin-bottom: 2.5rem;
   
   .title2{
-    @include text-config('Banks',24px,block);
+    @include text-config('Banks',1.5rem,block);
     color: $color-text;
   }
 
@@ -439,7 +439,7 @@ margin-bottom: 2.5rem;
     margin-top: 0.5rem;
     
     &::after{
-    @include progress('',absolute,480px,1.25rem,$bg-after-progress,0.25rem)
+    @include progress('',absolute,30rem,1.25rem,$bg-after-progress,0.25rem)
     }
     }
     
@@ -477,18 +477,18 @@ gap: 1.25rem;
   }
 }
 
-@media(max-width:500px){
+@media(max-width:31.25rem){
 header{
   #main{
     display: none;
   }
   #second{
     display: flex;
-    gap: 12px;
+    gap: 0.75rem;
     
 
     &.desativo{
-      height: 60px;
+      height: 3.75rem;
       li{
         display: none;
       }
@@ -503,7 +503,7 @@ header{
       }
       .avatar{
         display: block;
-        margin-top: 16px;
+        margin-top: 1rem;
       }
     }
 
@@ -536,7 +536,7 @@ header{
         font-size: 0.75rem;
         width: 2.625rem;
         text-align: center;
-        margin: 18px auto;
+        margin: 10.5rem auto;
         cursor: pointer;
         position: absolute;
         color: transparent;
@@ -549,7 +549,7 @@ header{
         width: 2.625rem;
         height: 2.625rem;
         border-radius: 50%;
-        margin-top: 12px;
+        margin-top: 0.75rem;
         margin-left: 0;
         left:-250%
        }
@@ -561,7 +561,7 @@ header{
           position: absolute;
           top: -1%;
           right: 3%;
-          padding: 12px;
+          padding: 0.75rem;
           cursor: pointer;
         }
       }

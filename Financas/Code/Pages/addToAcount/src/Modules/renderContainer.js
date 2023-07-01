@@ -7,6 +7,7 @@ export function render(){
   const valueInput = document.querySelector('#value')
   const radiosInputs = document.querySelectorAll('input[type="radio"]')
   const button = document.querySelector('#create')
+  localStorage.setItem('Contas Julho', 0)
 
   function createOperation(operationData){
     const foundMonth = array.find(month => month.innerText == monthInput.value)
@@ -35,45 +36,74 @@ export function render(){
 
 
 async function fetchOperations() {
-  const operations = await fetch("http://localhost:3000/operations").then(
+  const operations = await fetch("http://localhost:3002/operations").then(
     (res) => res.json()
   );
+  const date = new Date().getMonth()
+  const findJuly = operations.filter(operation => operation.month === 'Julho')
   const findJune = operations.filter(operation => operation.month === 'Junho')
 
+  const operationJune = array[5].parentElement
+  const balanceOfTheContainerJune = operationJune.querySelector('#balance')
+  const valuesJune =  operations.map(operation => parseFloat(operation.value))
+  const initialValueJune = 0
+  const juneMonthSum = valuesJune.reduce(
+    (accumulator, value) => 
+    accumulator + value,
+    initialValueJune
+  );
+  operationJune.classList.add('ativo')
+  operationJune.classList.remove('desativo')
+  operationJune.children[1].setAttribute('src','https://cdn.lordicon.com/xsdtfyne.json')
 
-  if(findJune){
-    const operation = array[5].parentElement
-    const balanceOfTheContainer = operation.querySelector('#balance')
-    const values =  operations.map(operation => parseFloat(operation.value))
-    const initialValue = 0
-    const juneMonthSum = values.reduce(
-      (accumulator, value) => 
-      accumulator + value,
-      initialValue
-    );
-    operation.classList.add('ativo')
-    operation.classList.remove('desativo')
-    operation.children[1].setAttribute('src','https://cdn.lordicon.com/xsdtfyne.json')
-
-    findJune.forEach((findItem)=>{
-      const spanName = document.createElement('span')
-      spanName.textContent =`${findItem.name}`
+  findJune.forEach((findItem)=>{
+    const spanName = document.createElement('span')
+    spanName.textContent =`${findItem.name}`
+ 
+    const spanValue = document.createElement('span')
+    spanValue.textContent = `${findItem.value}`
+    spanValue.classList.add('value')
    
-      const spanValue = document.createElement('span')
-      spanValue.textContent = `${findItem.value}`
-      spanValue.classList.add('value')
-     
-      const spanType = document.createElement('span')
-      spanType.textContent = `${findItem.type}`
-      spanType.classList.add('debit')
-      operation.append(spanName,spanValue,spanType)
-    })
-    localStorage.setItem('Contas Junho',JSON.stringify(juneMonthSum))
-    balanceOfTheContainer.innerText = `${parseFloat(balanceOfTheContainer.innerText)-parseFloat(juneMonthSum)}.00`
-    form.reset()
+    const spanType = document.createElement('span')
+    spanType.textContent = `${findItem.type}`
+    spanType.classList.add('debit')
+    operationJune.append(spanName,spanValue,spanType)
+  })
+  localStorage.setItem('Contas Junho',JSON.stringify(juneMonthSum))
+  balanceOfTheContainerJune.innerText = `${parseFloat(balanceOfTheContainerJune.innerText)-parseFloat(juneMonthSum)}.00`
+  form.reset()  
 
-  
-}
+  if(date === 6 && findJuly){
+    const operationsJuly = array[6].parentElement
+    const balanceOfTheContainerJuly = operationsJuly.querySelector('#balance')
+    const valuesJuly =  findJuly.map(operation => parseFloat(operation.value))
+    const initialValueJuly = 0
+    const julyMonthSum = valuesJuly.reduce(
+    (accumulator, value) => 
+    accumulator + value,
+    initialValueJuly
+    );
+    operationsJuly.classList.add('ativo')
+    operationsJuly.classList.remove('desativo')
+    operationsJuly.children[1].setAttribute('src','https://cdn.lordicon.com/xsdtfyne.json')
+
+    findJuly.forEach((findItem)=>{
+    const spanName = document.createElement('span')
+    spanName.textContent =`${findItem.name}`
+
+    const spanValue = document.createElement('span')
+    spanValue.textContent = `${findItem.value}`
+    spanValue.classList.add('value')
+ 
+    const spanType = document.createElement('span')
+    spanType.textContent = `${findItem.type}`
+    spanType.classList.add('debit')
+    operationsJuly.append(spanName,spanValue,spanType)
+  })
+  localStorage.setItem('Contas Julho',JSON.stringify(julyMonthSum))
+  balanceOfTheContainerJuly.innerText = `${parseFloat(balanceOfTheContainerJuly.innerText)-parseFloat(julyMonthSum)}.00`
+  form.reset()  
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () =>{
@@ -89,7 +119,7 @@ async function renderOperation(ev) {
       value: parseFloat(valueInput.value.replace(/[-]/g,'' )).toFixed(2),
       month:monthInput.value
     };
-    const response = await fetch("http://localhost:3000/operations", {
+    const response = await fetch("http://localhost:3002/operations", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

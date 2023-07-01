@@ -5,31 +5,8 @@ const nameInput = document.querySelector('#name')
 const valueInput = document.querySelector('#value')
 const cards = document.querySelectorAll('.card-container')
 const arrayCards = Array.from(cards)
-const accountsCard1 = []
-const accountsCard2 = []
-const accountsCard3 = []
 const button = document.querySelector('button')
 
-
-  
-
-  //function decrementBalance(ev){
-  //ev.preventDefault()
-  //const sumCards1 = accountsCard1.reduce(function(acc, currentValue) {
-  //  return acc + currentValue.value;
-  //}, 0);
-  //const sumCards2 = accountsCard2.reduce(function(acc, currentValue) {
-  //  return acc + currentValue.value;
-  //}, 0);
-  //
-  //const sumCards3 = accountsCard3.reduce(function(acc, currentValue) {
-  //  return acc + currentValue.value;
-  //}, 0);
-  //
-  //localStorage.setItem('Fatura Cartão 1', parseFloat(sumCards1))
-  //localStorage.setItem('Fatura Cartão 2', parseFloat(sumCards2))
-  //localStorage.setItem('Fatura Cartão 3', parseFloat(sumCards3))
-  //}
 
 function render(billData){
 const findCard = arrayCards.find(card => card.id === idInput.value)
@@ -51,9 +28,11 @@ const bills = await fetch("http://localhost:3000/bills").then(res => res.json())
 const billsID1 =  bills.filter(bills => bills.idCard === '1')
 const billsID2 =  bills.filter(bills => bills.idCard === '2')
 const billsID3 =  bills.filter(bills => bills.idCard === '3')
+const billsID4 =  bills.filter(bills => bills.idCard === '4')
 const values1 = billsID1.map(bill => parseFloat(bill.value))
 const values2 = billsID2.map(bill => parseFloat(bill.value))
 const values3 = billsID3.map(bill => parseFloat(bill.value))
+const values4 = billsID4.map(bill => parseFloat(bill.value))
 
 const initialValue = 0
 const billsCard1 = values1.reduce(
@@ -118,6 +97,27 @@ const billsCard3 = values3.reduce(
   initialValue
 );
 localStorage.setItem('Fatura Cartão 3' , billsCard3)
+
+billsID4.forEach((bill)=>{
+  const operationContainer = document.createElement('div')
+  operationContainer.classList.add('card-operation')
+
+  const name = document.createElement('span')
+  name.textContent = `${bill.name.toUpperCase()}`
+  const value = document.createElement('span')
+  value.textContent = `${bill.value}`
+  value.classList.add('value')
+
+  operationContainer.append(name,value)
+  arrayCards[3].append(operationContainer)
+})
+
+const billsCard4 = values4.reduce(
+  (accumulator, value) => 
+  accumulator + value,
+  initialValue
+);
+localStorage.setItem('Fatura Cartão 4' , billsCard4)
 }
 
 document.addEventListener("DOMContentLoaded", () =>{
