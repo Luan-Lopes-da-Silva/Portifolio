@@ -7,7 +7,6 @@ export function controlBalance(){
   const operationsJune = localStorage.getItem('Contas Junho')
   const operationsJuly = localStorage.getItem('Contas Julho')
 
-console.log(month)
   if(month === 5){
     balance.innerText = `R$ ${realObj.salario-operationsJune},00`
     localStorage.setItem('Saldo',JSON.stringify(realObj.salario-operationsJune))

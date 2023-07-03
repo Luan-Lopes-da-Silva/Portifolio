@@ -27,6 +27,20 @@
       "value": "500.00",
       "month": "Julho",
       "id": 4
+    },
+    {
+      "name": "Luan",
+      "type": "Debit",
+      "value": "20.00",
+      "month": "Julho",
+      "id": 5
+    },
+    {
+      "name": "Loan",
+      "type": "Debit",
+      "value": "250.00",
+      "month": "Julho",
+      "id": 6
     }
   ]
 }

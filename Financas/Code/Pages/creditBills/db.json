@@ -59,6 +59,12 @@
       "name": "Kleiton",
       "value": "300,00",
       "id": 10
+    },
+    {
+      "idCard": "1",
+      "name": "Light bill",
+      "value": "250,00",
+      "id": 11
     }
   ]
 }
