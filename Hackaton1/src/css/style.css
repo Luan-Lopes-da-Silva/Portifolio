@@ -145,7 +145,7 @@ main #us div button {
   border-radius: 8px;
   border: none;
   font-size: 1rem;
-  font-family: "Monserrat";
+  font-family: "Montserrat";
 }
 main #us div button:hover {
   cursor: pointer;
@@ -164,7 +164,7 @@ main #artists div h2, main #artists div p {
 }
 main #artists div h2 {
   font-size: 2rem;
-  font-family: "Monserrat";
+  font-family: "Montserrat";
   margin-bottom: 20px;
 }
 main #artists div p {
@@ -184,14 +184,14 @@ main #artists div button {
   justify-content: center;
   gap: 12px;
   font-weight: 600;
-  font-family: "Monserrat";
+  font-family: "Montserrat";
   font-size: 1rem;
 }
 main #artists div button:hover {
   cursor: pointer;
 }
 main #programation {
-  background: linear-gradient(rgba(56, 29, 219, 0.5), rgb(56, 29, 219));
+  background-color: rgb(92, 92, 92);
   width: 100%;
   padding-left: 100px;
   padding-top: 60px;
@@ -241,31 +241,227 @@ main #programation .date-container div h5 {
 main #programation .container-grid {
   border-radius: 8px;
   border: 2px solid rgb(249, 249, 249);
+  width: 1700px;
+}
+main #programation .container-grid header {
   padding: 0px 20px;
 }
 main #programation .container-grid header ul {
   display: flex;
   width: 100%;
-  justify-content: space-between;
   padding: 20px 0px;
+  gap: 100px;
 }
 main #programation .container-grid header ul li {
   font-size: 24px;
   font-family: "Raleway";
   font-weight: 700;
   color: rgb(249, 249, 249);
+  width: 100px;
 }
-main #programation .container-grid div .content {
-  background-color: red;
-  width: 300px;
+main #programation .container-grid header ul li + li {
+  margin-right: 220px;
+}
+main #programation .container-grid .content-container {
+  display: flex;
+  margin-top: 12px;
+  padding-bottom: 20px;
+  position: relative;
+  border-bottom: 2px solid black;
+  width: 100%;
+  padding: 0px 20px;
+}
+main #programation .container-grid .content-container:nth-child(4) {
+  border-bottom: none;
+}
+main #programation .container-grid .content-container:nth-child(2) .show {
+  top: 40px;
+}
+main #programation .container-grid .content-container:nth-child(3) .show {
+  top: 80px;
+}
+main #programation .container-grid .content-container span {
+  font-family: "Raleway";
+  font-weight: 400;
+  color: rgb(249, 249, 249);
+}
+main #programation .container-grid .content-container .content {
+  width: 370px;
   display: inline-block;
   font-family: "Raleway";
   font-weight: 600;
   color: rgb(249, 249, 249);
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 12px;
+  line-height: 24px;
 }
-main #programation .container-grid div .content2 {
-  display: inline-block;
-  width: 289.7px;
+main #programation .container-grid .content-container .artist {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+main #programation .container-grid .content-container .artist div span {
+  display: flex;
+}
+main #programation .container-grid .content-container .artist div span + span {
+  margin-top: 16px;
+}
+main #programation .container-grid .content-container .show {
+  position: absolute;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  top: 60px;
+}
+main #programation .container-grid .content-container .show:hover {
+  cursor: pointer;
+}
+main #programation .container-grid .content-container .show .live {
+  color: rgb(246, 67, 72);
+}
+main #ticket {
+  background-color: rgb(92, 92, 92);
+  width: 100%;
+  padding-bottom: 60px;
+}
+main #ticket h2 {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 34px;
+  color: rgb(249, 249, 249);
+}
+main #ticket .ticket-types {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+main #ticket .ticket-types .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(249, 249, 249);
+  border-radius: 8px;
+  border-top: 3px solid rgb(34, 34, 34);
+  width: 400px;
+  height: 400px;
+  padding: 20px 0px;
+}
+main #ticket .ticket-types .card h3 {
+  font-family: "Montserrat";
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+main #ticket .ticket-types .card h1 {
+  font-family: "Montserrat";
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+main #ticket .ticket-types .card span {
+  font-family: "Raleway";
+  font-weight: 400;
+  color: rgb(34, 34, 34);
+  margin-bottom: 15px;
+}
+main #ticket .ticket-types .card button {
+  margin-top: 30px;
+  font-family: "Raleway";
+  width: 161px;
+  height: 56px;
+  border-radius: 8px;
+  border: 1px solid rgb(34, 34, 34);
+  background-color: rgb(249, 249, 249);
+  font-size: 16px;
+  font-weight: 600;
+}
+main #ticket .ticket-types .card button:hover {
+  cursor: pointer;
+}
+main #ticket .ticket-types .card:nth-child(2) button {
+  background-color: rgb(34, 34, 34);
+  color: rgb(249, 249, 249);
+}
+main #ticket .ticket-types .card-vip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(249, 249, 249);
+  border-radius: 8px;
+  border-top: 3px solid rgb(246, 67, 72);
+  width: 400px;
+  height: 400px;
+  padding: 20px 0px;
+}
+main #ticket .ticket-types .card-vip button {
+  margin-top: 30px;
+  font-family: "Raleway";
+  width: 161px;
+  height: 56px;
+  border-radius: 8px;
+  border: 1px solid rgb(246, 67, 72);
+  background-color: rgb(249, 249, 249);
+  color: rgb(246, 67, 72);
+  font-size: 16px;
+  font-weight: 600;
+}
+main #ticket .ticket-types .card-vip button:hover {
+  cursor: pointer;
+}
+main #ticket .ticket-types .card-vip h3 {
+  font-family: "Montserrat";
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+main #ticket .ticket-types .card-vip h1 {
+  font-family: "Montserrat";
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+main #ticket .ticket-types .card-vip span {
+  font-family: "Raleway";
+  font-weight: 400;
+  color: rgb(34, 34, 34);
+  margin-bottom: 15px;
+}
+main #investors {
+  background-color: rgb(92, 92, 92);
+  width: 100%;
+  padding-bottom: 60px;
+  display: grid;
+  text-align: center;
+  place-items: center;
+}
+main #investors h2 {
+  margin-bottom: 60px;
+  font-family: "Montserrat";
+  font-size: 34px;
+  color: rgb(249, 249, 249);
+}
+main #investors #investors-container {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  row-gap: 60px;
+  column-gap: 130px;
+  place-content: center;
+  margin-bottom: 80px;
+  align-items: center;
+}
+main #investors button {
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  width: 260px;
+  height: 56px;
+  background-color: rgb(249, 249, 249);
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+}
+main #investors button:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

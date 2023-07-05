@@ -145,7 +145,7 @@ main{
       border-radius: 8px;
       border: none;
       font-size: 1rem;
-      font-family:'Monserrat';
+      font-family:'Montserrat';
       &:hover{
         cursor: pointer;
       }
@@ -167,7 +167,7 @@ main{
       }
       h2{
         font-size: 2rem;
-        font-family: 'Monserrat';
+        font-family: 'Montserrat';
         margin-bottom: 20px;
       }
       p{
@@ -187,7 +187,7 @@ main{
         justify-content: center;
         gap: 12px;
         font-weight: 600;
-        font-family: 'Monserrat';
+        font-family: 'Montserrat';
         font-size: 1rem;
         &:hover{
         cursor: pointer;
@@ -196,7 +196,7 @@ main{
     }
   }
   #programation{
-    background: linear-gradient(rgba(56,29,219,0.5),rgba(56,29,219));
+    background-color: $a7-variation;
     width: 100%;
     padding-left: 100px;
     padding-top: 60px;
@@ -246,36 +246,237 @@ main{
     .container-grid{
     border-radius: 8px;
     border: 2px solid $g1;
-    padding: 0px 20px;
-    
+    width: 1700px;
     header{
+      padding: 0px 20px;
     ul{
     display: flex;
     width: 100%;
-    justify-content: space-between;
     padding: 20px 0px;
+    gap: 100px;
+
     li{
     font-size: 24px;
     font-family: 'Raleway';
     font-weight: 700; 
     color: $g1;
+    width: 100px;
+    }
+    li+li{
+      margin-right: 220px;
     }
     }
     }
+   
+    .content-container{
+      display: flex;
+      margin-top: 12px;
+      padding-bottom: 20px;
+      position: relative;
+      border-bottom: 2px solid black;
+      width: 100%;
+      padding: 0px 20px;
+      &:nth-child(4){
+        border-bottom: none;
+      }
 
-    div{
+      &:nth-child(2){
+      .show{
+      top: 40px;
+      }
+      }
+      &:nth-child(3){
+        .show{
+          top: 80px;
+        }
+      }
+      span{
+        font-family: 'Raleway';
+        font-weight: 400;
+        color: $g1;
+      }
       .content{
-        background-color: red;
-        width: 300px;
+        width: 370px;
         display: inline-block;
         font-family: 'Raleway';
         font-weight: 600;
         color: $g1;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 12px;
+        line-height: 24px;
       }
-      .content2{
-        display: inline-block;
-        width: 289.7px;
+      .artist{
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        gap: 12px;
+        margin-bottom: 4px;
+        & div{
+        span{
+          display: flex;
+        }
+        span+span{
+          margin-top: 16px;
+        }
+        }
       }
+      .show{
+        position: absolute;
+        right: 24px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        top: 60px;
+        &:hover{
+          cursor: pointer;
+        }
+        .live{
+        color: $g4;
+        }
+      }
+    }
+    }
+  }
+  #ticket{
+  background-color: $a7-variation;
+  width: 100%;
+  padding-bottom: 60px;
+  h2{
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 34px;
+    color: $g1;
+  }
+  .ticket-types{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $g1;
+    border-radius: 8px;
+    border-top: 3px solid $g2;
+    width: 400px;
+    height: 400px;
+    padding: 20px 0px;
+    h3{
+    font-family: 'Montserrat';
+    font-size: 24px;
+    margin-bottom: 15px;
+    }
+    h1{
+      font-family: 'Montserrat';
+      font-size: 60px;
+      margin-bottom: 30px;
+    }
+    span{
+      font-family: 'Raleway';
+      font-weight: 400;
+      color: $g2;
+      margin-bottom: 15px;
+    }
+    button{
+      margin-top: 30px;
+      font-family: 'Raleway';
+      width: 161px;
+      height: 56px;
+      border-radius: 8px;
+      border: 1px solid $g2;
+      background-color: $g1;
+      font-size: 16px;
+      font-weight: 600;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    &:nth-child(2){
+      button{
+      background-color: $g2;
+      color: $g1;
+      }
+    }
+    }
+    .card-vip{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $g1;
+    border-radius: 8px;
+    border-top: 3px solid $g4;
+    width: 400px;
+    height: 400px;
+    padding: 20px 0px;
+    button{
+      margin-top: 30px;
+      font-family: 'Raleway';
+      width: 161px;
+      height: 56px;
+      border-radius: 8px;
+      border: 1px solid $g4;
+      background-color: $g1;
+      color: $g4;
+      font-size: 16px;
+      font-weight: 600;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    h3{
+      font-family: 'Montserrat';
+      font-size: 24px;
+      margin-bottom: 15px;
+      }
+      h1{
+        font-family: 'Montserrat';
+        font-size: 60px;
+        margin-bottom: 30px;
+      }
+      span{
+        font-family: 'Raleway';
+        font-weight: 400;
+        color: $g2;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  }
+  #investors{
+    background-color: $a7-variation;
+    width: 100%;
+    padding-bottom: 60px;
+    display: grid;
+    text-align: center;
+    place-items: center;
+    h2{
+      margin-bottom: 60px;
+      font-family: 'Montserrat';
+      font-size: 34px;
+      color: $g1;
+    }
+    #investors-container{
+      display: grid;
+      grid-template-columns: repeat(4,200px);  
+      row-gap: 60px;
+      column-gap: 130px;
+      place-content: center;
+      margin-bottom: 80px;
+      align-items: center;
+    }
+    button{
+    font-size: 16px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    width: 260px;
+    height: 56px;
+    background-color: $g1;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    &:hover{
+      cursor: pointer;
     }
     }
   }
