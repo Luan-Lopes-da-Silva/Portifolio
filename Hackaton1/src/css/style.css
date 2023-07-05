@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+#header {
+  background: url("../assets/Imgs/Bg.svg");
+  background-position: center;
+  width: 100%;
+  padding-bottom: 60px;
+}
+#header nav {
+  padding: 20px 60px 60px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+#header nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#header nav ul li {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(249, 249, 249);
+  font-family: "Montserrat";
+}
+#header nav ul li button {
+  width: 258px;
+  height: 56px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-family: "Montserrat";
+  font-weight: 600;
+  padding: 18px 34px;
+  background-color: rgb(249, 249, 249);
+}
+#header nav ul li button:hover {
+  cursor: pointer;
+}
+#header h1 {
+  color: rgb(249, 249, 249);
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 4rem;
+  font-family: "Montserrat";
+}
+#header #focus {
+  color: rgb(246, 67, 72);
+  text-transform: capitalize;
+}
+#header p {
+  font-family: "Raleway";
+  color: rgb(249, 249, 249);
+  font-size: 24px;
+  text-align: center;
+  width: 950px;
+  margin: 12px auto;
+}
+#header .buttons {
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+#header .buttons #start {
+  width: 144px;
+  height: 56px;
+  color: rgb(249, 249, 249);
+  background-color: rgb(246, 67, 72);
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Monserrat";
+  border-radius: 8px;
+  border: none;
+}
+#header .buttons #start:hover {
+  cursor: pointer;
+}
+#header .buttons #show {
+  width: 180px;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Montserrat";
+  color: rgb(249, 249, 249);
+}
+#header .buttons #show:hover {
+  cursor: pointer;
+}
+
+main {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+main #us {
+  background-color: rgb(70, 70, 70);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 700px 460px;
+  align-items: center;
+  padding-bottom: 60px;
+}
+main #us img {
+  grid-column: 1;
+}
+main #us div h2 {
+  font-family: "Montserrat";
+  margin-bottom: 20px;
+  color: rgb(249, 249, 249);
+  font-size: 2rem;
+}
+main #us div p {
+  font-family: "Raleway";
+  line-height: 24px;
+  font-size: 1rem;
+  color: rgb(249, 249, 249);
+  width: 570px;
+}
+main #us div button {
+  margin-top: 32px;
+  width: 176px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-family: "Monserrat";
+}
+main #us div button:hover {
+  cursor: pointer;
+}
+main #artists {
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  align-items: center;
+  padding-bottom: 80px;
+  background-color: rgb(70, 70, 70);
+  width: 100%;
+  padding-left: 100px;
+}
+main #artists div h2, main #artists div p {
+  color: rgb(249, 249, 249);
+}
+main #artists div h2 {
+  font-size: 2rem;
+  font-family: "Monserrat";
+  margin-bottom: 20px;
+}
+main #artists div p {
+  font-family: "Raleway";
+  font-size: 1rem;
+  line-height: 24px;
+  width: 470px;
+}
+main #artists div button {
+  margin-top: 32px;
+  width: 283px;
+  height: 60px;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-weight: 600;
+  font-family: "Monserrat";
+  font-size: 1rem;
+}
+main #artists div button:hover {
+  cursor: pointer;
+}
+main #programation {
+  background: linear-gradient(rgba(56, 29, 219, 0.5), rgb(56, 29, 219));
+  width: 100%;
+  padding-left: 100px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+main #programation h2 {
+  font-family: "Monserrat";
+  font-size: 2rem;
+  color: rgb(249, 249, 249);
+  margin-bottom: 32px;
+}
+main #programation .date-container {
+  display: flex;
+  gap: 24px;
+}
+main #programation .date-container div {
+  width: 300px;
+  margin-bottom: 30px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid rgba(34, 34, 34, 0.1);
+}
+main #programation .date-container div:hover {
+  cursor: pointer;
+}
+main #programation .date-container div.ativo {
+  border-color: rgb(34, 34, 34);
+}
+main #programation .date-container div.ativo h3 {
+  color: rgb(34, 34, 34);
+  opacity: 100%;
+}
+main #programation .date-container div.ativo h5 {
+  opacity: 50%;
+}
+main #programation .date-container div h3 {
+  font-size: 24px;
+  font-family: "Montserrat";
+  color: rgb(249, 249, 249);
+  opacity: 50%;
+  margin-bottom: 4px;
+}
+main #programation .date-container div h5 {
+  font-family: "Montserrat";
+  color: rgb(34, 34, 34);
+  opacity: 20%;
+}
+main #programation .container-grid {
+  border-radius: 8px;
+  border: 2px solid rgb(249, 249, 249);
+  padding: 0px 20px;
+}
+main #programation .container-grid header ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+main #programation .container-grid header ul li {
+  font-size: 24px;
+  font-family: "Raleway";
+  font-weight: 700;
+  color: rgb(249, 249, 249);
+}
+main #programation .container-grid div .content {
+  background-color: red;
+  width: 300px;
+  display: inline-block;
+  font-family: "Raleway";
+  font-weight: 600;
+  color: rgb(249, 249, 249);
+}
+main #programation .container-grid div .content2 {
+  display: inline-block;
+  width: 289.7px;
+}
+
+/*# sourceMappingURL=style.css.map */

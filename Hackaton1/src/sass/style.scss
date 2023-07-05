@@ -1,1 +1,282 @@
-@import 'Colors/colors.scss';
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style:none;
+}
+
+#header{
+  background: url('../assets/Imgs/Bg.svg');
+  background-position:center;
+  width:100%;
+  padding-bottom:60px;
+  nav{
+    padding: 20px 60px 60px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .logo{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    ul{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      li{
+      font-size: 14px;
+      font-weight: 600; 
+      color: $g1; 
+      font-family: 'Montserrat';
+        button{
+        width: 258px;
+        height: 56px;
+        border-radius:8px ;
+        border: none;
+        font-size: 1rem;
+        font-family: 'Montserrat';
+        font-weight: 600;
+        padding: 18px 34px;
+        background-color: $g1;
+        &:hover{
+        cursor: pointer;
+        }
+        }
+      }
+    }
+  }
+  h1{
+  color: $g1; 
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 4rem;
+  font-family: 'Montserrat';
+  }
+  #focus{
+  color: $g4;
+  text-transform: capitalize;
+
+  }
+  p{
+  font-family: 'Raleway';
+  color: $g1;
+  font-size: 24px;
+  text-align: center;
+  width: 950px;
+  margin: 12px auto;
+  }
+  .buttons{
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    #start{
+    width: 144px;
+    height: 56px;
+    color: $g1;
+    background-color: $g4;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Monserrat';
+    border-radius: 8px;
+    border: none;
+    &:hover{
+      cursor: pointer;
+    }
+    }
+    #show{
+    width: 180px;
+    background-color: transparent; 
+    border: none;
+    display: flex;
+    align-items: center;
+    gap:12px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Montserrat';
+    color: $g1;
+    &:hover{
+      cursor: pointer;
+    }
+    }
+  }
+}
+
+main{
+  width: 100%;
+  display: grid;
+  place-items: center;
+  #us{
+    background-color: $a7;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 700px 460px;
+    align-items: center;
+    padding-bottom: 60px;
+    img{
+      grid-column: 1;
+    }
+   div{
+    h2{
+      font-family: 'Montserrat';
+      margin-bottom: 20px;
+      color: $g1;
+      font-size: 2rem;
+    }
+    p{
+    font-family: 'Raleway';
+    line-height: 24px;
+    font-size: 1rem;
+    color: $g1;
+    width: 570px;
+    }
+    button{
+      margin-top: 32px;
+      width: 176px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-weight: 600;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      font-family:'Monserrat';
+      &:hover{
+        cursor: pointer;
+      }
+    }
+   }
+  }
+
+  #artists{
+    display: grid;
+    grid-template-columns: 460px 1fr;
+    align-items: center;
+    padding-bottom: 80px;
+    background-color: $a7;
+    width: 100%;
+    padding-left: 100px;
+    div{
+      h2,p{
+        color: $g1;
+      }
+      h2{
+        font-size: 2rem;
+        font-family: 'Monserrat';
+        margin-bottom: 20px;
+      }
+      p{
+        font-family: 'Raleway';
+        font-size: 1rem;
+        line-height: 24px;
+        width: 470px;
+      }
+      button{
+        margin-top: 32px;
+        width: 283px;
+        height: 60px;
+        border-radius: 8px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        font-weight: 600;
+        font-family: 'Monserrat';
+        font-size: 1rem;
+        &:hover{
+        cursor: pointer;
+        }
+      }
+    }
+  }
+  #programation{
+    background: linear-gradient(rgba(56,29,219,0.5),rgba(56,29,219));
+    width: 100%;
+    padding-left: 100px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    h2{
+     font-family: 'Monserrat';
+     font-size: 2rem;
+     color: $g1;
+     margin-bottom: 32px; 
+    }
+   
+    .date-container{
+    display: flex;
+    gap: 24px;
+    div{
+      width: 300px;
+      margin-bottom: 30px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid $g2-variation;
+      &:hover{
+      cursor: pointer;
+      }
+     &.ativo{
+      border-color:$g2 ;
+      h3{
+        color: $g2;
+        opacity: 100%;
+      }
+      h5{
+        opacity: 50%;
+      }
+     } 
+     h3{
+     font-size: 24px;
+     font-family: 'Montserrat'; 
+     color: $g1;
+     opacity: 50%;
+     margin-bottom: 4px;
+     }
+     h5{
+     font-family: 'Montserrat'; 
+     color: $g2;
+     opacity: 20%;
+     }   
+    }
+    }
+    .container-grid{
+    border-radius: 8px;
+    border: 2px solid $g1;
+    padding: 0px 20px;
+    
+    header{
+    ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px 0px;
+    li{
+    font-size: 24px;
+    font-family: 'Raleway';
+    font-weight: 700; 
+    color: $g1;
+    }
+    }
+    }
+
+    div{
+      .content{
+        background-color: red;
+        width: 300px;
+        display: inline-block;
+        font-family: 'Raleway';
+        font-weight: 600;
+        color: $g1;
+      }
+      .content2{
+        display: inline-block;
+        width: 289.7px;
+      }
+    }
+    }
+  }
+}

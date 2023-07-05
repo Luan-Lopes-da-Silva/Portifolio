@@ -7,52 +7,67 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../src/css/style.css">
 </head>
 <body>
-  <header>
+  <header id="header">
     <nav>
-      <img src="../src/assets/Svgs/onebitcode.svg" alt="">
-      <img src="../src/assets/Svgs/Caminho 177.svg" alt="">
+      <div class="logo">
+        <img src="../src/assets/Svgs/onebitcode.svg" alt="">
+        <img src="../src/assets/Svgs/Caminho 177.svg" alt="">
+      </div>
       <ul>
         <li>Inicio</li>
         <li>Artistas</li>
-        <li>Programção</li>
+        <li>Programação</li>
         <li>Contato</li>
         <li><button>Comprar ingressos</button></li>
       </ul>
     </nav>
-    <h1>A sua melhor experiencia musical digital</h1>
+    <h1>Sua melhor experiencia</h1>
+    <h1 id="focus">Musical digital</h1>
     <p>Prepare-se para uma experiência incrível e envolvente, onde a arte se une à performance para criar momentos inesquecíveis. Nossos shows artísticos são projetados para encantar, inspirar e transportar você para um mundo de criatividade e expressão.</p>
-    <button>Começar</button>
-    <button><img src="../src/assets/Svgs/Fill=False-34.svg" alt=""> Assistir Video</button>
+    <div class="buttons">
+      <button id="start">Começar</button>
+      <button id="show">
+        <img src="../src/assets/Svgs/Fill=False-34.svg" alt=""> Assistir Video
+      </button>
+    </div>
     <span class="contagem"></span>
   </header>
   <main>
     <section id="us">
       <img src="../src/assets/Imgs/Images1.svg" alt="">
-      <h2>Sobre a gente</h2>
-      <p>Na onebitmusic, estamos redefinindo a maneira como experimentamos e nos envolvemos com a música, utilizando tecnologia de realidade virtual (VR) para criar shows e performances que transcendem os limites físicos e levam você a novos patamares de entretenimento musical.</p>
-      <button>Ler mais<img src="../src/assets/Svgs/Direction=Right, Type=Normal.svg" alt=""></button>
+      <div>
+        <h2>Sobre a gente</h2>
+        <p>Na onebitmusic, estamos redefinindo a maneira como experimentamos e nos envolvemos com a música, utilizando tecnologia de realidade virtual (VR) para criar shows e performances que transcendem os limites físicos e levam você a novos patamares de entretenimento musical.</p>
+        <button>Ler mais<img src="../src/assets/Svgs/Direction=Right, Type=Normal.svg" alt=""></button>
+      </div>
     </section>
     <section id="artists">
-    <h2>Artistas</h2>
-    <p>No evento da OneBitMusic, você terá a oportunidade de desfrutar de uma incrível variedade de artistas talentosos. Nossa seleção musical abrange diferentes gêneros e estilos, garantindo uma experiência musical diversificada e emocionante. De DJs renomados a bandas cativantes, cada artista traz sua paixão e habilidade para criar performances envolventes. Prepare-se para se surpreender com músicas cativantes, ritmos vibrantes e momentos emocionantes durante todo o evento. Os artistas da OneBitMusic estão prontos para levar você a uma jornada musical única e inesquecível.</p>
+    <div>
+      <h2>Artistas</h2>
+      <p>No evento da OneBitMusic, você terá a oportunidade de desfrutar de uma incrível variedade de artistas talentosos. Nossa seleção musical abrange diferentes gêneros e estilos, garantindo uma experiência musical diversificada e emocionante. De DJs renomados a bandas cativantes, cada artista traz sua paixão e habilidade para criar performances envolventes. Prepare-se para se surpreender com músicas cativantes, ritmos vibrantes e momentos emocionantes durante todo o evento. Os artistas da OneBitMusic estão prontos para levar você a uma jornada musical única e inesquecível.</p>
+      <button>Veja a lista completa<img src="../src/assets/Svgs/Direction=Right, Type=Normal.svg" alt=""></button>
+    </div>
     <img src="../src/assets/Imgs/Images.svg" alt="">
-    <button>Veja a lista completa<img src="../src/assets/Svgs/Direction=Right, Type=Normal.svg" alt=""></button>
+ 
     </section>
     <section id="programation">
       <h2>Nossa programação</h2>
-      <div>
-        <h3>Dia 01</h3>
-        <h5>23 Setembro</h5>
-      </div>
-      <div>
-        <h3>Dia 02</h3>
-        <h5>24 Setembro</h5>
-      </div>
-      <div>
-        <h3>Dia 03</h3>
-        <h5>25 Setembro</h5>
+      <div class="date-container">
+        <div class="ativo">
+          <h3>Dia 01</h3>
+          <h5>23 Setembro</h5>
+        </div>
+        <div>
+          <h3>Dia 02</h3>
+          <h5>24 Setembro</h5>
+        </div>
+        <div>
+          <h3>Dia 03</h3>
+          <h5>25 Setembro</h5>
+        </div>
       </div>
       <div class="container-grid">
       <header>
@@ -64,7 +79,7 @@
       </header>
         <div>
           <span>11:00 AM to 12:00 PM</span>
-          <span>Desfrute de uma performance emocionante com Yui Ronald, um artista solo que encanta o público com sua voz cativante e letras inspiradoras. Prepare-se para uma noite de músicas envolventes e momentos emocionantes. </span>
+          <span class="content">Desfrute de uma performance emocionante com Yui Ronald, um artista solo que encanta o público com sua voz cativante e letras inspiradoras. Prepare-se para uma noite de músicas envolventes e momentos emocionantes. </span>
           <div>
             <img src="../src/assets/Imgs/Avatar-2(1).svg" alt="">
             <span>Yui Ronald</span>
@@ -77,7 +92,7 @@
         </div>
         <div>
           <span>12:00 PM to 03:00 PM</span>
-          <span>O trio que vai levar você a uma jornada musical com suas harmonias vocais encantadoras e arranjos instrumentais cativantes. Prepare-se para desfrutar de um repertório diversificado que abrange diversos estilos musicais e emocione seus sentidos.</span>
+          <span class="content2">O trio que vai levar você a uma jornada musical com suas harmonias vocais encantadoras e arranjos instrumentais cativantes. Prepare-se para desfrutar de um repertório diversificado que abrange diversos estilos musicais e emocione seus sentidos.</span>
           <div>
             <img src="../src/assets/Imgs/Avatar-1(1).svg" alt="">
             <span>Bob John</span>
@@ -195,13 +210,13 @@
     <section id="gallery">
     <h2>Galeria de momentos compartilhados</h2> 
     <div class="gallery-container">
-    <img src="" alt="">
-    <img src="" alt="">
+    <img src="../src/assets/Svgs/Direction=Left, Type=Small.svg" alt="">
+    <img src="../src/assets/Svgs/Direction=Right, Type=Small.svg" alt="">
     <div>
       <div class="metrics">
-        <img src="" alt="">
+        <img src="../src/assets/Svgs/Fill=False-6.svg" alt="">
         <span>80</span>
-        <img src="" alt="">
+        <img src="../src/assets/Svgs/Fill=False-26.svg" alt="">
         <span>11</span>
       </div>
       <span>Explorando Novos Horizontes Musicais</span>
@@ -209,9 +224,9 @@
     </div>
     <div>
       <div class="metrics">
-        <img src="" alt="">
+        <img src="../src/assets/Svgs/Fill=False-6.svg" alt="">
         <span>321</span>
-        <img src="" alt="">
+        <img src="../src/assets/Svgs/Fill=False-26.svg" alt="">
         <span>140</span>
       </div>
       <span>Vibrações Eletrizantes na OneBitMusic</span>
@@ -219,9 +234,9 @@
     </div>
     <div>
       <div class="metrics">
-        <img src="" alt="">
+        <img src="../src/assets/Svgs/Fill=False-6.svg" alt="">
         <span>1.029</span>
-        <img src="" alt="">
+        <img src="../src/assets/Svgs/Fill=False-26.svg" alt="">
         <span>29</span>
       </div>
       <span>Noite Inesquecível com OneBitMusic</span>
@@ -229,9 +244,9 @@
     </div>
     <div>
       <div class="metrics">
-        <img src="" alt="">
+        <img src="../src/assets/Svgs/Fill=False-6.svg" alt="">
         <span>103</span>
-        <img src="" alt="">
+        <img src="../src/assets/Svgs/Fill=False-26.svg" alt="">
         <span>12</span>
       </div>
       <span>A Magia da Música em Realidade Virtual</span>
@@ -239,9 +254,9 @@
     </div>
     <div>
       <div class="metrics">
-        <img src="" alt="">
+        <img src="../src/assets/Svgs/Fill=False-6.svg" alt="">
         <span>78</span>
-        <img src="" alt="">
+        <img src="../src/assets/Svgs/Fill=False-26.svg" alt="">
         <span>19</span>
       </div>
       <span>Momentos Inesquecíveis na OneBitMusic</span>
