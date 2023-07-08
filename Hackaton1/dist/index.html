@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../src/css/style.css">
+
 </head>
 <body>
   <header id="header">
@@ -62,6 +63,20 @@
     </div>
     </div>
   </header>
+  <div class="modal-comment">
+  <span class="close">X</span>
+  <form >
+    <label for="nameComment">Seu nome</label>
+    <input type="text"  id="nameComment">
+    <label for="commentMsg">Comentario</label>
+    <textarea id="commentMsg" cols="30" rows="10">
+    </textarea>
+    <button>Enviar Comentario</button>
+  </form>
+  <section id="comments">
+  <h5 id="alert">Ops... Ainda não vemos nenhum comentario</h5>  
+  </section>
+  </div>
   <main>
     <section id="us">
       <img src="../src/assets/Imgs/Images1.svg" alt="">
@@ -83,15 +98,15 @@
     <section id="programation">
       <h2>Nossa programação</h2>
       <div class="date-container">
-        <div class="ativo">
+        <div id="1">
           <h3>Dia 01</h3>
           <h5>23 Setembro</h5>
         </div>
-        <div>
+        <div id="2">
           <h3>Dia 02</h3>
           <h5>24 Setembro</h5>
         </div>
-        <div>
+        <div id="3">
           <h3>Dia 03</h3>
           <h5>25 Setembro</h5>
         </div>
@@ -104,7 +119,8 @@
         <li>Artistas</li>
       </ul>
       </header>
-        <div class="content-container">
+      <div class="change-content" id="1">
+        <div class="content-container" >
           <span>11:00 AM to 12:00 PM</span>
           <span class="content">Desfrute de uma performance emocionante com Yui Ronald, um artista solo que encanta o público com sua voz cativante e letras inspiradoras. Prepare-se para uma noite de músicas envolventes e momentos emocionantes. </span>
           <div class="artist">
@@ -168,13 +184,158 @@
                 <span>Booth: 2F24</span>
               </div>
             </div>
+            <div class="show">
+              <span>Em breve</span>
+              <img src="../src/assets/Svgs/Fill=False-30.svg" alt="">
+            </div>
           </div>
+        </div>
+      </div>
+          
+      <div class="change-content" id="2">
+              <div class="content-container" >
+                <span>11:00 AM to 12:00 PM</span>
+                <span class="content">Desfrute de uma performance emocionante com Etham Rheams, um artista solo que encanta o público com sua voz cativante e letras inspiradoras. Prepare-se para uma noite de músicas envolventes e momentos emocionantes. </span>
+                <div class="artist">
+                  <img src="../src/assets/Imgs/OtherPhotos/ethan-rheams-fEM9otYJK4c-unsplash 1.jpg" alt="">
+                  <div>
+                    <span>Ethan Rheams</span>
+                    <span>Booth: 2F12</span>
+                  </div>
+                </div>
+                <div class="show">
+                  <span>Em breve</span>
+                  <img src="../src/assets/Svgs/Fill=False-30.svg" alt="">
+                </div>
+              </div>
+              <div class="content-container">
+                <span>12:00 PM to 03:00 PM</span>
+                <span class="content">O trio que vai levar você a uma jornada musical com suas harmonias vocais encantadoras e arranjos instrumentais cativantes. Prepare-se para desfrutar de um repertório diversificado que abrange diversos estilos musicais e emocione seus sentidos.</span>
+                <div>
+                  <div class="artist">
+                    <img src="../src/assets/Imgs/OtherPhotos/john-fornander-yvs7ZH3AZNM-unsplash 1.jpg" alt="">
+                    <div>
+                      <span>John Fornander</span>
+                      <span>Booth: 3G12</span>
+                    </div>
+                  </div>
+                  <div class="artist">
+                    <img src="../src/assets/Imgs/OtherPhotos/dario-dD_k8TNRCWc-unsplash 1.jpg" alt="" class="img">
+                    <div>
+                      <span>Dario</span>
+                      <span>Booth: 3F12</span>
+                    </div>
+                  </div>
+                  <div class="artist">
+                    <img src="../src/assets/Imgs/OtherPhotos/steijn-leijzer--SS5Z5x8rKk-unsplash 1.jpg" alt="">
+                    <div>
+                      <span>Steijin Leizer</span>
+                      <span>Booth: 2A35</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="show">
+                  <span>Em breve</span>
+                  <img src="../src/assets/Svgs/Fill=False-30.svg" alt="">
+                </div>
+              </div>
+              <div class="content-container">
+                <span>03:00 PM to 04:00 PM</span>
+                <span class="content">A dupla que vai conquistar seu coração com sua música cativante e performances cheias de energia. Com sua sintonia perfeita e talento extraordinário, eles criarão um ambiente envolvente e contagiarão o público com seu estilo musical único.</span>
+                <div>
+                  <div class="artist">
+                    <img src="../src/assets/Imgs/OtherPhotos/alfonso-scarpa-2LGx4cQAMks-unsplash 1.jpg" alt="" class="img">
+                    <div>
+                      <span>Alfonso Scarpa</span>
+                      <span>Booth: 3F18</span>
+                    </div>
+                  </div>
+                  <div class="artist">
+                    <img src="../src/assets/Imgs/OtherPhotos/gesphotoss-EaCidUroyVE-unsplash 1.jpg" alt="">
+                    <div>
+                      <span>August Lima</span>
+                      <span>Booth: 2F24</span>
+                    </div>
+                  </div>
+                  <div class="show">
+                    <span>Em breve</span>
+                    <img src="../src/assets/Svgs/Fill=False-30.svg" alt="">
+                  </div>
+                </div>
+              </div>
+      </div>
+                
+      <div class="change-content" id="3">
+                <div class="content-container" >
+                  <span>11:00 AM to 12:00 PM</span>
+                  <span class="content">Desfrute de uma performance emocionante com Ethan Rheams, um artista solo que encanta o público com sua voz cativante e letras inspiradoras. Prepare-se para uma noite de músicas envolventes e momentos emocionantes. </span>
+                  <div class="artist">
+                    <img src="../src/assets/Imgs/OtherPhotos/ethan-rheams-fEM9otYJK4c-unsplash 1.jpg" alt="">
+                    <div>
+                      <span>Ethan Rheams</span>
+                      <span>Booth: 4F14</span>
+                    </div>
+                  </div>
+                  <div class="show">
+                    <span>Em breve</span>
+                    <img src="../src/assets/Svgs/Fill=False-30.svg" alt="">
+                  </div>
+                </div>
+                <div class="content-container">
+                  <span>12:00 PM to 03:00 PM</span>
+                  <span class="content">O trio que vai levar você a uma jornada musical com suas harmonias vocais encantadoras e arranjos instrumentais cativantes. Prepare-se para desfrutar de um repertório diversificado que abrange diversos estilos musicais e emocione seus sentidos.</span>
+                  <div>
+                    <div class="artist">
+                      <img src="../src/assets/Imgs/Avatar-1(1).svg" alt="">
+                      <div>
+                        <span>Bob John</span>
+                        <span>Booth: 3G12</span>
+                      </div>
+                    </div>
+                    <div class="artist">
+                      <img src="../src/assets/Imgs/Avatar-2(1).svg" alt="">
+                      <div>
+                        <span>Yui Ronald</span>
+                        <span>Booth: 2F12</span>
+                      </div>
+                    </div>
+                    <div class="artist">
+                      <img src="../src/assets/Imgs/Avatar-3.svg" alt="">
+                      <div>
+                        <span>Emma Satoshi</span>
+                        <span>Booth: 2A35</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="show">
+                    <span>Em breve</span>
+                    <img src="../src/assets/Svgs/Fill=False-30.svg" alt="">
+                  </div>
+                </div>
+                <div class="content-container">
+                  <span>03:00 PM to 04:00 PM</span>
+                  <span class="content">A dupla que vai conquistar seu coração com sua música cativante e performances cheias de energia. Com sua sintonia perfeita e talento extraordinário, eles criarão um ambiente envolvente e contagiarão o público com seu estilo musical único.</span>
+                  <div>
+                    <div class="artist">
+                      <img src="../src/assets/Imgs/OtherPhotos/john-fornander-yvs7ZH3AZNM-unsplash 1.jpg" alt="" class="img">
+                      <div>
+                        <span>John Fornander</span>
+                        <span>Booth: 5F13</span>
+                      </div>
+                    </div>
+                    <div class="artist">
+                      <img src="../src/assets/Imgs/OtherPhotos/steijn-leijzer--SS5Z5x8rKk-unsplash 1.jpg" alt="" class="img">
+                      <div>
+                        <span>Stejin Leizer</span>
+                        <span>Booth: 3F34</span>
+                      </div>
+                    </div>
           <div class="show">
             <span>Em breve</span>
             <img src="../src/assets/Svgs/Fill=False-30.svg" alt="">
           </div>
         </div>
-     
+        </div>
       </div>
     </section>
     <section id="ticket">
@@ -196,7 +357,7 @@
         <span>Possibilidade de interagir com os artistas</span>
         <button>Saber mais</button> 
       </div>
-      <div class="card-vip">
+      <div class="card vip">
         <h3>Vip</h3>
         <h1>R$200</h1>
         <span>Acesso aos shows digitais</span>
@@ -276,7 +437,7 @@
       <div class="metrics">
         <img src="../src/assets/Svgs/Fill=False-6 - Copia.svg" alt="">
         <span>321</span>
-        <img src="../src/assets/Svgs/Fill=False-26 - Copia.svg" alt="">
+        <img src="../src/assets/Svgs/Fill=False-26 - Copia.svg" alt="" class="comment">
         <span>140</span>
       </div>
       <span>Vibrações Eletrizantes na OneBitMusic</span>
@@ -287,7 +448,7 @@
       <div class="metrics">
         <img src="../src/assets/Svgs/Fill=False-6 - Copia.svg" alt="">
         <span>1.029</span>
-        <img src="../src/assets/Svgs/Fill=False-26 - Copia.svg" alt="">
+        <img src="../src/assets/Svgs/Fill=False-26 - Copia.svg" alt="" class="comment">
         <span>29</span>
       </div>
       <span>Noite Inesquecível com OneBitMusic</span>
@@ -298,7 +459,7 @@
       <div class="metrics">
         <img src="../src/assets/Svgs/Fill=False-6 - Copia.svg" alt="">
         <span>103</span>
-        <img src="../src/assets/Svgs/Fill=False-26 - Copia.svg" alt="">
+        <img src="../src/assets/Svgs/Fill=False-26 - Copia.svg" alt="" class="comment">
         <span>12</span>
       </div>
       <span>A Magia da Música em Realidade Virtual</span>
@@ -341,7 +502,7 @@
         <input type="text" id="email" name="email">
         <label for="message">Mensagem</label>
         <input type="text" id="message" name="message">
-        <button>Enviar</button>
+        <button id="btn">Enviar</button>
       </form>
       <img src="../src/assets/Svgs/Shape (1).svg" alt="" id="shape2">
      </div>

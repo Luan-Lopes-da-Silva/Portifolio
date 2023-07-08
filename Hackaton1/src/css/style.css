@@ -7,10 +7,93 @@
 
 body {
   overflow-x: hidden;
+  position: relative;
+}
+body .modal-comment {
+  display: none;
+  overflow-y: scroll;
+  width: 300px;
+  height: 350px;
+  border-radius: 8px;
+  background-color: rgb(249, 249, 249);
+  position: absolute;
+  top: 80%;
+  z-index: 5000;
+  left: 45%;
+  padding: 20px;
+}
+body .modal-comment label {
+  display: block;
+  margin: 4px 0px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+  font-family: "Raleway";
+}
+body .modal-comment.ativo {
+  display: block;
+}
+body .modal-comment .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(246, 67, 72);
+  font-family: "Montserrat";
+}
+body .modal-comment .close:hover {
+  cursor: pointer;
+}
+body .modal-comment input {
+  width: 100%;
+  height: 28px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(34, 34, 34);
+  color: rgb(249, 249, 249);
+  outline: none;
+  padding: 4px;
+}
+body .modal-comment textarea {
+  padding: 8px 4px;
+  width: 100%;
+  background-color: rgb(34, 34, 34);
+  color: rgb(249, 249, 249);
+}
+body .modal-comment button {
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(34, 34, 34);
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(249, 249, 249);
+  font-family: "Montserrat";
+}
+body .modal-comment button:hover {
+  cursor: pointer;
+}
+body .modal-comment form {
+  margin-top: 16px;
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(34, 34, 34, 0.9);
+}
+body .modal-comment #comments {
+  margin-top: 12px;
+}
+body .modal-comment #comments h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(70, 70, 70);
+  font-family: "Montserrat";
 }
 
 #header {
-  background: url("../assets/Imgs/Bg.svg");
+  background: url("../assets/Imgs/Bg (1).jpg");
   background-position: center;
   width: 100%;
   text-align: center;
@@ -28,11 +111,11 @@ body {
 #header .counter .countdown-container .countdown-el p, #header .counter .countdown-container .countdown-el span {
   width: max-content;
   font-size: 144px;
-  font-family: "Montserrat";
   font-weight: 900;
+  color: transparent;
+  font-family: "Montserrat";
   text-align: center;
   margin-top: 84px;
-  color: transparent;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: rgb(249, 249, 249);
   opacity: 50%;
@@ -59,35 +142,41 @@ body {
   color: rgb(249, 249, 249);
   font-family: "Montserrat";
 }
+#header nav ul li:hover {
+  cursor: pointer;
+}
 #header nav ul li button {
   width: 258px;
   height: 56px;
-  border-radius: 8px;
   border: none;
-  font-size: 1rem;
-  font-family: "Montserrat";
-  font-weight: 600;
-  padding: 18px 34px;
+  border-radius: 8px;
   background-color: rgb(249, 249, 249);
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+  font-family: "Montserrat";
+  padding: 18px 34px;
 }
 #header nav ul li button:hover {
   cursor: pointer;
 }
 #header h1 {
+  font-size: 4rem;
+  font-weight: 600;
   color: rgb(249, 249, 249);
+  font-family: "Montserrat";
   text-align: center;
   text-transform: capitalize;
-  font-size: 4rem;
-  font-family: "Montserrat";
 }
 #header #focus {
   color: rgb(246, 67, 72);
   text-transform: capitalize;
 }
 #header p {
-  font-family: "Raleway";
-  color: rgb(249, 249, 249);
   font-size: 24px;
+  font-weight: 400;
+  color: rgb(249, 249, 249);
+  font-family: "Raleway";
   text-align: center;
   width: 950px;
   margin: 12px auto;
@@ -103,28 +192,30 @@ body {
 #header .buttons #start {
   width: 144px;
   height: 56px;
-  color: rgb(249, 249, 249);
+  border: none;
+  border-radius: 8px;
   background-color: rgb(246, 67, 72);
   font-size: 20px;
   font-weight: 600;
-  font-family: "Monserrat";
-  border-radius: 8px;
-  border: none;
+  color: rgb(249, 249, 249);
+  font-family: "Montserrat";
 }
 #header .buttons #start:hover {
   cursor: pointer;
 }
 #header .buttons #show {
   width: 180px;
-  background-color: transparent;
+  height: max-content;
   border: none;
+  border-radius: 0px;
+  background-color: transparent;
   display: flex;
   align-items: center;
   gap: 12px;
   font-size: 20px;
   font-weight: 600;
-  font-family: "Montserrat";
   color: rgb(249, 249, 249);
+  font-family: "Montserrat";
 }
 #header .buttons #show:hover {
   cursor: pointer;
@@ -147,30 +238,34 @@ main #us img {
   grid-column: 1;
 }
 main #us div h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(249, 249, 249);
   font-family: "Montserrat";
   margin-bottom: 20px;
-  color: rgb(249, 249, 249);
-  font-size: 2rem;
 }
 main #us div p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(249, 249, 249);
   font-family: "Raleway";
   line-height: 24px;
-  font-size: 1rem;
-  color: rgb(249, 249, 249);
   width: 570px;
 }
 main #us div button {
-  margin-top: 32px;
   width: 176px;
   height: 60px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(249, 249, 249);
+  margin-top: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  font-weight: 600;
-  border-radius: 8px;
-  border: none;
   font-size: 1rem;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
   font-family: "Montserrat";
 }
 main #us div button:hover {
@@ -200,18 +295,20 @@ main #artists div p {
   width: 470px;
 }
 main #artists div button {
-  margin-top: 32px;
   width: 283px;
   height: 60px;
-  border-radius: 8px;
   border: none;
+  border-radius: 8px;
+  background-color: rgb(249, 249, 249);
+  margin-top: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  font-weight: 600;
-  font-family: "Montserrat";
   font-size: 1rem;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+  font-family: "Montserrat";
 }
 main #artists div button:hover {
   cursor: pointer;
@@ -224,9 +321,10 @@ main #programation {
   padding-bottom: 60px;
 }
 main #programation h2 {
-  font-family: "Monserrat";
   font-size: 2rem;
+  font-weight: 600;
   color: rgb(249, 249, 249);
+  font-family: "Montserrat";
   margin-bottom: 32px;
 }
 main #programation .date-container {
@@ -237,7 +335,7 @@ main #programation .date-container div {
   width: 300px;
   margin-bottom: 30px;
   padding-bottom: 16px;
-  border-bottom: 2px solid rgba(34, 34, 34, 0.1);
+  border-bottom: 2px solid rgba(34, 34, 34, 0.9);
 }
 main #programation .date-container div:hover {
   cursor: pointer;
@@ -254,8 +352,9 @@ main #programation .date-container div.ativo h5 {
 }
 main #programation .date-container div h3 {
   font-size: 24px;
-  font-family: "Montserrat";
+  font-weight: 600;
   color: rgb(249, 249, 249);
+  font-family: "Montserrat";
   opacity: 50%;
   margin-bottom: 4px;
 }
@@ -266,7 +365,7 @@ main #programation .date-container div h5 {
 }
 main #programation .container-grid {
   border-radius: 8px;
-  border: 2px solid rgb(249, 249, 249);
+  border: 2px solid rgba(249, 249, 249, 0.1);
   width: 1700px;
 }
 main #programation .container-grid header {
@@ -288,53 +387,67 @@ main #programation .container-grid header ul li {
 main #programation .container-grid header ul li + li {
   margin-right: 220px;
 }
-main #programation .container-grid .content-container {
+main #programation .container-grid .change-content {
+  display: none;
+}
+main #programation .container-grid .change-content.ativo {
+  display: block;
+}
+main #programation .container-grid .change-content .content-container {
   display: flex;
   margin-top: 12px;
   padding-bottom: 20px;
   position: relative;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid rgba(249, 249, 249, 0.1);
   width: 100%;
   padding: 0px 20px;
 }
-main #programation .container-grid .content-container:nth-child(4) {
+main #programation .container-grid .change-content .content-container:nth-child(4) {
   border-bottom: none;
 }
-main #programation .container-grid .content-container:nth-child(2) .show {
-  top: 40px;
-}
-main #programation .container-grid .content-container:nth-child(3) .show {
+main #programation .container-grid .change-content .content-container:nth-child(2) .show {
   top: 80px;
 }
-main #programation .container-grid .content-container span {
-  font-family: "Raleway";
+main #programation .container-grid .change-content .content-container:nth-child(3) .show {
+  top: 80px;
+}
+main #programation .container-grid .change-content .content-container span {
+  font-size: inherit;
   font-weight: 400;
   color: rgb(249, 249, 249);
+  font-family: "Raleway";
 }
-main #programation .container-grid .content-container .content {
+main #programation .container-grid .change-content .content-container .content {
   width: 370px;
   display: inline-block;
-  font-family: "Raleway";
+  font-size: inherit;
   font-weight: 600;
   color: rgb(249, 249, 249);
+  font-family: "Raleway";
   margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 12px;
   line-height: 24px;
 }
-main #programation .container-grid .content-container .artist {
+main #programation .container-grid .change-content .content-container .artist {
   display: grid;
   grid-template-columns: 50px 1fr;
   gap: 12px;
   margin-bottom: 4px;
 }
-main #programation .container-grid .content-container .artist div span {
+main #programation .container-grid .change-content .content-container .artist img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+main #programation .container-grid .change-content .content-container .artist div span {
   display: flex;
 }
-main #programation .container-grid .content-container .artist div span + span {
+main #programation .container-grid .change-content .content-container .artist div span + span {
   margin-top: 16px;
 }
-main #programation .container-grid .content-container .show {
+main #programation .container-grid .change-content .content-container .show {
   position: absolute;
   right: 24px;
   display: flex;
@@ -342,10 +455,10 @@ main #programation .container-grid .content-container .show {
   gap: 4px;
   top: 60px;
 }
-main #programation .container-grid .content-container .show:hover {
+main #programation .container-grid .change-content .content-container .show:hover {
   cursor: pointer;
 }
-main #programation .container-grid .content-container .show .live {
+main #programation .container-grid .change-content .content-container .show .live {
   color: rgb(246, 67, 72);
 }
 main #ticket {
@@ -354,10 +467,12 @@ main #ticket {
   padding-bottom: 60px;
 }
 main #ticket h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: rgb(249, 249, 249);
+  font-family: "Montserrat";
   text-align: center;
   margin-bottom: 32px;
-  font-size: 34px;
-  color: rgb(249, 249, 249);
 }
 main #ticket .ticket-types {
   width: 100%;
@@ -376,32 +491,56 @@ main #ticket .ticket-types .card {
   height: 400px;
   padding: 20px 0px;
 }
-main #ticket .ticket-types .card h3 {
-  font-family: "Montserrat";
-  font-size: 24px;
-  margin-bottom: 15px;
+main #ticket .ticket-types .card.vip {
+  border-top: 3px solid rgb(246, 67, 72);
 }
-main #ticket .ticket-types .card h1 {
-  font-family: "Montserrat";
-  font-size: 60px;
-  margin-bottom: 30px;
-}
-main #ticket .ticket-types .card span {
-  font-family: "Raleway";
-  font-weight: 400;
-  color: rgb(34, 34, 34);
-  margin-bottom: 15px;
-}
-main #ticket .ticket-types .card button {
-  margin-top: 30px;
-  font-family: "Raleway";
+main #ticket .ticket-types .card.vip button {
   width: 161px;
   height: 56px;
+  border: 1px solid rgb(246, 67, 72);
   border-radius: 8px;
-  border: 1px solid rgb(34, 34, 34);
   background-color: rgb(249, 249, 249);
   font-size: 16px;
   font-weight: 600;
+  color: rgb(246, 67, 72);
+  font-family: "Raleway";
+  margin-top: 30px;
+}
+main #ticket .ticket-types .card.vip button:hover {
+  cursor: pointer;
+}
+main #ticket .ticket-types .card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: inherit;
+  font-family: "Montserrat";
+  margin-bottom: 15px;
+}
+main #ticket .ticket-types .card h1 {
+  font-size: 60px;
+  font-weight: 600;
+  color: inherit;
+  font-family: "Montserrat";
+  margin-bottom: 30px;
+}
+main #ticket .ticket-types .card span {
+  font-size: inherit;
+  font-weight: 400;
+  color: rgb(34, 34, 34);
+  font-family: "Raleway";
+  margin-bottom: 15px;
+}
+main #ticket .ticket-types .card button {
+  width: 161px;
+  height: 56px;
+  border: 1px solid rgb(34, 34, 34);
+  border-radius: 8px;
+  background-color: rgb(249, 249, 249);
+  font-size: 16px;
+  font-weight: 600;
+  color: inherit;
+  font-family: "Raleway";
+  margin-top: 30px;
 }
 main #ticket .ticket-types .card button:hover {
   cursor: pointer;
@@ -409,48 +548,6 @@ main #ticket .ticket-types .card button:hover {
 main #ticket .ticket-types .card:nth-child(2) button {
   background-color: rgb(34, 34, 34);
   color: rgb(249, 249, 249);
-}
-main #ticket .ticket-types .card-vip {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgb(249, 249, 249);
-  border-radius: 8px;
-  border-top: 3px solid rgb(246, 67, 72);
-  width: 400px;
-  height: 400px;
-  padding: 20px 0px;
-}
-main #ticket .ticket-types .card-vip button {
-  margin-top: 30px;
-  font-family: "Raleway";
-  width: 161px;
-  height: 56px;
-  border-radius: 8px;
-  border: 1px solid rgb(246, 67, 72);
-  background-color: rgb(249, 249, 249);
-  color: rgb(246, 67, 72);
-  font-size: 16px;
-  font-weight: 600;
-}
-main #ticket .ticket-types .card-vip button:hover {
-  cursor: pointer;
-}
-main #ticket .ticket-types .card-vip h3 {
-  font-family: "Montserrat";
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-main #ticket .ticket-types .card-vip h1 {
-  font-family: "Montserrat";
-  font-size: 60px;
-  margin-bottom: 30px;
-}
-main #ticket .ticket-types .card-vip span {
-  font-family: "Raleway";
-  font-weight: 400;
-  color: rgb(34, 34, 34);
-  margin-bottom: 15px;
 }
 main #investors {
   background-color: rgb(92, 92, 92);
@@ -461,10 +558,11 @@ main #investors {
   place-items: center;
 }
 main #investors h2 {
-  margin-bottom: 60px;
-  font-family: "Montserrat";
   font-size: 34px;
+  font-weight: 600;
   color: rgb(249, 249, 249);
+  font-family: "Montserrat";
+  margin-bottom: 60px;
 }
 main #investors #investors-container {
   display: grid;
@@ -476,14 +574,15 @@ main #investors #investors-container {
   align-items: center;
 }
 main #investors button {
-  font-size: 16px;
-  font-family: "Montserrat";
-  font-weight: 600;
   width: 260px;
   height: 56px;
-  background-color: rgb(249, 249, 249);
-  border-radius: 8px;
   border: none;
+  border-radius: 8px;
+  background-color: rgb(249, 249, 249);
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+  font-family: "Montserrat";
   text-align: center;
 }
 main #investors button:hover {
@@ -494,8 +593,9 @@ main #reports {
   gap: 20px;
   align-items: center;
   width: 100%;
-  padding-bottom: 250px;
+  padding-bottom: 700px;
   background-color: rgb(92, 92, 92);
+  position: relative;
 }
 main #reports .report {
   background-color: rgb(70, 70, 70);
@@ -506,7 +606,8 @@ main #reports .report {
 main #reports .report:nth-child(1) {
   margin-left: -226px;
   opacity: 10%;
-  position: relative;
+  position: absolute;
+  margin-top: 250px;
 }
 main #reports .report:nth-child(1) .avatar {
   text-align: center;
@@ -515,8 +616,9 @@ main #reports .report:nth-child(1) .avatar {
   left: 50%;
 }
 main #reports .report:nth-child(2) {
-  margin-top: -20px;
-  position: relative;
+  margin-top: 200px;
+  position: absolute;
+  left: 29.2%;
 }
 main #reports .report:nth-child(2) .avatar {
   left: 45%;
@@ -525,8 +627,10 @@ main #reports .report:nth-child(2) .avatar {
   top: 100%;
 }
 main #reports .report:nth-child(3) {
-  position: relative;
+  position: absolute;
   opacity: 10%;
+  right: -10%;
+  margin-top: 250px;
 }
 main #reports .report:nth-child(3) .avatar {
   position: absolute;
@@ -564,8 +668,9 @@ main #gallery {
   padding-bottom: 30px;
 }
 main #gallery h2 {
-  color: rgb(249, 249, 249);
   font-size: 34px;
+  font-weight: 600;
+  color: rgb(249, 249, 249);
   font-family: "Montserrat";
   position: relative;
   text-align: center;
@@ -606,7 +711,7 @@ main #gallery .gallery-container #left:hover {
 main #gallery .gallery-container #right {
   position: absolute;
   top: 30%;
-  right: 16%;
+  right: 9%;
   z-index: 1000;
   background-color: rgb(249, 249, 249);
   padding: 12px;
@@ -652,12 +757,13 @@ main #gallery .gallery-container .metric-container .metrics img:hover {
   cursor: pointer;
 }
 main #gallery .gallery-container .metric-container p, main #gallery .gallery-container .metric-container span {
-  width: 360px;
-  font-family: "Raleway";
-  margin-top: 12px;
-  color: rgb(249, 249, 249);
-  line-height: 24px;
   font-size: 16px;
+  font-weight: inherit;
+  color: rgb(249, 249, 249);
+  font-family: "Raleway";
+  width: 360px;
+  margin-top: 12px;
+  line-height: 24px;
 }
 main #contact {
   width: 100%;
@@ -675,10 +781,11 @@ main #contact .contact-container .column1 {
   position: relative;
 }
 main #contact .contact-container .column1 h2 {
-  font-family: "Montserrat";
   font-size: 34px;
-  margin-bottom: 126px;
+  font-weight: 600;
   color: rgb(249, 249, 249);
+  font-family: "Montserrat";
+  margin-bottom: 126px;
 }
 main #contact .contact-container .column1 #shape {
   position: absolute;
@@ -686,13 +793,14 @@ main #contact .contact-container .column1 #shape {
   bottom: 0;
 }
 main #contact .contact-container .column1 div {
+  font-size: inherit;
+  font-weight: 600;
   color: rgb(249, 249, 249);
+  font-family: "Montserrat";
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 42px;
-  font-family: "Montserrat";
-  font-weight: 600;
 }
 main #contact .contact-container .column2 {
   background-color: rgb(92, 92, 92);
@@ -705,10 +813,11 @@ main #contact .contact-container .column2 form {
   width: max-content;
 }
 main #contact .contact-container .column2 h3 {
-  margin-bottom: 90px;
-  font-family: "Montserrat";
   font-size: 24px;
+  font-weight: 600;
   color: rgb(34, 34, 34);
+  font-family: "Montserrat";
+  margin-bottom: 90px;
 }
 main #contact .contact-container .column2 input {
   width: 570px;
@@ -727,23 +836,26 @@ main #contact .contact-container .column2 input:focus {
 }
 main #contact .contact-container .column2 label {
   display: block;
-  font-family: "Raleway";
-  color: rgb(249, 249, 249);
   font-size: 12px;
   font-weight: 600;
+  color: rgb(249, 249, 249);
+  font-family: "Raleway";
 }
 main #contact .contact-container .column2 button {
-  display: block;
-  margin-top: 40px;
   width: 100%;
   height: 56px;
-  background-color: rgb(246, 67, 72);
+  border: none;
   border-radius: 8px;
-  color: rgb(249, 249, 249);
-  font-family: "Montserrat";
+  background-color: rgb(246, 67, 72);
   font-size: 1rem;
   font-weight: 600;
-  border: none;
+  color: rgb(249, 249, 249);
+  font-family: "Montserrat";
+  display: block;
+  margin-top: 40px;
+}
+main #contact .contact-container .column2 button:hover {
+  cursor: pointer;
 }
 main #contact .contact-container .column2 #shape2 {
   position: absolute;
@@ -761,8 +873,9 @@ main footer {
 main footer span {
   margin-left: 64px;
   opacity: 30%;
-  color: rgb(249, 249, 249);
   font-size: 12px;
+  font-weight: 400;
+  color: rgb(249, 249, 249);
   font-family: "Raleway";
 }
 main footer div:nth-child(1) {
