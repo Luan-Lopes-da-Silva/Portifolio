@@ -18,7 +18,7 @@ export default function(){
     emailSpan.classList.remove('error')
     passwordSpan.classList.remove('error')
     setTimeout(()=>{
-    window.location.href = '../../home/dist/home.html'
+    window.location.href = '../../home/dist/index.html'
     },2000)
     }else if(localStorageObj.email === email.value && localStorageObj.senha !== password.value){
     passwordSpan.innerText = 'Senha incorreta'

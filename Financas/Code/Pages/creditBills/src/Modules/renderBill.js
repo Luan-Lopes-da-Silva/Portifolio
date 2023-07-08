@@ -6,9 +6,11 @@ const valueInput = document.querySelector('#value')
 const cards = document.querySelectorAll('.card-container')
 const arrayCards = Array.from(cards)
 const button = document.querySelector('button')
+const values = []
 
 
-function render(billData){
+function render(billData,ev){
+ev.preventDefault()
 const findCard = arrayCards.find(card => card.id === idInput.value)
 if(findCard){
   const operationContainer = document.createElement('div')
@@ -22,6 +24,106 @@ if(findCard){
   findCard.append(operationContainer)
 }
 }
+
+function renderOff(ev){
+  ev.preventDefault()
+  const findCard = arrayCards.find(card => card.id === idInput.value)
+  if(findCard.id==='1'){
+    const operationContainer = document.createElement('div')
+    operationContainer.classList.add('card-operation')
+    const name = document.createElement('span')
+    name.textContent = `${nameInput.value.toUpperCase()}`
+    const value = document.createElement('span')
+    value.textContent = `${valueInput.value}`
+    value.classList.add('value')
+    operationContainer.append(name,value)
+    findCard.append(operationContainer)
+    const newOperation = {
+      name:nameInput.value,
+      value:valueInput.value,
+      id:findCard.id
+    }
+    values.push(newOperation)
+    const billsCard1 = values.filter(operation=>operation.id === '1')
+    const valueBills = billsCard1.map(operation=>parseFloat(operation.value))
+    const billsCard = valueBills.reduce(
+      (accumulator, value) => 
+      accumulator + value
+    )
+    localStorage.setItem('Fatura Cartão 1',JSON.stringify(billsCard))
+  }else if(findCard.id==='2'){
+    console.log('é o 2')
+    const operationContainer = document.createElement('div')
+    operationContainer.classList.add('card-operation')
+    const name = document.createElement('span')
+    name.textContent = `${nameInput.value.toUpperCase()}`
+    const value = document.createElement('span')
+    value.textContent = `${valueInput.value}`
+    value.classList.add('value')
+    operationContainer.append(name,value)
+    findCard.append(operationContainer)
+    const newOperation = {
+      name:nameInput.value,
+      value:valueInput.value,
+      id:findCard.id
+    }
+    values.push(newOperation)
+    const billsCard2 = values.filter(operation=>operation.id === '2')
+    const valueBills = billsCard2.map(operation=>parseFloat(operation.value))
+    const billsCard = valueBills.reduce(
+      (accumulator, value) => 
+      accumulator + value
+    )
+    localStorage.setItem('Fatura Cartão 2',JSON.stringify(billsCard))
+  }else if(findCard.id==='3'){
+    console.log('é o 3')
+    const operationContainer = document.createElement('div')
+    operationContainer.classList.add('card-operation')
+    const name = document.createElement('span')
+    name.textContent = `${nameInput.value.toUpperCase()}`
+    const value = document.createElement('span')
+    value.textContent = `${valueInput.value}`
+    value.classList.add('value')
+    operationContainer.append(name,value)
+    findCard.append(operationContainer)
+    const newOperation = {
+      name:nameInput.value,
+      value:valueInput.value,
+      id:findCard.id
+    }
+    values.push(newOperation)
+    const billsCard3 = values.filter(operation=>operation.id === '3')
+    const valueBills = billsCard3.map(operation=>parseFloat(operation.value))
+    const billsCard = valueBills.reduce(
+      (accumulator, value) => 
+      accumulator + value
+    )
+    localStorage.setItem('Fatura Cartão 3',JSON.stringify(billsCard))
+  }else{
+    const operationContainer = document.createElement('div')
+    operationContainer.classList.add('card-operation')
+    const name = document.createElement('span')
+    name.textContent = `${nameInput.value.toUpperCase()}`
+    const value = document.createElement('span')
+    value.textContent = `${valueInput.value}`
+    value.classList.add('value')
+    operationContainer.append(name,value)
+    findCard.append(operationContainer)
+    const newOperation = {
+      name:nameInput.value,
+      value:valueInput.value,
+      id:findCard.id
+    }
+    values.push(newOperation)
+    const billsCard4 = values.filter(operation=>operation.id === '4')
+    const valueBills = billsCard4.map(operation=>parseFloat(operation.value))
+    const billsCard = valueBills.reduce(
+      (accumulator, value) => 
+      accumulator + value
+    )
+    localStorage.setItem('Fatura Cartão 4',JSON.stringify(billsCard))
+  }
+  }
 
 async function fetchBills(){
 const bills = await fetch("http://localhost:3000/bills").then(res => res.json())
@@ -121,11 +223,18 @@ localStorage.setItem('Fatura Cartão 4' , billsCard4)
 }
 
 document.addEventListener("DOMContentLoaded", () =>{
-  fetchBills()
-})
+  const response = fetch("http://localhost:3000/bills").then(response => {
+    if(!response.ok){
+      throw new Error('Nossos servidores estão offline no momento')
+    }
+    return response
+   }).catch(button.addEventListener('click',renderOff))
+    fetchBills()
+  })
 
 
 async function renderBills(ev) {
+  ev.preventDefault()
   if (valueInput.value != '' && nameInput.value != '' && idInput.value != '') {
     const billData = {
       idCard:idInput.value,

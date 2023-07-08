@@ -37,7 +37,7 @@ export default function(){
     btn2.style.display = 'none'
     document.querySelector('.loading').style.display = 'block'
     setTimeout(()=>{
-    window.location.href = '../../login/dist/login.html'
+    window.location.href = '../../login/dist/index.html'
     },2000)
   
   }

@@ -30,6 +30,32 @@ export function render() {
     document.querySelector(".transfers-containers").appendChild(article);
   }
 
+  function createTransferOff() {
+    const article = document.createElement("article");
+    article.id = `${Math.floor(Math.random()*1000)}`;
+    article.classList.add("transfer-container");
+
+    const name = document.createElement("span");
+    name.textContent = `${nameInput.value}`;
+    name.classList.add("name");
+
+    const value = document.createElement("span");
+    value.textContent = `R$ ${transferInput.value}`.replace(',','.');
+    value.classList.add("value");
+
+    const createdAt = document.createElement("span");
+    createdAt.textContent = `${new Date().toLocaleString('pt-br')}`;
+    createdAt.classList.add("created");
+
+    values.push(parseFloat(transferInput.value.replace(/[,]/g, ".")))
+    const sumValues = values.reduce(function(acc,transfer){
+    return acc+transfer
+    },0)
+    localStorage.setItem('Transferencia',JSON.stringify(sumValues))
+    article.append(name, value, createdAt);
+    document.querySelector(".transfers-containers").appendChild(article);
+  }
+
   async function fetchTransfers() {
     const transfers = await fetch("http://localhost:3001/transfers").then(
       (res) => res.json()
@@ -37,11 +63,20 @@ export function render() {
     transfers.forEach(createTransfer);
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    fetchTransfers();
-  });
+  
+  document.addEventListener("DOMContentLoaded", () =>{
+    const response = fetch("http://localhost:3001/transfers").then(response => {
+      if(!response.ok){
+        throw new Error('Nossos servidores estão offline no momento')
+      }
+      return response
+     }).catch(form.addEventListener('submit',createTransferOff))
+     fetchTransfers();
+    })
 
-  async function renderTransfer() {
+
+  async function renderTransfer(ev) {
+    ev.preventDefault()
     if (radios[0].checked) {
       const createdAt = new Date();
       const transferData = {

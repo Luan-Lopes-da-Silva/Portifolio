@@ -69,7 +69,6 @@ export function render(){
          (accumulator, value) => 
          accumulator + value
        );
-      
       localStorage.setItem('Contas Julho', JSON.stringify(julyMonthSum))
       form.reset();
      }else{
