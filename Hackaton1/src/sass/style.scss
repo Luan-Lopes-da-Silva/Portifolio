@@ -3,13 +3,45 @@
   padding: 0;
   box-sizing: border-box;
   list-style:none;
+ 
+}
+
+body{
+  overflow-x: hidden;
 }
 
 #header{
   background: url('../assets/Imgs/Bg.svg');
   background-position:center;
   width:100%;
-  padding-bottom:60px;
+  text-align: center;
+  padding-bottom:54px;
+
+  .counter{
+  
+    .countdown-container{
+      display: flex;
+      justify-content: center;
+      gap: 120px;
+      .countdown-el{
+        display: flex;
+        align-items: start;
+        p,span{
+         width: max-content; 
+         font-size: 144px;
+         font-family: 'Montserrat';
+         font-weight: 900;
+         text-align: center;
+         margin-top: 84px;
+         color: transparent;
+         -webkit-text-stroke-width: 2px;
+         -webkit-text-stroke-color: $g1;
+         opacity: 50%;
+        }
+      }
+    }
+  }
+
   nav{
     padding: 20px 60px 60px;
     display: flex;
@@ -45,6 +77,7 @@
         }
       }
     }
+  
   }
   h1{
   color: $g1; 
@@ -478,6 +511,310 @@ main{
     &:hover{
       cursor: pointer;
     }
+    }
+  }
+
+  #reports{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 250px;
+    background-color: $a7-variation;
+    .report{
+    background-color: $a7;
+    padding: 40px 20px;
+    width: 770px;
+    height: 232px;
+    &:nth-child(1){
+    margin-left: -226px;
+    opacity: 10%;
+    position: relative;
+    .avatar{
+    text-align: center;
+    position: absolute;
+    top: 110%;
+    left: 50%;  
+    }
+    }
+    &:nth-child(2){
+    margin-top: -20px;
+    position: relative;
+    .avatar{
+      left: 45%;
+      text-align: center;
+      position: absolute;
+      top: 100%;
+    }
+    }
+    &:nth-child(3){
+      position: relative;
+      opacity: 10%;
+    .avatar{
+      position: absolute;
+      top: 100%;
+      left: 0%;
+      left: 50%;
+      text-align: center;      
+    }  
+    }
+    p{
+    width: 650px;
+    margin: auto auto;
+    color: $g1;
+    font-family: 'Raleway';
+    opacity: 70%;
+    text-align: center;
+    }
+    h4{
+    font-family: 'Montserrat';
+    font-size: 20px;  
+    color: $g1;
+    }
+    span{
+      color: $g1;
+      font-family: 'Raleway';
+    }
+    #right{
+    position: absolute;  
+    right: 20px;
+    }
+    }
+  }
+
+  #gallery{
+  width: 100%;
+  background-color: $a7-variation;
+  height: max-content;
+  position: relative;
+  padding-bottom: 30px;
+  h2{
+  color: $g1;
+  font-size: 34px;
+  font-family: 'Montserrat';
+  position: relative;
+  text-align: center;
+  margin-top: 140px;
+  }
+  .bg{
+  padding-top: 30px;
+  width: 100%;
+  height: 400px;
+  background:linear-gradient(rgba(252, 82, 82,0.5),
+  rgba(252, 82, 82, 0)) ; 
+  position: absolute;
+  opacity: 40%;
+  text-align: center;
+  img{
+  text-align: center;
+  width:300px;
+  }
+  }
+  .gallery-container{
+    display: flex;
+    gap: 30px;
+    padding-top: 32px;
+    margin-left: -25px;
+    position: relative;
+   
+    
+    #left{
+      position: absolute;
+      left: 7%;
+      top: 30%;
+      z-index: 1000;
+
+      background-color: $g1;
+      padding: 12px;
+      border-radius: 50%;
+      &:hover{
+        cursor: pointer;
+      }      
+    }
+
+    #right{
+    position: absolute;
+    top: 30%;
+    right: 16%;
+    z-index: 1000;
+    background-color: $g1;
+      padding: 12px;
+      border-radius: 50%;
+      &:hover{
+        cursor: pointer;
+      }   
+    }
+    .metric-container{
+      width: max-content;
+      height: max-content;
+      position: relative;
+      display: flex;
+      flex-direction:column;
+      align-items: start;
+      padding: 0;
+      &:nth-child(3){
+        width: 357px;
+        opacity: 50%;
+      }
+      &:nth-child(7){
+        opacity: 50%;
+      }
+    
+    .photo{
+    width: 370px;
+    height: 370px;
+    text-align: start;
+    display: flex;
+    justify-self: start;
+    }
+      .metrics{
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 12px;
+      span{
+        width: max-content;
+        margin-top: 0;
+      }
+      img:hover{
+        cursor: pointer;
+      }
+      }
+      p,span{
+      width: 360px;
+      font-family: 'Raleway';
+      margin-top: 12px;
+      color: $g1;
+      line-height: 24px;
+      font-size: 16px;
+      }
+    }
+  }
+  }
+  #contact{
+  width: 100%;
+ .contact-container{
+  width: 100%;
+  display: flex;
+  .column1{
+    padding-top:120px;
+    padding-left: 80px;
+    width: 845px;
+    height: 662px;
+    background-color: $g2;
+    position: relative;
+    h2{
+      font-family: 'Montserrat';
+      font-size: 34px;
+      margin-bottom: 126px;
+      color: $g1;
+    }
+    #shape{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    }
+    div{
+    color: $g1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 42px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    }
+ }
+ .column2{
+   background-color: $a7-variation;
+   width: 100%;
+   padding-top: 139px;
+   padding-left: 130px;
+   position: relative;
+   
+   form{
+    width: max-content;
+   }
+   h3{
+   margin-bottom: 90px; 
+   font-family: 'Montserrat';
+   font-size: 24px;
+   color: $g2;
+  }
+   input{
+   width: 570px;
+   background-color: transparent;
+   border: none;
+   border-bottom: 1px solid $a1;
+   padding: 8px;
+   margin-top: 8;
+   margin-bottom: 30px;
+   color: $g1;
+   &:focus{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid $a4; 
+   }
+   }
+   label{
+   display: block;
+   font-family: 'Raleway';
+   color: $g1;
+   font-size: 12px;
+   font-weight: 600;
+   }
+   button{
+   display: block;
+   margin-top: 40px;
+   width: 100%;
+   height: 56px;
+   background-color: $g4;
+   border-radius: 8px;
+   color: $g1;
+   font-family: "Montserrat";
+   font-size: 1rem;
+   font-weight: 600;
+   border: none;
+   }
+   #shape2{
+    position: absolute;
+    right: 18%;
+    bottom: 0;
+   }
+ }  
+ }
+ 
+  }
+
+  footer{
+    display: flex;
+    align-items: center;
+    background-color: $g2;
+    width: 100%;
+    height: 91px;
+    justify-content: space-around;
+    span{
+    margin-left: 64px;
+    opacity: 30%;
+    color: $g1;
+    font-size: 12px;
+    font-family: 'Raleway';
+    }
+    div{
+    &:nth-child(1){
+    margin-left: -580px;
+    img:hover{
+      cursor: pointer;
+      }
+    }
+    &:nth-child(2){
+    display: flex;
+    gap: 30px;
+    margin-left: -1000px;
+    img:hover{
+    cursor: pointer;
+    }
+    }
+    
     }
   }
 }

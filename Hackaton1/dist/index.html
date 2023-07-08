@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OneBit Music</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../src/css/style.css">
 </head>
 <body>
@@ -33,7 +33,34 @@
         <img src="../src/assets/Svgs/Fill=False-34.svg" alt=""> Assistir Video
       </button>
     </div>
-    <span class="contagem"></span>
+    <div class="counter">
+    <div class="countdown-container">
+      <div class="countdown-el days-c">
+        <p id="days">
+          0
+        </p>
+        <span>
+          d
+        </span>
+      </div>
+      <div class="countdown-el hours-c">
+        <p id="hours">
+          0
+        </p>
+        <span>h</span>
+      </div>
+      <div class="countdown-el minutes-c">
+        <p id="mins">
+          0
+        </p>
+        <span>m</span>
+      </div>
+      <div class="countdown-el seconds-c">
+        <p id="secs">12</p>
+        <span>s</span>
+      </div>
+    </div>
+    </div>
   </header>
   <main>
     <section id="us">
@@ -197,7 +224,7 @@
       <div class="report">
         <img src="../src/assets/Svgs/Type=Double, Direction=Left.svg" alt="">
         <p>A OneBitMusic não apenas me ofereceu uma plataforma para desfrutar de shows digitais envolventes, mas também me apresentou a artistas independentes incríveis. Através da plataforma, descobri músicos talentosos e me conectei com uma comunidade de amantes da música que compartilham interesses semelhantes. Estou impressionada com o compromisso da marca em valorizar a diversidade e a liberdade artística.</p>
-        <img src="../src/assets/Svgs/Type=Double, Direction=Right.svg" alt="">
+        <img src="../src/assets/Svgs/Type=Double, Direction=Right.svg" alt="" id="right">
         <div class="avatar">
           <img src="../src/assets/Imgs/Avatar-2.svg" alt="">
           <h4>Sofia</h4>
@@ -205,9 +232,9 @@
         </div>
         </div>
     <div class="report">
-    <img src="../src/assets/Svgs/Type=Double, Direction=Left.svg" alt="">
+    <img src="../src/assets/Svgs/Type=Double, Direction=Left.svg" alt="" >
     <p>Através dos shows digitais e da tecnologia de realidade virtual da OneBitMusic, pude mergulhar em um universo musical fascinante. Os visuais deslumbrantes, a qualidade do áudio e a interatividade oferecida pela plataforma me deixaram maravilhado. A OneBitMusic realmente entende como proporcionar experiências musicais únicas e memoráveis.</p>
-    <img src="../src/assets/Svgs/Type=Double, Direction=Right.svg" alt="">
+    <img src="../src/assets/Svgs/Type=Double, Direction=Right.svg" alt="" id="right">
     <div class="avatar">
       <img src="../src/assets/Imgs/Avatar-1.svg" alt="">
       <h4>Carlos</h4>
@@ -217,7 +244,7 @@
       <div class="report">
         <img src="../src/assets/Svgs/Type=Double, Direction=Left.svg" alt="">
         <p>Eu fui apresentada à OneBitMusic por um amigo e decidi experimentar um dos seus shows digitais. A imersão proporcionada pela realidade virtual me fez sentir como se estivesse realmente presente no palco, cercada pelos artistas e envolvida pela música. Foi uma experiência única e emocionante que certamente vou repetir. A OneBitMusic está revolucionando a forma como vivenciamos os shows artísticos.</p>
-        <img src="../src/assets/Svgs/Type=Double, Direction=Right.svg" alt="">
+        <img src="../src/assets/Svgs/Type=Double, Direction=Right.svg" alt="" id="right">
         <div class="avatar">
           <img src="../src/assets/Imgs/Avatar.svg" alt="">
           <h4>Ana</h4>
@@ -226,11 +253,15 @@
         </div>
     </section>
     <section id="gallery">
+    <div class="bg">
+    <img src="../src/assets/Svgs/Vector.svg" alt="">
+    </div>
     <h2>Galeria de momentos compartilhados</h2> 
     <div class="gallery-container">
-    <img src="../src/assets/Svgs/Direction=Left, Type=Small.svg" alt="">
-    <img src="../src/assets/Svgs/Direction=Right, Type=Small.svg" alt="">
-    <div>
+      <img src="../src/assets/Svgs/Direction=Right, Type=Small.svg " alt="" id="right">
+      <img src="../src/assets/Svgs/Direction=Left, Type=Small.svg" alt="" id="left">
+    <div class="metric-container">
+      <img src="../src/assets/Imgs/Img-1(1).svg" alt="" class="photo">
       <div class="metrics">
         <img src="../src/assets/Svgs/Fill=False-6.svg" alt="">
         <span>80</span>
@@ -240,63 +271,68 @@
       <span>Explorando Novos Horizontes Musicais</span>
       <p>Essa foto captura o momento em que mergulhamos na realidade virtual da #OneBitMusic. Foi uma experiência incrível explorar novos horizontes musicais e nos conectar com artistas de todo o mundo. Veja como nossos fãs estão aproveitando essa jornada musical!</p>
     </div>
-    <div>
+    <div class="metric-container">
+      <img src="../src/assets/Imgs/Img(1).svg" alt="" class="photo">
       <div class="metrics">
-        <img src="../src/assets/Svgs/Fill=False-6.svg" alt="">
+        <img src="../src/assets/Svgs/Fill=False-6 - Copia.svg" alt="">
         <span>321</span>
-        <img src="../src/assets/Svgs/Fill=False-26.svg" alt="">
+        <img src="../src/assets/Svgs/Fill=False-26 - Copia.svg" alt="">
         <span>140</span>
       </div>
       <span>Vibrações Eletrizantes na OneBitMusic</span>
       <p>Uma imagem que captura a energia contagiante do show digital da #OneBitMusic. Os visuais hipnotizantes e a batida pulsante nos transportaram para uma jornada musical incrível. Compartilhe suas fotos e faça parte da nossa galeria de fãs!</p>
     </div>
-    <div>
+    <div class="metric-container">
+      <img src="../src/assets/Imgs/Img-2(1).svg" alt="" class="photo">
       <div class="metrics">
-        <img src="../src/assets/Svgs/Fill=False-6.svg" alt="">
+        <img src="../src/assets/Svgs/Fill=False-6 - Copia.svg" alt="">
         <span>1.029</span>
-        <img src="../src/assets/Svgs/Fill=False-26.svg" alt="">
+        <img src="../src/assets/Svgs/Fill=False-26 - Copia.svg" alt="">
         <span>29</span>
       </div>
       <span>Noite Inesquecível com OneBitMusic</span>
       <p>Uma foto do incrível show de realidade virtual da #OneBitMusic, onde a música e a tecnologia se encontram para criar uma experiência única. Obrigado a todos que compartilharam esse momento conosco!<p>
     </div>
-    <div>
+    <div class="metric-container">
+      <img src="../src/assets/Imgs/Img-3(1).svg" alt="" class="photo">
       <div class="metrics">
-        <img src="../src/assets/Svgs/Fill=False-6.svg" alt="">
+        <img src="../src/assets/Svgs/Fill=False-6 - Copia.svg" alt="">
         <span>103</span>
-        <img src="../src/assets/Svgs/Fill=False-26.svg" alt="">
+        <img src="../src/assets/Svgs/Fill=False-26 - Copia.svg" alt="">
         <span>12</span>
       </div>
       <span>A Magia da Música em Realidade Virtual</span>
       <p>Essa foto é um lembrete da magia que encontramos nos shows digitais da #OneBitMusic. Os óculos de realidade virtual nos transportam para um mundo sonoro único, onde a música ganha vida. Veja como nossos fãs estão aproveitando essa experiência imersiva!</p>
     </div>
-    <div>
+   
+    <div class="metric-container">
+      <img src="../src/assets/Imgs/teste.svg" alt="" class="photo">
       <div class="metrics">
         <img src="../src/assets/Svgs/Fill=False-6.svg" alt="">
         <span>78</span>
         <img src="../src/assets/Svgs/Fill=False-26.svg" alt="">
         <span>19</span>
       </div>
-      <span>Momentos Inesquecíveis na OneBitMusic</span>
+      <span>Explorando Novos Horizontes Musicais</span>
       <p>Essa imagem representa a alegria e a emoção que experimentamos nos shows da #OneBitMusic. A música nos conecta, nos inspira e nos proporciona momentos inesquecíveis. Compartilhe suas fotos conosco e faça parte dessa galeria de momentos especiais!</p>
     </div>
     </div>
     </section>
     <section id="contact">
     <div class="contact-container">
-    <div>
-     <h2>Nos contate</h2>
-     <div>
-       <img src="../src/assets/Svgs/Fill=True-7.svg" alt="">
-       <span>+55 99823-3232</span>
+     <div class="column1">
+      <h2>Nos contate</h2>
+       <div>
+         <img src="../src/assets/Svgs/Fill=True-7.svg" alt="">
+         <span>+55 99823-3232</span>
+       </div>
+       <div>
+         <img src="../src/assets/Svgs/Fill=True-1.svg" alt="">
+         <span>contato@onebitmusic.com</span>
+         <img src="../src/assets/Svgs/Shape.svg" alt="" id="shape">
+       </div>
      </div>
-     <div>
-       <img src="../src/assets/Svgs/Fill=True-1.svg" alt="">
-       <span>contato@onebitmusic.com</span>
-     </div>
-     <img src="../src/assets/Svgs/Shape.svg" alt="">
-    </div>
-    <div>
+     <div class="column2">
       <h3>Preencha com seus dados</h3>
       <form>
         <label for="name">Nome</label>
@@ -307,7 +343,7 @@
         <input type="text" id="message" name="message">
         <button>Enviar</button>
       </form>
-      <img src="../src/assets/Svgs/Shape (1).svg" alt="" >
+      <img src="../src/assets/Svgs/Shape (1).svg" alt="" id="shape2">
      </div>
     </div>
     </section>
@@ -316,13 +352,15 @@
         <img src="../src/assets/Svgs/onebitcode.svg" alt="">
         <img src="../src/assets/Svgs/Caminho 177.svg" alt="">
       </div>
-      <img src="../src/assets/Svgs/Fill=True-15.svg" alt="">
-      <img src="../src/assets/Svgs/Fill=True-16.svg" alt="">
-      <img src="../src/assets/Svgs/Fill=True-17.svg" alt="">
-      <img src="../src/assets/Svgs/Fill=True-19.svg" alt="">
-      <span>© onebitcode.com, 2023</span>
+      <div>
+        <img src="../src/assets/Svgs/Fill=True-15.svg" alt="">
+        <img src="../src/assets/Svgs/Fill=True-16.svg" alt="">
+        <img src="../src/assets/Svgs/Fill=True-17.svg" alt="">
+        <img src="../src/assets/Svgs/Fill=True-19.svg" alt="">
+        <span>© onebitcode.com, 2023</span>
+      </div> 
     </footer>
   </main>
-  
 </body>
+<script src="main.min.js"></script>
 </html>
