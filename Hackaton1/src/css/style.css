@@ -12,7 +12,7 @@ body {
 body .modal-comment {
   display: none;
   overflow-y: scroll;
-  width: 300px;
+  width: 400px;
   height: 350px;
   border-radius: 8px;
   background-color: rgb(249, 249, 249);
@@ -80,16 +80,46 @@ body .modal-comment form {
   margin-top: 16px;
   width: 100%;
   padding-bottom: 20px;
-  border-bottom: 2px solid rgba(34, 34, 34, 0.9);
+  border-bottom: 2px solid rgba(34, 34, 34, 0.5);
 }
 body .modal-comment #comments {
-  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
 }
 body .modal-comment #comments h5 {
   font-size: 16px;
   font-weight: 600;
   color: rgb(70, 70, 70);
   font-family: "Montserrat";
+}
+body .modal-comment .commentContainer {
+  background-color: rgb(70, 70, 70);
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+body .modal-comment .commentContainer .name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(249, 249, 249);
+  font-family: "Montserrat";
+  display: inline-block;
+}
+body .modal-comment .commentContainer .hour {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(249, 249, 249);
+  font-family: "Montserrat";
+}
+body .modal-comment .commentContainer .text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(249, 249, 249);
+  font-family: "Montserrat";
+  word-wrap: break-word;
+  display: inline-block;
+  margin-bottom: 12px;
 }
 
 #header {
@@ -226,6 +256,9 @@ main {
   display: grid;
   place-items: center;
 }
+main.blur {
+  filter: blur(4px);
+}
 main #us {
   background-color: rgb(70, 70, 70);
   width: 100%;
@@ -335,7 +368,7 @@ main #programation .date-container div {
   width: 300px;
   margin-bottom: 30px;
   padding-bottom: 16px;
-  border-bottom: 2px solid rgba(34, 34, 34, 0.9);
+  border-bottom: 2px solid rgba(34, 34, 34, 0.5);
 }
 main #programation .date-container div:hover {
   cursor: pointer;
@@ -593,7 +626,7 @@ main #reports {
   gap: 20px;
   align-items: center;
   width: 100%;
-  padding-bottom: 700px;
+  padding-bottom: 500px;
   background-color: rgb(92, 92, 92);
   position: relative;
 }

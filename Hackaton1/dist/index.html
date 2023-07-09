@@ -6,9 +6,7 @@
   <title>OneBit Music</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../src/css/style.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header id="header">
@@ -63,7 +61,7 @@
     </div>
     </div>
   </header>
-  <div class="modal-comment">
+  <div class="modal-comment" id="1">
   <span class="close">X</span>
   <form >
     <label for="nameComment">Seu nome</label>
@@ -77,6 +75,34 @@
   <h5 id="alert">Ops... Ainda não vemos nenhum comentario</h5>  
   </section>
   </div>
+  <div class="modal-comment" id="2">
+    <span class="close">X</span>
+    <form >
+      <label for="nameComment">Seu nome</label>
+      <input type="text"  id="nameComment">
+      <label for="commentMsg">Comentario</label>
+      <textarea id="commentMsg" cols="30" rows="10">
+      </textarea>
+      <button>Enviar Comentario</button>
+    </form>
+    <section id="comments">
+    <h5 id="alert">Ops... Ainda não vemos nenhum comentario</h5>  
+    </section>
+    </div>
+    <div class="modal-comment" id="3">
+      <span class="close">X</span>
+      <form >
+        <label for="nameComment">Seu nome</label>
+        <input type="text"  id="nameComment">
+        <label for="commentMsg">Comentario</label>
+        <textarea id="commentMsg" cols="30" rows="10">
+        </textarea>
+        <button>Enviar Comentario</button>
+      </form>
+      <section id="comments">
+      <h5 id="alert">Ops... Ainda não vemos nenhum comentario</h5>  
+      </section>
+      </div>
   <main>
     <section id="us">
       <img src="../src/assets/Imgs/Images1.svg" alt="">
@@ -195,12 +221,12 @@
       <div class="change-content" id="2">
               <div class="content-container" >
                 <span>11:00 AM to 12:00 PM</span>
-                <span class="content">Desfrute de uma performance emocionante com Etham Rheams, um artista solo que encanta o público com sua voz cativante e letras inspiradoras. Prepare-se para uma noite de músicas envolventes e momentos emocionantes. </span>
+                <span class="content">Desfrute de uma performance emocionante com Ethan Rheams, um artista solo que encanta o público com sua voz cativante e letras inspiradoras. Prepare-se para uma noite de músicas envolventes e momentos emocionantes. </span>
                 <div class="artist">
                   <img src="../src/assets/Imgs/OtherPhotos/ethan-rheams-fEM9otYJK4c-unsplash 1.jpg" alt="">
                   <div>
                     <span>Ethan Rheams</span>
-                    <span>Booth: 2F12</span>
+                    <span>Booth: 4F14</span>
                   </div>
                 </div>
                 <div class="show">
@@ -216,7 +242,7 @@
                     <img src="../src/assets/Imgs/OtherPhotos/john-fornander-yvs7ZH3AZNM-unsplash 1.jpg" alt="">
                     <div>
                       <span>John Fornander</span>
-                      <span>Booth: 3G12</span>
+                      <span>Booth: 5F13</span>
                     </div>
                   </div>
                   <div class="artist">
@@ -230,7 +256,7 @@
                     <img src="../src/assets/Imgs/OtherPhotos/steijn-leijzer--SS5Z5x8rKk-unsplash 1.jpg" alt="">
                     <div>
                       <span>Steijin Leizer</span>
-                      <span>Booth: 2A35</span>
+                      <span>Booth: 3F34</span>
                     </div>
                   </div>
                 </div>
@@ -254,7 +280,7 @@
                     <img src="../src/assets/Imgs/OtherPhotos/gesphotoss-EaCidUroyVE-unsplash 1.jpg" alt="">
                     <div>
                       <span>August Lima</span>
-                      <span>Booth: 2F24</span>
+                      <span>Booth: 4F28</span>
                     </div>
                   </div>
                   <div class="show">
@@ -421,7 +447,7 @@
     <div class="gallery-container">
       <img src="../src/assets/Svgs/Direction=Right, Type=Small.svg " alt="" id="right">
       <img src="../src/assets/Svgs/Direction=Left, Type=Small.svg" alt="" id="left">
-    <div class="metric-container">
+    <div class="metric-container" >
       <img src="../src/assets/Imgs/Img-1(1).svg" alt="" class="photo">
       <div class="metrics">
         <img src="../src/assets/Svgs/Fill=False-6.svg" alt="">
@@ -437,30 +463,30 @@
       <div class="metrics">
         <img src="../src/assets/Svgs/Fill=False-6 - Copia.svg" alt="">
         <span>321</span>
-        <img src="../src/assets/Svgs/Fill=False-26 - Copia.svg" alt="" class="comment">
-        <span>140</span>
+        <img src="../src/assets/Svgs/Fill=False-26 - Copia.svg" alt="" class="comment" id="1">
+        <span class="number">0</span>
       </div>
       <span>Vibrações Eletrizantes na OneBitMusic</span>
       <p>Uma imagem que captura a energia contagiante do show digital da #OneBitMusic. Os visuais hipnotizantes e a batida pulsante nos transportaram para uma jornada musical incrível. Compartilhe suas fotos e faça parte da nossa galeria de fãs!</p>
     </div>
-    <div class="metric-container">
+    <div class="metric-container" >
       <img src="../src/assets/Imgs/Img-2(1).svg" alt="" class="photo">
       <div class="metrics">
         <img src="../src/assets/Svgs/Fill=False-6 - Copia.svg" alt="">
         <span>1.029</span>
-        <img src="../src/assets/Svgs/Fill=False-26 - Copia.svg" alt="" class="comment">
-        <span>29</span>
+        <img src="../src/assets/Svgs/Fill=False-26 - Copia.svg" alt="" class="comment" id="2">
+        <span class="number">0</span>
       </div>
       <span>Noite Inesquecível com OneBitMusic</span>
       <p>Uma foto do incrível show de realidade virtual da #OneBitMusic, onde a música e a tecnologia se encontram para criar uma experiência única. Obrigado a todos que compartilharam esse momento conosco!<p>
     </div>
-    <div class="metric-container">
+    <div class="metric-container" >
       <img src="../src/assets/Imgs/Img-3(1).svg" alt="" class="photo">
       <div class="metrics">
         <img src="../src/assets/Svgs/Fill=False-6 - Copia.svg" alt="">
         <span>103</span>
-        <img src="../src/assets/Svgs/Fill=False-26 - Copia.svg" alt="" class="comment">
-        <span>12</span>
+        <img src="../src/assets/Svgs/Fill=False-26 - Copia.svg" alt="" class="comment" id="3">
+        <span class="number">0</span>
       </div>
       <span>A Magia da Música em Realidade Virtual</span>
       <p>Essa foto é um lembrete da magia que encontramos nos shows digitais da #OneBitMusic. Os óculos de realidade virtual nos transportam para um mundo sonoro único, onde a música ganha vida. Veja como nossos fãs estão aproveitando essa experiência imersiva!</p>
@@ -523,5 +549,5 @@
     </footer>
   </main>
 </body>
-<script src="main.min.js"></script>
+<script src="./main.min.js"></script>
 </html>

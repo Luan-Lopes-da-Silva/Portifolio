@@ -3,7 +3,7 @@ const hourEl = document.getElementById('hours')
 const minEl = document.getElementById('mins')
 const secEl = document.getElementById('secs')
 
-const limitDate = '10 Jul 2023'
+const limitDate = '20 Jul 2023'
 
 
 export default function countDown(){

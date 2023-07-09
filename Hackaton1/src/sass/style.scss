@@ -27,7 +27,7 @@ body{
   .modal-comment{
     display: none;
     overflow-y: scroll;
-    width: 300px;
+    width: 400px;
     height: 350px;
     border-radius: 8px;
     background-color: $g1;
@@ -84,11 +84,33 @@ body{
     }
 
     #comments{
-    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;  
     h5{
-    @include text-style(16px,600,$a7,'Montserrat')
-    }  
+    @include text-style(16px,600,$a7,'Montserrat');
+    } 
     }
+    .commentContainer{
+      background-color: $a7;
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 12px;
+      .name{
+      @include text-style(1.5rem,600,$g1,'Montserrat'); 
+      display: inline-block 
+      }
+      .hour{
+      @include text-style(1rem,500,$g1,'Montserrat');
+       
+      }
+      .text{
+      @include text-style(1rem,600,$g1,'Montserrat');
+      word-wrap: break-word;
+      display: inline-block ;
+      margin-bottom: 12px;  
+      }
+      }
   }
 
 }
@@ -200,6 +222,9 @@ main{
   width: 100%;
   display: grid;
   place-items: center;
+  &.blur{
+  filter: blur(4px);  
+  }
   #us{
     background-color: $a7;
     width: 100%;
@@ -520,7 +545,7 @@ main{
     gap: 20px;
     align-items: center;
     width: 100%;
-    padding-bottom: 700px;
+    padding-bottom: 500px;
     background-color: $a7-variation;
     position: relative;
     .report{

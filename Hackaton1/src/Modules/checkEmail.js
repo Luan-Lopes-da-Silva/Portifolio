@@ -1,7 +1,8 @@
 const name = document.querySelector('#name')
 const email = document.querySelector('#email')
 const message = document.querySelector('#message')
-const form = document.querySelector('form')
+const button = document.querySelector('#btn')
+ 
 
 
 
@@ -46,6 +47,6 @@ email.addEventListener('keyup',function(){
     }  
     })
 
-form.addEventListener('submit',checkInputs)
+button.addEventListener('click',checkInputs)
 }
 
